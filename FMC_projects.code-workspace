@@ -1,1 +1,8 @@
 {
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {"python.defaultInterpreterPath": "C:\\Users\\Mac Prible\\anaconda3\\envs\\freemocap-env\\python.exe"}
+}
