@@ -5,7 +5,7 @@
 # Configure your project parameters here
 
 [project]
-project_dir = 'C:\Users\Mac Prible\Box\Research\FMC_projects\pose2sim\Pose2Sim\Demo' # BETWEEN SINGLE QUOTES! # If empty, project dir is current dir
+project_dir = 'C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\pose2sim\\Pose2Sim\\Demo' # BETWEEN SINGLE QUOTES! # If empty, project dir is current dir
 frames_range = [0,100] #For example [10,300], or [] if all frames.
 frame_rate = 60 #Hz
 
