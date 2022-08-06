@@ -15,3 +15,5 @@ I believe that we can skip many of the steps that lead up to the creation of the
 It looks like the filtering is specificed by a configuration file "Config.toml"
 
 This config file also does many of the same triangulation activities that I suspect are duplicated by FMC. So I don't need to worry about those. Focus on the 3d filtering --> OpenSim setup
+
+I am getting hung up on the Filter3D step, so I'm going to close out and try to rerun. Also going to try to install pose2sim from the files rather than just pip.
