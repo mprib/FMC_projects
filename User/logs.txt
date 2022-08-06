@@ -1,0 +1,23 @@
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+
+
+---------------------------------------------------------------------
+Triangulation of 2D points for FMC_projects, for frames 0 to 100.
+---------------------------------------------------------------------
+
+Project directory: C:\Users\Mac Prible\Box\Research\FMC_projects
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+NumExpr defaulting to 4 threads.
+
+
+---------------------------------------------------------------------
+Triangulation of 2D points for FMC_projects, for frames 0 to 100.
+---------------------------------------------------------------------
+
+Project directory: C:\Users\Mac Prible\Box\Research\FMC_projects
