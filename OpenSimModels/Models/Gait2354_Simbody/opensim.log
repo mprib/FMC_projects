@@ -1,0 +1,188 @@
+[2022-08-06 17:35:00.828] [info] Updating Model file from 20303 to latest format...
+[2022-08-06 17:35:00.922] [info] Loaded model 3DGaitModel2354 from file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\gait2354_simbody.osim
+[2022-08-06 17:35:00.942] [warning] Couldn't find file 'femur.vtp'.
+[2022-08-06 17:35:00.943] [warning] Couldn't find file 'tibia.vtp'.
+[2022-08-06 17:35:00.971] [warning] Couldn't find file 'l_femur.vtp'.
+[2022-08-06 17:35:00.972] [warning] Couldn't find file 'l_tibia.vtp'.
+[2022-08-06 17:35:01.054] [info] ControllerSet 'Controllers' was renamed and is being reset to 'controllerset'.
+[2022-08-06 17:35:01.060] [info] ComponentSet 'MiscComponents' was renamed and is being reset to 'componentset'.
+[2022-08-06 17:36:01.843] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:36:22.259] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:36:30.329] [info] Step 2: Scaling generic model
+[2022-08-06 17:36:30.394] [info] Step 3: Placing markers on model
+[2022-08-06 17:36:30.453] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:36:30.454] [info] Averaged frames from time 0.0 to 4.983 in C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (frames 1 to 300)
+[2022-08-06 17:36:30.454] [info] Deleted 0 unused markers from model subject01.
+[2022-08-06 17:36:30.473] [error] InverseKinematicsSolver: Model has no markers!
+[2022-08-06 17:38:50.311] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:40:08.349] [info] Updated markers in model 3DGaitModel2354
+[2022-08-06 17:40:08.835] [info] Updated markers in model 3DGaitModel2354
+[2022-08-06 17:40:08.950] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:40:08.950] [info] Measurement 'torso'
+[2022-08-06 17:40:08.951] [info] 	pair 0 (V.Sacral, Top.Head): model = 0.701084, experimental = 0.756975
+[2022-08-06 17:40:08.951] [info] 	overall scale factor = 1.07972
+[2022-08-06 17:40:08.951] [info] Measurement 'pelvis'
+[2022-08-06 17:40:08.952] [info] 	pair 0 (R.ASIS, L.ASIS): model = 0.256, experimental = 0.262292
+[2022-08-06 17:40:08.952] [info] 	overall scale factor = 1.02458
+[2022-08-06 17:40:08.952] [info] Measurement 'thigh'
+[2022-08-06 17:40:08.952] [info] 	pair 0 (R.ASIS, R.Knee.Lat): model = 0.508288, experimental = 0.538738
+[2022-08-06 17:40:08.952] [info] 	pair 1 (L.ASIS, L.Knee.Lat): model = 0.508288, experimental = 0.549642
+[2022-08-06 17:40:08.953] [info] 	overall scale factor = 1.07063
+[2022-08-06 17:40:08.953] [info] Measurement 'shank'
+[2022-08-06 17:40:08.953] [info] 	pair 0 (R.Knee.Lat, R.Ankle.Lat): model = 0.401944, experimental = 0.458672
+[2022-08-06 17:40:08.953] [info] 	pair 1 (L.Knee.Lat, L.Ankle.Lat): model = 0.401944, experimental = 0.436842
+[2022-08-06 17:40:08.954] [info] 	overall scale factor = 1.11398
+[2022-08-06 17:40:08.954] [info] Measurement 'foot'
+[2022-08-06 17:40:08.954] [info] 	pair 0 (R.Heel, R.Toe.Tip): model = 0.280401, experimental = 0.291576
+[2022-08-06 17:40:08.954] [info] 	pair 1 (L.Heel, L.Toe.Tip): model = 0.280401, experimental = 0.284416
+[2022-08-06 17:40:08.955] [info] 	overall scale factor = 1.02708
+[2022-08-06 17:40:08.973] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:40:30.779] [info] Step 2: Scaling generic model
+[2022-08-06 17:40:30.842] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:40:30.843] [info] Measurement 'torso'
+[2022-08-06 17:40:30.843] [info] 	pair 0 (V.Sacral, Top.Head): model = 0.701084, experimental = 0.756975
+[2022-08-06 17:40:30.843] [info] 	overall scale factor = 1.07972
+[2022-08-06 17:40:30.843] [info] Measurement 'pelvis'
+[2022-08-06 17:40:30.844] [info] 	pair 0 (R.ASIS, L.ASIS): model = 0.256, experimental = 0.262292
+[2022-08-06 17:40:30.844] [info] 	overall scale factor = 1.02458
+[2022-08-06 17:40:30.844] [info] Measurement 'thigh'
+[2022-08-06 17:40:30.844] [info] 	pair 0 (R.ASIS, R.Knee.Lat): model = 0.508288, experimental = 0.538738
+[2022-08-06 17:40:30.845] [info] 	pair 1 (L.ASIS, L.Knee.Lat): model = 0.508288, experimental = 0.549642
+[2022-08-06 17:40:30.845] [info] 	overall scale factor = 1.07063
+[2022-08-06 17:40:30.845] [info] Measurement 'shank'
+[2022-08-06 17:40:30.845] [info] 	pair 0 (R.Knee.Lat, R.Ankle.Lat): model = 0.401944, experimental = 0.458672
+[2022-08-06 17:40:30.845] [info] 	pair 1 (L.Knee.Lat, L.Ankle.Lat): model = 0.401944, experimental = 0.436842
+[2022-08-06 17:40:30.846] [info] 	overall scale factor = 1.11398
+[2022-08-06 17:40:30.846] [info] Measurement 'foot'
+[2022-08-06 17:40:30.846] [info] 	pair 0 (R.Heel, R.Toe.Tip): model = 0.280401, experimental = 0.291576
+[2022-08-06 17:40:30.846] [info] 	pair 1 (L.Heel, L.Toe.Tip): model = 0.280401, experimental = 0.284416
+[2022-08-06 17:40:30.846] [info] 	overall scale factor = 1.02708
+[2022-08-06 17:40:30.968] [info] Wrote model file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_scaledOnly.osim' from model.
+[2022-08-06 17:40:30.986] [info] Wrote scale file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_scaleSet_applied.xml' for model subject01.
+[2022-08-06 17:40:30.987] [info] Step 3: Placing markers on model
+[2022-08-06 17:40:31.053] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (49 markers, 300 frames)
+[2022-08-06 17:40:31.056] [info] Averaged frames from time 1.0 to 1.01 in C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc (frames 61 to 62)
+[2022-08-06 17:40:31.056] [info] Deleted 0 unused markers from model subject01.
+[2022-08-06 17:40:31.088] [info] Frame at (t = 1.0):	 total squared error = 0.0426665, marker error: RMS = 0.0330758, max = 0.0918374 (Top.Head)
+[2022-08-06 17:40:31.088] [info] Moved markers in model subject01 to match locations in marker file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_static.trc'.
+[2022-08-06 17:40:31.155] [info] Wrote model file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_simbody.osim' from model subject01.
+[2022-08-06 17:42:35.051] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_walk1.trc (41 markers, 151 frames)
+[2022-08-06 17:44:32.955] [info] Reading object from file [gait2354_IK_Tasks.xml] cwd =C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody.
+[2022-08-06 17:44:32.985] [info] Loaded marker file C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\subject01_walk1.trc (41 markers, 151 frames)
+[2022-08-06 17:44:59.767] [cout] [info] 
+               MODEL: subject01
+         coordinates: 23
+              forces: 54
+           actuators: 54
+             muscles: 54
+            analyses: 2
+              probes: 0
+              bodies: 12
+              joints: 12
+         constraints: 0
+             markers: 39
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[2022-08-06 17:44:59.776] [info] Running tool subject01.
+[2022-08-06 17:44:59.835] [info] Frame 24 (t = 0.4):	 total squared error = 0.0136808, marker error: RMS = 0.0210075, max = 0.0787211 (R.Acromium)
+[2022-08-06 17:44:59.847] [info] Frame 25 (t = 0.417):	 total squared error = 0.0136699, marker error: RMS = 0.0209991, max = 0.0783706 (R.Acromium)
+[2022-08-06 17:44:59.853] [info] Frame 26 (t = 0.433):	 total squared error = 0.0138459, marker error: RMS = 0.0211339, max = 0.0779442 (R.Acromium)
+[2022-08-06 17:44:59.859] [info] Frame 27 (t = 0.45):	 total squared error = 0.0140419, marker error: RMS = 0.021283, max = 0.077532 (R.Acromium)
+[2022-08-06 17:44:59.863] [info] Frame 28 (t = 0.467):	 total squared error = 0.0142659, marker error: RMS = 0.021452, max = 0.0781256 (R.Acromium)
+[2022-08-06 17:44:59.872] [info] Frame 29 (t = 0.483):	 total squared error = 0.0142579, marker error: RMS = 0.021446, max = 0.0779932 (R.Acromium)
+[2022-08-06 17:44:59.883] [info] Frame 30 (t = 0.5):	 total squared error = 0.0142135, marker error: RMS = 0.0214126, max = 0.0787493 (R.Acromium)
+[2022-08-06 17:44:59.895] [info] Frame 31 (t = 0.517):	 total squared error = 0.0140262, marker error: RMS = 0.021271, max = 0.0786927 (R.Acromium)
+[2022-08-06 17:44:59.903] [info] Frame 32 (t = 0.533):	 total squared error = 0.0139338, marker error: RMS = 0.0212009, max = 0.0786286 (R.Acromium)
+[2022-08-06 17:44:59.914] [info] Frame 33 (t = 0.55):	 total squared error = 0.0138897, marker error: RMS = 0.0211673, max = 0.0788862 (R.Acromium)
+[2022-08-06 17:44:59.922] [info] Frame 34 (t = 0.567):	 total squared error = 0.0141117, marker error: RMS = 0.0213358, max = 0.0788869 (R.Acromium)
+[2022-08-06 17:44:59.930] [info] Frame 35 (t = 0.583):	 total squared error = 0.0144678, marker error: RMS = 0.0216034, max = 0.0786643 (R.Acromium)
+[2022-08-06 17:44:59.936] [info] Frame 36 (t = 0.6):	 total squared error = 0.014842, marker error: RMS = 0.0218809, max = 0.0790628 (R.Acromium)
+[2022-08-06 17:44:59.945] [info] Frame 37 (t = 0.617):	 total squared error = 0.0156802, marker error: RMS = 0.0224903, max = 0.0802181 (R.Acromium)
+[2022-08-06 17:44:59.955] [info] Frame 38 (t = 0.633):	 total squared error = 0.0166041, marker error: RMS = 0.0231434, max = 0.0815453 (R.Acromium)
+[2022-08-06 17:44:59.963] [info] Frame 39 (t = 0.65):	 total squared error = 0.017137, marker error: RMS = 0.0235119, max = 0.0828138 (R.Acromium)
+[2022-08-06 17:44:59.970] [info] Frame 40 (t = 0.667):	 total squared error = 0.0171174, marker error: RMS = 0.0234984, max = 0.083645 (R.Acromium)
+[2022-08-06 17:44:59.977] [info] Frame 41 (t = 0.683):	 total squared error = 0.0171447, marker error: RMS = 0.0235171, max = 0.0842952 (R.Acromium)
+[2022-08-06 17:44:59.982] [info] Frame 42 (t = 0.7):	 total squared error = 0.0172039, marker error: RMS = 0.0235577, max = 0.0837571 (R.Acromium)
+[2022-08-06 17:44:59.993] [info] Frame 43 (t = 0.717):	 total squared error = 0.0172717, marker error: RMS = 0.0236041, max = 0.0835022 (R.Acromium)
+[2022-08-06 17:45:00.002] [info] Frame 44 (t = 0.733):	 total squared error = 0.0170796, marker error: RMS = 0.0234724, max = 0.0822621 (R.Acromium)
+[2022-08-06 17:45:00.014] [info] Frame 45 (t = 0.75):	 total squared error = 0.0167373, marker error: RMS = 0.023236, max = 0.0829502 (R.Acromium)
+[2022-08-06 17:45:00.023] [info] Frame 46 (t = 0.767):	 total squared error = 0.0158997, marker error: RMS = 0.0226472, max = 0.0812505 (R.Acromium)
+[2022-08-06 17:45:00.029] [info] Frame 47 (t = 0.783):	 total squared error = 0.0143304, marker error: RMS = 0.0215005, max = 0.0801315 (R.Acromium)
+[2022-08-06 17:45:00.039] [info] Frame 48 (t = 0.8):	 total squared error = 0.0132227, marker error: RMS = 0.0206528, max = 0.079125 (R.Acromium)
+[2022-08-06 17:45:00.050] [info] Frame 49 (t = 0.817):	 total squared error = 0.0124383, marker error: RMS = 0.0200309, max = 0.0785134 (R.Acromium)
+[2022-08-06 17:45:00.061] [info] Frame 50 (t = 0.833):	 total squared error = 0.0121611, marker error: RMS = 0.0198064, max = 0.0776837 (R.Acromium)
+[2022-08-06 17:45:00.072] [info] Frame 51 (t = 0.85):	 total squared error = 0.0126384, marker error: RMS = 0.0201913, max = 0.0776074 (R.Acromium)
+[2022-08-06 17:45:00.081] [info] Frame 52 (t = 0.867):	 total squared error = 0.013367, marker error: RMS = 0.0207652, max = 0.0772401 (R.Acromium)
+[2022-08-06 17:45:00.090] [info] Frame 53 (t = 0.883):	 total squared error = 0.0137033, marker error: RMS = 0.0210248, max = 0.0772789 (R.Acromium)
+[2022-08-06 17:45:00.099] [info] Frame 54 (t = 0.9):	 total squared error = 0.013252, marker error: RMS = 0.0206757, max = 0.0766736 (R.Acromium)
+[2022-08-06 17:45:00.104] [info] Frame 55 (t = 0.917):	 total squared error = 0.0130761, marker error: RMS = 0.0205380, max = 0.0772889 (R.Acromium)
+[2022-08-06 17:45:00.110] [info] Frame 56 (t = 0.933):	 total squared error = 0.0129419, marker error: RMS = 0.0204323, max = 0.0761977 (R.Acromium)
+[2022-08-06 17:45:00.119] [info] Frame 57 (t = 0.95):	 total squared error = 0.0130285, marker error: RMS = 0.0205006, max = 0.0752621 (R.Acromium)
+[2022-08-06 17:45:00.125] [info] Frame 58 (t = 0.967):	 total squared error = 0.0132704, marker error: RMS = 0.0206900, max = 0.0750606 (R.Acromium)
+[2022-08-06 17:45:00.133] [info] Frame 59 (t = 0.983):	 total squared error = 0.0135741, marker error: RMS = 0.0209254, max = 0.0758702 (R.Acromium)
+[2022-08-06 17:45:00.138] [info] Frame 60 (t = 1.0):	 total squared error = 0.0134754, marker error: RMS = 0.0208492, max = 0.074564 (R.Acromium)
+[2022-08-06 17:45:00.144] [info] Frame 61 (t = 1.017):	 total squared error = 0.0136091, marker error: RMS = 0.0209524, max = 0.0743153 (R.Acromium)
+[2022-08-06 17:45:00.151] [info] Frame 62 (t = 1.033):	 total squared error = 0.0138945, marker error: RMS = 0.021171, max = 0.0740038 (R.Acromium)
+[2022-08-06 17:45:00.161] [info] Frame 63 (t = 1.05):	 total squared error = 0.0138911, marker error: RMS = 0.0211683, max = 0.0736381 (R.Acromium)
+[2022-08-06 17:45:00.172] [info] Frame 64 (t = 1.067):	 total squared error = 0.0140549, marker error: RMS = 0.0212928, max = 0.0725562 (R.Acromium)
+[2022-08-06 17:45:00.176] [info] Frame 65 (t = 1.083):	 total squared error = 0.0145192, marker error: RMS = 0.0216417, max = 0.0722407 (R.Acromium)
+[2022-08-06 17:45:00.186] [info] Frame 66 (t = 1.1):	 total squared error = 0.0143457, marker error: RMS = 0.021512, max = 0.0718669 (R.Acromium)
+[2022-08-06 17:45:00.193] [info] Frame 67 (t = 1.117):	 total squared error = 0.0141622, marker error: RMS = 0.0213739, max = 0.0718719 (R.Acromium)
+[2022-08-06 17:45:00.201] [info] Frame 68 (t = 1.133):	 total squared error = 0.0136842, marker error: RMS = 0.0210101, max = 0.0715855 (R.Acromium)
+[2022-08-06 17:45:00.212] [info] Frame 69 (t = 1.15):	 total squared error = 0.0130332, marker error: RMS = 0.0205043, max = 0.0704922 (R.Acromium)
+[2022-08-06 17:45:00.222] [info] Frame 70 (t = 1.167):	 total squared error = 0.0129103, marker error: RMS = 0.0204074, max = 0.0712419 (R.Acromium)
+[2022-08-06 17:45:00.234] [info] Frame 71 (t = 1.183):	 total squared error = 0.0128807, marker error: RMS = 0.0203839, max = 0.0707814 (R.Acromium)
+[2022-08-06 17:45:00.244] [info] Frame 72 (t = 1.2):	 total squared error = 0.0129995, marker error: RMS = 0.0204777, max = 0.0712998 (R.Acromium)
+[2022-08-06 17:45:00.253] [info] Frame 73 (t = 1.217):	 total squared error = 0.0131695, marker error: RMS = 0.0206112, max = 0.071646 (R.Acromium)
+[2022-08-06 17:45:00.260] [info] Frame 74 (t = 1.233):	 total squared error = 0.0134446, marker error: RMS = 0.0208254, max = 0.0731344 (R.Acromium)
+[2022-08-06 17:45:00.269] [info] Frame 75 (t = 1.25):	 total squared error = 0.0137294, marker error: RMS = 0.0210448, max = 0.073579 (R.Acromium)
+[2022-08-06 17:45:00.275] [info] Frame 76 (t = 1.267):	 total squared error = 0.0143681, marker error: RMS = 0.0215288, max = 0.0748795 (R.Acromium)
+[2022-08-06 17:45:00.283] [info] Frame 77 (t = 1.283):	 total squared error = 0.0148773, marker error: RMS = 0.0219070, max = 0.0763025 (R.Acromium)
+[2022-08-06 17:45:00.291] [info] Frame 78 (t = 1.3):	 total squared error = 0.0154864, marker error: RMS = 0.0223509, max = 0.077554 (R.Acromium)
+[2022-08-06 17:45:00.302] [info] Frame 79 (t = 1.317):	 total squared error = 0.0162205, marker error: RMS = 0.0228745, max = 0.0794583 (R.Acromium)
+[2022-08-06 17:45:00.314] [info] Frame 80 (t = 1.333):	 total squared error = 0.0164476, marker error: RMS = 0.0230340, max = 0.0797761 (R.Acromium)
+[2022-08-06 17:45:00.322] [info] Frame 81 (t = 1.35):	 total squared error = 0.0165783, marker error: RMS = 0.0231254, max = 0.0811070 (R.Acromium)
+[2022-08-06 17:45:00.328] [info] Frame 82 (t = 1.367):	 total squared error = 0.0162121, marker error: RMS = 0.0228685, max = 0.0810810 (R.Acromium)
+[2022-08-06 17:45:00.335] [info] Frame 83 (t = 1.383):	 total squared error = 0.0153378, marker error: RMS = 0.0222434, max = 0.0801179 (R.Acromium)
+[2022-08-06 17:45:00.342] [info] Frame 84 (t = 1.4):	 total squared error = 0.0142020, marker error: RMS = 0.0214040, max = 0.0794091 (R.Acromium)
+[2022-08-06 17:45:00.352] [info] Frame 85 (t = 1.417):	 total squared error = 0.0132425, marker error: RMS = 0.0206683, max = 0.0789975 (R.Acromium)
+[2022-08-06 17:45:00.364] [info] Frame 86 (t = 1.433):	 total squared error = 0.0129355, marker error: RMS = 0.0204273, max = 0.0779918 (R.Acromium)
+[2022-08-06 17:45:00.388] [info] Frame 87 (t = 1.45):	 total squared error = 0.0129021, marker error: RMS = 0.0204009, max = 0.0775352 (R.Acromium)
+[2022-08-06 17:45:00.401] [info] Frame 88 (t = 1.467):	 total squared error = 0.0132854, marker error: RMS = 0.0207017, max = 0.0780288 (R.Acromium)
+[2022-08-06 17:45:00.418] [info] Frame 89 (t = 1.483):	 total squared error = 0.0137571, marker error: RMS = 0.0210660, max = 0.0781016 (R.Acromium)
+[2022-08-06 17:45:00.443] [info] Frame 90 (t = 1.5):	 total squared error = 0.0138298, marker error: RMS = 0.0211216, max = 0.0780743 (R.Acromium)
+[2022-08-06 17:45:00.460] [info] Frame 91 (t = 1.517):	 total squared error = 0.0138549, marker error: RMS = 0.0211408, max = 0.0781116 (R.Acromium)
+[2022-08-06 17:45:00.517] [info] Frame 92 (t = 1.533):	 total squared error = 0.0138072, marker error: RMS = 0.0211043, max = 0.0778759 (R.Acromium)
+[2022-08-06 17:45:00.570] [info] Frame 93 (t = 1.55):	 total squared error = 0.0136446, marker error: RMS = 0.0209798, max = 0.0780415 (R.Acromium)
+[2022-08-06 17:45:00.654] [info] Frame 94 (t = 1.567):	 total squared error = 0.0136616, marker error: RMS = 0.0209928, max = 0.078691 (R.Acromium)
+[2022-08-06 17:45:00.729] [info] Frame 95 (t = 1.583):	 total squared error = 0.0136142, marker error: RMS = 0.0209563, max = 0.0791040 (R.Acromium)
+[2022-08-06 17:45:00.738] [info] Frame 96 (t = 1.6):	 total squared error = 0.0135692, marker error: RMS = 0.0209216, max = 0.0792276 (R.Acromium)
+[2022-08-06 17:45:00.919] [info] InverseKinematicsTool completed 73 frames in 1 second(s).
+[2022-08-06 17:46:51.840] [cout] [info] 
+               MODEL: subject01
+         coordinates: 23
+              forces: 54
+           actuators: 54
+             muscles: 54
+            analyses: 2
+              probes: 0
+              bodies: 12
+              joints: 12
+         constraints: 0
+             markers: 39
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[2022-08-06 17:46:51.844] [info] Running tool subject01...
+[2022-08-06 17:46:51.845] [info] No external loads will be applied (external loads file not specified).
+[2022-08-06 17:46:51.913] [info] InverseDynamicsTool: 73 time frames in 29 millisecond(s).
+[2022-08-07 13:12:04.311] [info] Updating Model file from 20303 to latest format...
+[2022-08-07 13:12:04.355] [info] Loaded model 3DGaitModel2354 from file C:/Users/Mac Prible/Box/Research/FMC_projects/OpenSimModels/Models/Gait2354_Simbody/gait2354_simbody.osim
+[2022-08-07 13:12:04.358] [warning] Couldn't find file 'femur.vtp'.
+[2022-08-07 13:12:04.359] [warning] Couldn't find file 'tibia.vtp'.
+[2022-08-07 13:12:04.362] [warning] Couldn't find file 'l_femur.vtp'.
+[2022-08-07 13:12:04.362] [warning] Couldn't find file 'l_tibia.vtp'.
+[2022-08-07 13:12:04.367] [info] ControllerSet 'Controllers' was renamed and is being reset to 'controllerset'.
+[2022-08-07 13:12:04.369] [info] ComponentSet 'MiscComponents' was renamed and is being reset to 'componentset'.
+[2022-08-07 13:12:17.696] [info] Storage: read data file = C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\Models\Gait2354_Simbody\ik_results_day1.mot (nr=73 nc=24)
