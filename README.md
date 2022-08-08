@@ -23,6 +23,15 @@ now the question...How to get this .trc file (which could be straighforwardly cr
 
 --_
 
+The more that I look at this, the more I think that it does not matter what intermediate things are going on with Pose2Sim, the important thing is just taking these files and understanding what they do:
+
+joint_traj.trc
+static_cal.trc
+model.osim
+scale.xml
+ik.xml
+
+Armed with these, it should be possible to run the needed computations from the command line
 
 ## OpenSim Model
 
@@ -57,6 +66,8 @@ So there are a few files that are necessary in order to perform this process:
 3. Inverse Kinematics configuration file (.xml)
 4. Motion trajectories (.trc)
 
+There are also `.vtp` files which are meshes used by OpenSim, it seems primarily for their own animation. These must also be bundled into the filesystem somewhere
+
 # Calling OpenSim from Python
 
 It looks like Opensim is not directly installable via pip and the methods to install the python wrappers to it may not integrate well with freemocap because of dependency clashes. To simplify the situation, the primary opensim-cmd can be called from the command line using `& "C:\OpenSim 4.4\bin\opensim-cmd.exe"`. Append the `run-tool` argument with an `.xml` setup file to evoke the desired computations (model scaling and inverse kinematics).
@@ -64,3 +75,5 @@ It looks like Opensim is not directly installable via pip and the methods to ins
 This workflow should enable tranformation of a .trc file to...wait...
 
 What does the inverse kinematic file output? It's a .mot file, correct? 
+
+And a general note to myself: just get this stuff working in a very simple way successfully from the command line, and then you can start worrying about how to get bash or something else to store the command. or just send it from python. 

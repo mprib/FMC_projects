@@ -4,5 +4,19 @@
             "path": "."
         }
     ],
-    "settings": {"python.defaultInterpreterPath": "C:\\Users\\Mac Prible\\anaconda3\\envs\\freemocap-env\\python.exe"}
+    "settings": {
+        "python.defaultInterpreterPath": "C:\\Users\\Mac Prible\\anaconda3\\envs\\freemocap-env\\python.exe"
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+        
+            {
+                "type": "bashdb",
+                "request": "launch",
+                "name": "Bash-Debug (simplest configuration)",
+                "program": "${file}"
+            }
+        ]
+    }
 }
