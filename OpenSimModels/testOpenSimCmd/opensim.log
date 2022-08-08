@@ -1,0 +1,74 @@
+[2022-08-08 15:08:56.250] [info] Preparing to run ScaleTool.
+[2022-08-08 15:08:56.252] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:08:56.253] [info] Step 1: Loading generic model
+[2022-08-08 15:08:56.331] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:08:57.934] [info] Step 2: Scaling generic model
+[2022-08-08 15:08:58.125] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:08:58.158] [info] Measurement 'torso'
+[2022-08-08 15:08:58.164] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:08:58.165] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:08:58.174] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:08:58.183] [info] Measurement 'arm'
+[2022-08-08 15:08:58.186] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:08:58.187] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:08:58.190] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:08:58.191] [info] Measurement 'forearm'
+[2022-08-08 15:08:58.192] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:08:58.192] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:08:58.193] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:08:58.195] [info] Measurement 'thigh'
+[2022-08-08 15:08:58.201] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:08:58.202] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:08:58.202] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:08:58.203] [info] Measurement 'shank'
+[2022-08-08 15:08:58.204] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:08:58.205] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:08:58.205] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:08:58.206] [info] Measurement 'foot'
+[2022-08-08 15:08:58.206] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:08:58.207] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:08:58.207] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:08:58.208] [info] Measurement 'head'
+[2022-08-08 15:08:58.208] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:08:58.209] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:08:58.209] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:08:58.210] [info] Measurement 'pelvis'
+[2022-08-08 15:08:58.210] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:08:58.210] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:10:48.361] [info] Preparing to run ScaleTool.
+[2022-08-08 15:10:48.392] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:10:48.394] [info] Step 1: Loading generic model
+[2022-08-08 15:10:48.483] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:10:49.904] [info] Step 2: Scaling generic model
+[2022-08-08 15:10:49.971] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:10:49.972] [info] Measurement 'torso'
+[2022-08-08 15:10:49.973] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:10:49.974] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:10:49.974] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:10:49.975] [info] Measurement 'arm'
+[2022-08-08 15:10:49.975] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:10:49.975] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:10:49.976] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:10:49.977] [info] Measurement 'forearm'
+[2022-08-08 15:10:49.977] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:10:49.977] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:10:49.978] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:10:49.978] [info] Measurement 'thigh'
+[2022-08-08 15:10:49.979] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:10:49.979] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:10:49.979] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:10:49.980] [info] Measurement 'shank'
+[2022-08-08 15:10:49.980] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:10:49.981] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:10:49.984] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:10:49.984] [info] Measurement 'foot'
+[2022-08-08 15:10:49.985] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:10:49.985] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:10:49.986] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:10:49.986] [info] Measurement 'head'
+[2022-08-08 15:10:49.987] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:10:49.987] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:10:49.988] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:10:49.988] [info] Measurement 'pelvis'
+[2022-08-08 15:10:49.989] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:10:49.989] [info] 	overall scale factor = 0.976648

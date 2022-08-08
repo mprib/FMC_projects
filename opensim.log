@@ -395,3 +395,16 @@
 [2022-08-08 14:50:13.769] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
 [2022-08-08 14:50:15.222] [info] Step 2: Scaling generic model
 [2022-08-08 14:50:15.259] [error] ModelScaler.processModel: ERROR- marker_file not set but measurements are used
+[2022-08-08 15:06:42.542] [error] SimTK Exception thrown at Xml.cpp:108:
+  Error detected by Simbody method Xml::readFromFile(): Failed to load the Xml file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd' with error 'Failed to open file (line=0, col=0)'.
+  (Required condition 'loadOK' was not met.)
+
+[2022-08-08 15:06:42.568] [error] A problem occurred when trying to load file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd'.
+[2022-08-08 15:07:37.905] [info] Preparing to run ScaleTool.
+[2022-08-08 15:07:37.931] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:07:37.932] [info] Step 1: Loading generic model
+[2022-08-08 15:07:37.934] [error] Object: Cannot open file c:\Users\Mac Prible\Box\Research\FMC_projects\Model_Pose2Sim_Body25b.osim. It may not exist or you do not have permission to read it.
+	Thrown at Object.cpp:105 in Object().
+[2022-08-08 15:07:37.938] [error] Unable to load the generic model or marker set file.
+[2022-08-08 15:07:37.940] [error] ScaleTool: No model specified.
+[2022-08-08 15:07:37.941] [error] ScaleTool: No model specified.
