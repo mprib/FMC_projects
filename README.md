@@ -59,34 +59,8 @@ So there are a few files that are necessary in order to perform this process:
 
 # Calling OpenSim from Python
 
-It looks like Opensim is not directly installable via pip. It needed to be installed directly from the Open Sim folder on the C drive from [here](https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scripting+in+Python#ScriptinginPython-SpecialinstructionsforPython3.8+onWindows):
+It looks like Opensim is not directly installable via pip and the methods to install the python wrappers to it may not integrate well with freemocap because of dependency clashes. To simplify the situation, the primary opensim-cmd can be called from the command line using `& "C:\OpenSim 4.4\bin\opensim-cmd.exe"`. Append the `run-tool` argument with an `.xml` setup file to evoke the desired computations (model scaling and inverse kinematics).
 
-> Change directory to the sdk/Python folder under the install folder then invoke the following 2 commands in the Command Prompt or PowerShell:
+This workflow should enable tranformation of a .trc file to...wait...
 
-```
-C:/> python setup_win_python38.py
-C:/> python -m pip install .
-```
-
-Ok. This above did not actually appear to solve the problem because that is for python 3.7. 
-
-Trying something else.
-
----
-
-```
-cd C:\OpenSim 4.0\sdk\Python
-python setup.py install
-```
-
-
-from Command line: `set PATH=C:\OpenSim 4.0\bin;%PATH%`
-
-Continuting to have many issues with getting import opensim to run. Why in the fuck is this not in a simple distribution?
-
-Ok. Going to work to make all of this simpler by setting up a distinct anaconda environment for running OpenSim. If I can get it working there, then I won't have to worry about all that much.
-
-
-**How to feed python the specific files inputs that you need in order to get the output file you need?**
-
-Chuck *all of this*. It looks like a simpler approach is to just run code from the command line. Put together some kind of a shell script and adjust the xml files as needed.
+What does the inverse kinematic file output? It's a .mot file, correct? 
