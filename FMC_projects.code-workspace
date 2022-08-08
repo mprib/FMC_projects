@@ -10,12 +10,7 @@
     "launch": {
         "version": "0.2.0",
         "configurations": [
-            {
-                "name": "PowerShell Launch Current File",
-                "type": "PowerShell",
-                "request": "launch",
-                "script": "${file}",
-                "cwd": "${file}"
+
         {
             "name": "PowerShell Attach Interactive Session Runspace",
             "type": "PowerShell",

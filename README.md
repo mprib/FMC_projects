@@ -77,3 +77,8 @@ This workflow should enable tranformation of a .trc file to...wait...
 What does the inverse kinematic file output? It's a .mot file, correct? 
 
 And a general note to myself: just get this stuff working in a very simple way successfully from the command line, and then you can start worrying about how to get bash or something else to store the command. or just send it from python. 
+
+Note that the scaled model output name needs to be specified in the
+
+output_model_file within ModelScaler, not within MarkerPlacer, which is where the default xml file seemed to have an output file name included.
+

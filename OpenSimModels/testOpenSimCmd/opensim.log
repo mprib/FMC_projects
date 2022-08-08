@@ -72,3 +72,380 @@
 [2022-08-08 15:10:49.988] [info] Measurement 'pelvis'
 [2022-08-08 15:10:49.989] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
 [2022-08-08 15:10:49.989] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:17:17.499] [info] Preparing to run ScaleTool.
+[2022-08-08 15:17:17.524] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:17:17.524] [info] Step 1: Loading generic model
+[2022-08-08 15:17:17.597] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:17:18.947] [info] Step 2: Scaling generic model
+[2022-08-08 15:17:19.004] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:17:19.028] [info] Measurement 'torso'
+[2022-08-08 15:17:19.029] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:17:19.030] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:17:19.031] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:17:19.031] [info] Measurement 'arm'
+[2022-08-08 15:17:19.032] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:17:19.032] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:17:19.033] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:17:19.033] [info] Measurement 'forearm'
+[2022-08-08 15:17:19.033] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:17:19.034] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:17:19.034] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:17:19.035] [info] Measurement 'thigh'
+[2022-08-08 15:17:19.035] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:17:19.036] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:17:19.036] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:17:19.036] [info] Measurement 'shank'
+[2022-08-08 15:17:19.037] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:17:19.037] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:17:19.038] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:17:19.038] [info] Measurement 'foot'
+[2022-08-08 15:17:19.039] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:17:19.039] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:17:19.039] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:17:19.040] [info] Measurement 'head'
+[2022-08-08 15:17:19.040] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:17:19.041] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:17:19.041] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:17:19.041] [info] Measurement 'pelvis'
+[2022-08-08 15:17:19.042] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:17:19.042] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:22:03.310] [cout] [info] Run a tool (e.g., Inverse Kinematics) from an XML setup file.
+
+Usage:
+  opensim-cmd [options]... run-tool <setup-xml-file>
+  opensim-cmd run-tool -h | --help
+
+Options:
+  -L <path>, --library <path>  Load a plugin.
+  -o <level>, --log <level>  Logging level.
+
+Description:
+  The Tool to run is detected from the setup file you provide. Supported tools
+  include the following:
+  
+            Scale
+            Inverse Kinematics           (IK)
+            Inverse Dynamics             (ID)
+            Residual Reduction Algorithm (RRA)
+            Computed Muscle Control      (CMC)
+            Forward                      
+            Analyze
+            MocoStudy
+
+  This command will also recognize tools from plugins.
+
+  Use `opensim-cmd print-xml` to generate a template <setup-xml-file>.
+
+Examples:
+  opensim-cmd run-tool CMC_setup.xml
+  opensim-cmd -L C:\Plugins\osimMyCustomForce.dll run-tool CMC_setup.xml
+  opensim-cmd --library ../plugins/libosimMyPlugin.so run-tool Forward_setup.xml
+  opensim-cmd --library=libosimMyCustomForce.dylib run-tool CMC_setup.xml
+
+[2022-08-08 15:24:14.099] [info] Preparing to run ScaleTool.
+[2022-08-08 15:24:14.124] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:24:14.128] [info] Step 1: Loading generic model
+[2022-08-08 15:24:14.250] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:24:15.937] [info] Step 2: Scaling generic model
+[2022-08-08 15:24:16.017] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:24:16.041] [info] Measurement 'torso'
+[2022-08-08 15:24:16.043] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:24:16.045] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:24:16.051] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:24:16.051] [info] Measurement 'arm'
+[2022-08-08 15:24:16.052] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:24:16.052] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:24:16.052] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:24:16.053] [info] Measurement 'forearm'
+[2022-08-08 15:24:16.053] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:24:16.053] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:24:16.054] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:24:16.054] [info] Measurement 'thigh'
+[2022-08-08 15:24:16.055] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:24:16.055] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:24:16.057] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:24:16.058] [info] Measurement 'shank'
+[2022-08-08 15:24:16.058] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:24:16.059] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:24:16.065] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:24:16.066] [info] Measurement 'foot'
+[2022-08-08 15:24:16.066] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:24:16.067] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:24:16.067] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:24:16.067] [info] Measurement 'head'
+[2022-08-08 15:24:16.068] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:24:16.068] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:24:16.069] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:24:16.069] [info] Measurement 'pelvis'
+[2022-08-08 15:24:16.073] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:24:16.073] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:25:24.698] [info] Preparing to run ScaleTool.
+[2022-08-08 15:25:24.724] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:25:24.726] [info] Step 1: Loading generic model
+[2022-08-08 15:25:24.808] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:25:26.310] [info] Step 2: Scaling generic model
+[2022-08-08 15:25:26.375] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:25:26.376] [info] Measurement 'torso'
+[2022-08-08 15:25:26.376] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:25:26.377] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:25:26.377] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:25:26.378] [info] Measurement 'arm'
+[2022-08-08 15:25:26.378] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:25:26.379] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:25:26.379] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:25:26.379] [info] Measurement 'forearm'
+[2022-08-08 15:25:26.380] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:25:26.380] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:25:26.381] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:25:26.381] [info] Measurement 'thigh'
+[2022-08-08 15:25:26.381] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:25:26.382] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:25:26.382] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:25:26.383] [info] Measurement 'shank'
+[2022-08-08 15:25:26.383] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:25:26.383] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:25:26.384] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:25:26.384] [info] Measurement 'foot'
+[2022-08-08 15:25:26.384] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:25:26.385] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:25:26.385] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:25:26.386] [info] Measurement 'head'
+[2022-08-08 15:25:26.386] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:25:26.387] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:25:26.388] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:25:26.388] [info] Measurement 'pelvis'
+[2022-08-08 15:25:26.389] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:25:26.389] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:26:21.061] [info] Preparing to run ScaleTool.
+[2022-08-08 15:26:21.115] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:26:21.117] [info] Step 1: Loading generic model
+[2022-08-08 15:26:21.233] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:26:22.879] [info] Step 2: Scaling generic model
+[2022-08-08 15:26:22.960] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:26:22.960] [info] Measurement 'torso'
+[2022-08-08 15:26:22.961] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:26:22.961] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:26:22.962] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:26:22.962] [info] Measurement 'arm'
+[2022-08-08 15:26:22.963] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:26:22.963] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:26:22.964] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:26:22.964] [info] Measurement 'forearm'
+[2022-08-08 15:26:22.965] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:26:22.965] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:26:22.966] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:26:22.966] [info] Measurement 'thigh'
+[2022-08-08 15:26:22.966] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:26:22.967] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:26:22.967] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:26:22.968] [info] Measurement 'shank'
+[2022-08-08 15:26:22.968] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:26:22.969] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:26:22.970] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:26:22.970] [info] Measurement 'foot'
+[2022-08-08 15:26:22.971] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:26:22.972] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:26:22.972] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:26:22.973] [info] Measurement 'head'
+[2022-08-08 15:26:22.973] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:26:22.974] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:26:22.974] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:26:22.975] [info] Measurement 'pelvis'
+[2022-08-08 15:26:22.975] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:26:22.976] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:26:24.224] [info] Wrote model file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim' from model.
+[2022-08-08 15:27:06.346] [info] Preparing to run ScaleTool.
+[2022-08-08 15:27:06.372] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:27:06.373] [info] Step 1: Loading generic model
+[2022-08-08 15:27:06.447] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:27:07.325] [info] Step 2: Scaling generic model
+[2022-08-08 15:27:07.390] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:27:07.390] [info] Measurement 'torso'
+[2022-08-08 15:27:07.391] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:27:07.391] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:27:07.392] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:27:07.392] [info] Measurement 'arm'
+[2022-08-08 15:27:07.393] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:27:07.393] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:27:07.393] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:27:07.394] [info] Measurement 'forearm'
+[2022-08-08 15:27:07.394] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:27:07.395] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:27:07.395] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:27:07.395] [info] Measurement 'thigh'
+[2022-08-08 15:27:07.396] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:27:07.399] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:27:07.400] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:27:07.400] [info] Measurement 'shank'
+[2022-08-08 15:27:07.401] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:27:07.401] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:27:07.402] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:27:07.402] [info] Measurement 'foot'
+[2022-08-08 15:27:07.402] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:27:07.403] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:27:07.403] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:27:07.404] [info] Measurement 'head'
+[2022-08-08 15:27:07.404] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:27:07.405] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:27:07.405] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:27:07.406] [info] Measurement 'pelvis'
+[2022-08-08 15:27:07.406] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:27:07.407] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:27:08.686] [info] Wrote model file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b_scaled.osim' from model.
+[2022-08-08 15:27:47.229] [info] Preparing to run ScaleTool.
+[2022-08-08 15:27:47.278] [info] Processing subject Pose2Sim_scaled...
+[2022-08-08 15:27:47.308] [info] Step 1: Loading generic model
+[2022-08-08 15:27:47.456] [info] Loaded model Pose2Sim_OpenPose from file c:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b.osim
+[2022-08-08 15:27:48.997] [info] Step 2: Scaling generic model
+[2022-08-08 15:27:49.066] [info] Loaded marker file Standing_for_Scaling.trc (21 markers, 25 frames)
+[2022-08-08 15:27:49.093] [info] Measurement 'torso'
+[2022-08-08 15:27:49.094] [info] 	pair 0 (LShoulder, LHip): model = 0.553062, experimental = 0.529204
+[2022-08-08 15:27:49.096] [info] 	pair 1 (RShoulder, RHip): model = 0.553062, experimental = 0.507691
+[2022-08-08 15:27:49.097] [info] 	overall scale factor = 0.937413
+[2022-08-08 15:27:49.098] [info] Measurement 'arm'
+[2022-08-08 15:27:49.098] [info] 	pair 0 (LShoulder, LElbow): model = 0.272304, experimental = 0.281982
+[2022-08-08 15:27:49.100] [info] 	pair 1 (RShoulder, RElbow): model = 0.272304, experimental = 0.256381
+[2022-08-08 15:27:49.101] [info] 	overall scale factor = 0.988532
+[2022-08-08 15:27:49.102] [info] Measurement 'forearm'
+[2022-08-08 15:27:49.103] [info] 	pair 0 (LElbow, LWrist): model = 0.239393, experimental = 0.27253
+[2022-08-08 15:27:49.104] [info] 	pair 1 (RElbow, RWrist): model = 0.239393, experimental = 0.290497
+[2022-08-08 15:27:49.104] [info] 	overall scale factor = 1.17595
+[2022-08-08 15:27:49.104] [info] Measurement 'thigh'
+[2022-08-08 15:27:49.105] [info] 	pair 0 (LHip, LKnee): model = 0.371469, experimental = 0.418556
+[2022-08-08 15:27:49.105] [info] 	pair 1 (RHip, RKnee): model = 0.371469, experimental = 0.442677
+[2022-08-08 15:27:49.106] [info] 	overall scale factor = 1.15923
+[2022-08-08 15:27:49.109] [info] Measurement 'shank'
+[2022-08-08 15:27:49.110] [info] 	pair 0 (LKnee, LAnkle): model = 0.388261, experimental = 0.380058
+[2022-08-08 15:27:49.110] [info] 	pair 1 (RKnee, RAnkle): model = 0.388261, experimental = 0.371851
+[2022-08-08 15:27:49.111] [info] 	overall scale factor = 0.968302
+[2022-08-08 15:27:49.112] [info] Measurement 'foot'
+[2022-08-08 15:27:49.112] [info] 	pair 0 (LHeel, LBigToe): model = 0.230688, experimental = 0.195896
+[2022-08-08 15:27:49.113] [info] 	pair 1 (RHeel, RBigToe): model = 0.230688, experimental = 0.164341
+[2022-08-08 15:27:49.113] [info] 	overall scale factor = 0.780786
+[2022-08-08 15:27:49.114] [info] Measurement 'head'
+[2022-08-08 15:27:49.114] [info] 	pair 0 (Head, Nose): model = 0.131925, experimental = 0.153019
+[2022-08-08 15:27:49.115] [info] 	pair 1 (Head, Neck): model = 0.230765, experimental = 0.256895
+[2022-08-08 15:27:49.117] [info] 	overall scale factor = 1.13656
+[2022-08-08 15:27:49.120] [info] Measurement 'pelvis'
+[2022-08-08 15:27:49.122] [info] 	pair 0 (RHip, LHip): model = 0.210813, experimental = 0.205890
+[2022-08-08 15:27:49.123] [info] 	overall scale factor = 0.976648
+[2022-08-08 15:27:50.403] [info] Wrote model file 'C:\Users\Mac Prible\Box\Research\FMC_projects\OpenSimModels\testOpenSimCmd\Model_Pose2Sim_Body25b_scaled.osim' from model.
+[2022-08-08 15:56:54.776] [info] Preparing to run InverseKinematicsTool.
+[2022-08-08 15:56:54.876] [info] Loaded model Pose2Sim_scaled from file Model_Pose2Sim_Body25b_scaled.osim
+[2022-08-08 15:56:56.446] [cout] [info] 
+               MODEL: Pose2Sim_scaled
+         coordinates: 62
+              forces: 0
+           actuators: 0
+             muscles: 0
+            analyses: 0
+              probes: 0
+              bodies: 30
+              joints: 30
+         constraints: 20
+             markers: 21
+         controllers: 0
+  contact geometries: 0
+misc modelcomponents: 0
+[2022-08-08 15:56:56.473] [info] Running tool .
+[2022-08-08 15:56:56.806] [info] Frame 0 (t = 2.51667):	 total squared error = 0.0194535, marker error: RMS = 0.0304361, max = 0.0816284 (Nose)
+[2022-08-08 15:56:56.929] [info] Frame 1 (t = 2.53333):	 total squared error = 0.017294, marker error: RMS = 0.0286971, max = 0.0817456 (Nose)
+[2022-08-08 15:56:57.047] [info] Frame 2 (t = 2.55):	 total squared error = 0.0169201, marker error: RMS = 0.0283852, max = 0.0818482 (Nose)
+[2022-08-08 15:56:57.202] [info] Frame 3 (t = 2.56667):	 total squared error = 0.0172248, marker error: RMS = 0.0286396, max = 0.0810296 (Nose)
+[2022-08-08 15:56:57.321] [info] Frame 4 (t = 2.58333):	 total squared error = 0.0174794, marker error: RMS = 0.0288505, max = 0.0798301 (Nose)
+[2022-08-08 15:56:57.426] [info] Frame 5 (t = 2.6):	 total squared error = 0.0174573, marker error: RMS = 0.0288322, max = 0.0789845 (Nose)
+[2022-08-08 15:56:57.554] [info] Frame 6 (t = 2.61667):	 total squared error = 0.017288, marker error: RMS = 0.0286921, max = 0.0790199 (Nose)
+[2022-08-08 15:56:57.643] [info] Frame 7 (t = 2.63333):	 total squared error = 0.0173695, marker error: RMS = 0.0287596, max = 0.0809336 (Nose)
+[2022-08-08 15:56:57.851] [info] Frame 8 (t = 2.65):	 total squared error = 0.0178728, marker error: RMS = 0.0291734, max = 0.0822017 (Nose)
+[2022-08-08 15:56:57.979] [info] Frame 9 (t = 2.66667):	 total squared error = 0.0195723, marker error: RMS = 0.0305289, max = 0.0849841 (Nose)
+[2022-08-08 15:56:58.079] [info] Frame 10 (t = 2.68333):	 total squared error = 0.0219267, marker error: RMS = 0.0323129, max = 0.0873861 (Nose)
+[2022-08-08 15:56:58.182] [info] Frame 11 (t = 2.7):	 total squared error = 0.0234703, marker error: RMS = 0.033431, max = 0.0876211 (Nose)
+[2022-08-08 15:56:58.292] [info] Frame 12 (t = 2.71667):	 total squared error = 0.0231979, marker error: RMS = 0.0332364, max = 0.0846013 (Nose)
+[2022-08-08 15:56:58.379] [info] Frame 13 (t = 2.73333):	 total squared error = 0.0216143, marker error: RMS = 0.0320820, max = 0.0791902 (Nose)
+[2022-08-08 15:56:58.471] [info] Frame 14 (t = 2.75):	 total squared error = 0.0197851, marker error: RMS = 0.0306944, max = 0.0735568 (Nose)
+[2022-08-08 15:56:58.584] [info] Frame 15 (t = 2.76667):	 total squared error = 0.0182975, marker error: RMS = 0.029518, max = 0.0685599 (Nose)
+[2022-08-08 15:56:58.702] [info] Frame 16 (t = 2.78333):	 total squared error = 0.0173789, marker error: RMS = 0.0287675, max = 0.0656256 (Nose)
+[2022-08-08 15:56:58.819] [info] Frame 17 (t = 2.8):	 total squared error = 0.0168357, marker error: RMS = 0.0283143, max = 0.0629687 (Nose)
+[2022-08-08 15:56:58.907] [info] Frame 18 (t = 2.81667):	 total squared error = 0.0166738, marker error: RMS = 0.0281778, max = 0.0615579 (Nose)
+[2022-08-08 15:56:59.004] [info] Frame 19 (t = 2.83333):	 total squared error = 0.0166987, marker error: RMS = 0.0281989, max = 0.0603744 (Nose)
+[2022-08-08 15:56:59.110] [info] Frame 20 (t = 2.85):	 total squared error = 0.0167097, marker error: RMS = 0.0282082, max = 0.0591251 (Nose)
+[2022-08-08 15:56:59.254] [info] Frame 21 (t = 2.86667):	 total squared error = 0.0166745, marker error: RMS = 0.0281784, max = 0.0582068 (Nose)
+[2022-08-08 15:56:59.406] [info] Frame 22 (t = 2.88333):	 total squared error = 0.0166197, marker error: RMS = 0.028132, max = 0.0570861 (Nose)
+[2022-08-08 15:56:59.507] [info] Frame 23 (t = 2.9):	 total squared error = 0.0167086, marker error: RMS = 0.0282072, max = 0.0561717 (Nose)
+[2022-08-08 15:56:59.639] [info] Frame 24 (t = 2.91667):	 total squared error = 0.0169336, marker error: RMS = 0.0283965, max = 0.0552512 (Nose)
+[2022-08-08 15:56:59.765] [info] Frame 25 (t = 2.93333):	 total squared error = 0.0170998, marker error: RMS = 0.0285356, max = 0.0538297 (Nose)
+[2022-08-08 15:56:59.860] [info] Frame 26 (t = 2.95):	 total squared error = 0.0172069, marker error: RMS = 0.0286247, max = 0.0529979 (Nose)
+[2022-08-08 15:56:59.983] [info] Frame 27 (t = 2.96667):	 total squared error = 0.0172205, marker error: RMS = 0.0286361, max = 0.0519196 (LKnee)
+[2022-08-08 15:57:00.084] [info] Frame 28 (t = 2.98333):	 total squared error = 0.0172609, marker error: RMS = 0.0286696, max = 0.0523249 (LKnee)
+[2022-08-08 15:57:00.225] [info] Frame 29 (t = 3.0):	 total squared error = 0.0172113, marker error: RMS = 0.0286284, max = 0.0524295 (Nose)
+[2022-08-08 15:57:00.335] [info] Frame 30 (t = 3.01667):	 total squared error = 0.0169835, marker error: RMS = 0.0284383, max = 0.0536251 (Nose)
+[2022-08-08 15:57:00.437] [info] Frame 31 (t = 3.03333):	 total squared error = 0.0166485, marker error: RMS = 0.0281565, max = 0.0557061 (Nose)
+[2022-08-08 15:57:00.548] [info] Frame 32 (t = 3.05):	 total squared error = 0.0163674, marker error: RMS = 0.0279177, max = 0.0580746 (Nose)
+[2022-08-08 15:57:00.677] [info] Frame 33 (t = 3.06667):	 total squared error = 0.0161357, marker error: RMS = 0.0277194, max = 0.0595887 (Nose)
+[2022-08-08 15:57:00.782] [info] Frame 34 (t = 3.08333):	 total squared error = 0.0156334, marker error: RMS = 0.0272846, max = 0.0593475 (Nose)
+[2022-08-08 15:57:00.913] [info] Frame 35 (t = 3.1):	 total squared error = 0.0146672, marker error: RMS = 0.0264279, max = 0.056769 (Nose)
+[2022-08-08 15:57:01.085] [info] Frame 36 (t = 3.11667):	 total squared error = 0.0137054, marker error: RMS = 0.0255468, max = 0.0536138 (Nose)
+[2022-08-08 15:57:01.198] [info] Frame 37 (t = 3.13333):	 total squared error = 0.0133963, marker error: RMS = 0.0252571, max = 0.0534357 (Nose)
+[2022-08-08 15:57:01.331] [info] Frame 38 (t = 3.15):	 total squared error = 0.0142047, marker error: RMS = 0.0260080, max = 0.0570974 (Nose)
+[2022-08-08 15:57:01.492] [info] Frame 39 (t = 3.16667):	 total squared error = 0.0161133, marker error: RMS = 0.0277002, max = 0.0642829 (Nose)
+[2022-08-08 15:57:01.644] [info] Frame 40 (t = 3.18333):	 total squared error = 0.01886, marker error: RMS = 0.0299682, max = 0.0720024 (Nose)
+[2022-08-08 15:57:01.812] [info] Frame 41 (t = 3.2):	 total squared error = 0.0221011, marker error: RMS = 0.0324412, max = 0.0788359 (Nose)
+[2022-08-08 15:57:01.951] [info] Frame 42 (t = 3.21667):	 total squared error = 0.0250646, marker error: RMS = 0.0345479, max = 0.0830282 (Nose)
+[2022-08-08 15:57:02.044] [info] Frame 43 (t = 3.23333):	 total squared error = 0.0268466, marker error: RMS = 0.0357548, max = 0.0837129 (Nose)
+[2022-08-08 15:57:02.150] [info] Frame 44 (t = 3.25):	 total squared error = 0.0272079, marker error: RMS = 0.0359947, max = 0.0802774 (Nose)
+[2022-08-08 15:57:02.289] [info] Frame 45 (t = 3.26667):	 total squared error = 0.0264066, marker error: RMS = 0.0354606, max = 0.0736353 (Neck)
+[2022-08-08 15:57:02.518] [info] Frame 46 (t = 3.28333):	 total squared error = 0.0250631, marker error: RMS = 0.0345468, max = 0.0668236 (Neck)
+[2022-08-08 15:57:02.632] [info] Frame 47 (t = 3.3):	 total squared error = 0.0237241, marker error: RMS = 0.0336113, max = 0.0608469 (Neck)
+[2022-08-08 15:57:02.737] [info] Frame 48 (t = 3.31667):	 total squared error = 0.0224252, marker error: RMS = 0.0326782, max = 0.0571427 (Neck)
+[2022-08-08 15:57:02.824] [info] Frame 49 (t = 3.33333):	 total squared error = 0.0210288, marker error: RMS = 0.0316444, max = 0.0555050 (Neck)
+[2022-08-08 15:57:02.914] [info] Frame 50 (t = 3.35):	 total squared error = 0.0190741, marker error: RMS = 0.0301378, max = 0.053849 (Neck)
+[2022-08-08 15:57:03.017] [info] Frame 51 (t = 3.36667):	 total squared error = 0.0165405, marker error: RMS = 0.0280649, max = 0.0506325 (Neck)
+[2022-08-08 15:57:03.105] [info] Frame 52 (t = 3.38333):	 total squared error = 0.0142735, marker error: RMS = 0.0260709, max = 0.0481941 (LKnee)
+[2022-08-08 15:57:03.177] [info] Frame 53 (t = 3.4):	 total squared error = 0.0128883, marker error: RMS = 0.0247736, max = 0.0477269 (LKnee)
+[2022-08-08 15:57:03.295] [info] Frame 54 (t = 3.41667):	 total squared error = 0.0122991, marker error: RMS = 0.0242007, max = 0.0482277 (LKnee)
+[2022-08-08 15:57:03.396] [info] Frame 55 (t = 3.43333):	 total squared error = 0.012459, marker error: RMS = 0.0243575, max = 0.0516588 (Neck)
+[2022-08-08 15:57:03.468] [info] Frame 56 (t = 3.45):	 total squared error = 0.0130354, marker error: RMS = 0.0249145, max = 0.0563796 (Neck)
+[2022-08-08 15:57:03.592] [info] Frame 57 (t = 3.46667):	 total squared error = 0.0141634, marker error: RMS = 0.0259702, max = 0.0604702 (Neck)
+[2022-08-08 15:57:03.709] [info] Frame 58 (t = 3.48333):	 total squared error = 0.0156319, marker error: RMS = 0.0272833, max = 0.0641115 (Neck)
+[2022-08-08 15:57:03.831] [info] Frame 59 (t = 3.5):	 total squared error = 0.0170644, marker error: RMS = 0.0285060, max = 0.0675136 (Neck)
+[2022-08-08 15:57:03.950] [info] Frame 60 (t = 3.51667):	 total squared error = 0.0177682, marker error: RMS = 0.0290879, max = 0.0701964 (Neck)
+[2022-08-08 15:57:04.032] [info] Frame 61 (t = 3.53333):	 total squared error = 0.017276, marker error: RMS = 0.0286821, max = 0.0717938 (Neck)
+[2022-08-08 15:57:04.140] [info] Frame 62 (t = 3.55):	 total squared error = 0.0157982, marker error: RMS = 0.027428, max = 0.0722539 (Neck)
+[2022-08-08 15:57:04.284] [info] Frame 63 (t = 3.56667):	 total squared error = 0.0136871, marker error: RMS = 0.0255297, max = 0.0713911 (Neck)
+[2022-08-08 15:57:04.424] [info] Frame 64 (t = 3.58333):	 total squared error = 0.0119079, marker error: RMS = 0.0238127, max = 0.0696651 (Neck)
+[2022-08-08 15:57:04.540] [info] Frame 65 (t = 3.6):	 total squared error = 0.0110991, marker error: RMS = 0.0229898, max = 0.0676653 (Neck)
+[2022-08-08 15:57:04.634] [info] Frame 66 (t = 3.61667):	 total squared error = 0.0117436, marker error: RMS = 0.0236478, max = 0.0660247 (Neck)
+[2022-08-08 15:57:04.785] [info] Frame 67 (t = 3.63333):	 total squared error = 0.0129821, marker error: RMS = 0.0248636, max = 0.0646009 (Neck)
+[2022-08-08 15:57:04.931] [info] Frame 68 (t = 3.65):	 total squared error = 0.0141072, marker error: RMS = 0.0259186, max = 0.063786 (Neck)
+[2022-08-08 15:57:05.121] [info] Frame 69 (t = 3.66667):	 total squared error = 0.0146738, marker error: RMS = 0.0264339, max = 0.0638006 (Neck)
+[2022-08-08 15:57:05.262] [info] Frame 70 (t = 3.68333):	 total squared error = 0.0155292, marker error: RMS = 0.0271935, max = 0.0640150 (Neck)
+[2022-08-08 15:57:05.383] [info] Frame 71 (t = 3.7):	 total squared error = 0.0170230, marker error: RMS = 0.0284713, max = 0.0644347 (Neck)
+[2022-08-08 15:57:05.496] [info] Frame 72 (t = 3.71667):	 total squared error = 0.0188503, marker error: RMS = 0.0299606, max = 0.0645377 (Neck)
+[2022-08-08 15:57:05.638] [info] Frame 73 (t = 3.73333):	 total squared error = 0.0202904, marker error: RMS = 0.0310839, max = 0.0641708 (Neck)
+[2022-08-08 15:57:05.764] [info] Frame 74 (t = 3.75):	 total squared error = 0.0208955, marker error: RMS = 0.031544, max = 0.063134 (Neck)
+[2022-08-08 15:57:05.896] [info] Frame 75 (t = 3.76667):	 total squared error = 0.0207080, marker error: RMS = 0.0314022, max = 0.0619221 (Neck)
+[2022-08-08 15:57:06.023] [info] Frame 76 (t = 3.78333):	 total squared error = 0.0202421, marker error: RMS = 0.0310469, max = 0.0610626 (Neck)
+[2022-08-08 15:57:06.151] [info] Frame 77 (t = 3.8):	 total squared error = 0.0200726, marker error: RMS = 0.0309167, max = 0.0610965 (Neck)
+[2022-08-08 15:57:06.244] [info] Frame 78 (t = 3.81667):	 total squared error = 0.0204397, marker error: RMS = 0.0311981, max = 0.0624899 (Neck)
+[2022-08-08 15:57:06.345] [info] Frame 79 (t = 3.83333):	 total squared error = 0.0212992, marker error: RMS = 0.0318472, max = 0.0654568 (Nose)
+[2022-08-08 15:57:06.457] [info] Frame 80 (t = 3.85):	 total squared error = 0.0223019, marker error: RMS = 0.0325883, max = 0.0721334 (Nose)
+[2022-08-08 15:57:06.564] [info] Frame 81 (t = 3.86667):	 total squared error = 0.0230970, marker error: RMS = 0.0331641, max = 0.0778837 (Nose)
+[2022-08-08 15:57:06.681] [info] Frame 82 (t = 3.88333):	 total squared error = 0.0237843, marker error: RMS = 0.0336539, max = 0.0827319 (Nose)
+[2022-08-08 15:57:06.872] [info] Frame 83 (t = 3.9):	 total squared error = 0.0248028, marker error: RMS = 0.034367, max = 0.0870365 (Nose)
+[2022-08-08 15:57:07.001] [info] Frame 84 (t = 3.91667):	 total squared error = 0.0264683, marker error: RMS = 0.0355020, max = 0.0907896 (Nose)
+[2022-08-08 15:57:07.117] [info] Frame 85 (t = 3.93333):	 total squared error = 0.0287304, marker error: RMS = 0.036988, max = 0.0936452 (Nose)
+[2022-08-08 15:57:07.260] [info] Frame 86 (t = 3.95):	 total squared error = 0.0306961, marker error: RMS = 0.0382324, max = 0.0940619 (Nose)
+[2022-08-08 15:57:07.424] [info] Frame 87 (t = 3.96667):	 total squared error = 0.0308480, marker error: RMS = 0.0383269, max = 0.0903795 (Nose)
+[2022-08-08 15:57:07.576] [info] Frame 88 (t = 3.98333):	 total squared error = 0.028156, marker error: RMS = 0.0366164, max = 0.081963 (Nose)
+[2022-08-08 15:57:07.714] [info] Frame 89 (t = 4.0):	 total squared error = 0.0236441, marker error: RMS = 0.0335546, max = 0.0718113 (Nose)
+[2022-08-08 15:57:07.819] [info] Frame 90 (t = 4.01667):	 total squared error = 0.0197916, marker error: RMS = 0.0306995, max = 0.0644788 (Nose)
+[2022-08-08 15:57:07.933] [info] Frame 91 (t = 4.03333):	 total squared error = 0.0181302, marker error: RMS = 0.0293827, max = 0.0630223 (Nose)
+[2022-08-08 15:57:08.036] [info] Frame 92 (t = 4.05):	 total squared error = 0.0184742, marker error: RMS = 0.0296601, max = 0.066355 (Nose)
+[2022-08-08 15:57:08.160] [info] Frame 93 (t = 4.06667):	 total squared error = 0.0195839, marker error: RMS = 0.0305380, max = 0.0714925 (Nose)
+[2022-08-08 15:57:08.264] [info] Frame 94 (t = 4.08333):	 total squared error = 0.0200398, marker error: RMS = 0.0308913, max = 0.0750021 (Nose)
+[2022-08-08 15:57:08.365] [info] Frame 95 (t = 4.1):	 total squared error = 0.0192898, marker error: RMS = 0.0303077, max = 0.075448 (Nose)
+[2022-08-08 15:57:08.471] [info] Frame 96 (t = 4.11667):	 total squared error = 0.0173286, marker error: RMS = 0.0287258, max = 0.0713678 (Nose)
+[2022-08-08 15:57:08.548] [info] Frame 97 (t = 4.13333):	 total squared error = 0.0149115, marker error: RMS = 0.0266471, max = 0.0633076 (Nose)
+[2022-08-08 15:57:08.667] [info] Frame 98 (t = 4.15):	 total squared error = 0.0126793, marker error: RMS = 0.0245718, max = 0.0578585 (Neck)
+[2022-08-08 15:57:08.775] [info] Frame 99 (t = 4.16667):	 total squared error = 0.0123149, marker error: RMS = 0.0242161, max = 0.0590274 (Neck)
+[2022-08-08 15:57:08.969] [info] InverseKinematicsTool completed 100 frames in 12 second(s).
