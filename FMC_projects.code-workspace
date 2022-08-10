@@ -18,12 +18,12 @@
             "processId": "current"
         },
         
-            {
-                "type": "bashdb",
-                "request": "launch",
-                "name": "Bash-Debug (simplest configuration)",
-                "program": "${file}"
-            }
+        {
+            "type": "bashdb",
+            "request": "launch",
+            "name": "Bash-Debug (simplest configuration)",
+            "program": "${file}"
+        }
         ]
     }
 }
