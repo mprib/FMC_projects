@@ -11,19 +11,7 @@
         "version": "0.2.0",
         "configurations": [
 
-        {
-            "name": "PowerShell Attach Interactive Session Runspace",
-            "type": "PowerShell",
-            "request": "attach",
-            "processId": "current"
-        },
-        
-        {
-            "type": "bashdb",
-            "request": "launch",
-            "name": "Bash-Debug (simplest configuration)",
-            "program": "${file}"
-        }
+
         ]
     }
 }

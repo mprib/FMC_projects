@@ -1,4 +1,10 @@
+# Running Pre-Alpha FreeMoCap
+
+From anaconda enabled powershell
+
+
 # Creating a pipeline from FMC to OpenSim
+
 
 
 ## Pose2Sim
@@ -84,3 +90,4 @@ output_model_file within ModelScaler, not within MarkerPlacer, which is where th
 
 ---
 
+alright. Looks like the simple way to do it is to just call OpenSim from powershell.
