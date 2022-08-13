@@ -1,0 +1,92 @@
+# FreeMoCap to OpenSim
+
+The purpose of this code module is to automate the process of taking trajectory arrays from FreeMocap (FMC) output and applying the Inverse Kinematics (IK) of OpenSim. The development process will begin with a sample of trajectories collected earlier this week that I was able to generate a rough `.blend` file from.
+
+The current folder system and project organization is slap-dash, but as the intention of this project is to learn, explore, and generate a small set of scripts to perform a function on the alpha, I am not going to invest significant time trying to make this pre-alpha universe particularly clean. Also, do not get distracted by creating the entire pipeline here, Mac. The intention is only to map a numpy array to a .trc file. Once that is largely done, then expand the workflow to the larger pipeline in order to refine and troubleshoot.
+
+
+# Understanding the current output
+
+Mediapipe outputs the following 
+
+```
+mediapipe_tracked_point_names =  [
+    "nose",
+    "left_eye_inner",
+    "left_eye",
+    "left_eye_outer",
+    "right_eye_inner",
+    "right_eye",
+    "right_eye_outer",
+    "left_ear",
+    "right_ear",
+    "mouth_left",
+    "mouth_right",
+    "left_shoulder",
+    "right_shoulder",
+    "left_elbow",
+    "right_elbow",
+    "left_wrist",
+    "right_wrist",
+    "left_pinky",
+    "right_pinky",
+    "left_index",
+    "right_index",
+    "left_thumb",
+    "right_thumb",
+    "left_hip",
+    "right_hip",
+    "left_knee",
+    "right_knee",
+    "left_ankle",
+    "right_ankle",
+    "left_heel",
+    "right_heel",
+    "left_foot_index",
+    "right_foot_index",
+    "right_hand_wrist",
+    "right_hand_thumb_cmc",
+    "right_hand_thumb_mcp",
+    "right_hand_thumb_ip",
+    "right_hand_thumb_tip",
+    "right_hand_index_finger_mcp",
+    "right_hand_index_finger_pip",
+    "right_hand_index_finger_dip",
+    "right_hand_index_finger_tip",
+    "right_hand_middle_finger_mcp",
+    "right_hand_middle_finger_pip",
+    "right_hand_middle_finger_dip",
+    "right_hand_middle_finger_tip",
+    "right_hand_ring_finger_mcp",
+    "right_hand_ring_finger_pip",
+    "right_hand_ring_finger_dip",
+    "right_hand_ring_finger_tip",
+    "right_hand_pinky_finger_mcp",
+    "right_hand_pinky_finger_pip",
+    "right_hand_pinky_finger_dip",
+    "right_hand_pinky_finger_tip",
+    "left_hand_wrist",
+    "left_hand_thumb_cmc",
+    "left_hand_thumb_mcp",
+    "left_hand_thumb_ip",
+    "left_hand_thumb_tip",
+    "left_hand_index_finger_mcp",
+    "left_hand_index_finger_pip",
+    "left_hand_index_finger_dip",
+    "left_hand_index_finger_tip",
+    "left_hand_middle_finger_mcp",
+    "left_hand_middle_finger_pip",
+    "left_hand_middle_finger_dip",
+    "left_hand_middle_finger_tip",
+    "left_hand_ring_finger_mcp",
+    "left_hand_ring_finger_pip",
+    "left_hand_ring_finger_dip",
+    "left_hand_ring_finger_tip",
+    "left_hand_pinky_finger_mcp",
+    "left_hand_pinky_finger_pip",
+    "left_hand_pinky_finger_dip",
+    "left_hand_pinky_finger_tip",
+    ]
+```
+
+# Initial Goal: ndarray to Human Readable (pandas) csv
