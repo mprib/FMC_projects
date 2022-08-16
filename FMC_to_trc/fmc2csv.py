@@ -25,25 +25,26 @@ GoodSession = "sesh_2022-08-10_10_33_12"
 
 # Build list of lists that can be used to iterate
 def trajectories2df(SessionID, frameNum, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
+    """Takes a session ID and returns a dataframe of each of the trajectory positions by frames"""
+
 
     joint_trajectories = get_trajectories(SessionID)
-    # These are the order of the axes as stored in the 
+    
+    # Order of the Axes
     x_axis = Axes[0]
     y_axis = Axes[1]
     z_axis = Axes[2]
 
-    # flip axis in or
+    # Adjust axes to have alignment with the vertical
     flip_x = FlipAxis[0]
     flip_y = FlipAxis[1]
     flip_z = FlipAxis[2]
 
-    sk_x = (joint_trajectories[frameNum, :, x_axis] * flip_x).tolist()   # skeleton x data
-    sk_y = (joint_trajectories[frameNum, :, y_axis] * flip_y).tolist()   # skeleton y data
-    sk_z = (joint_trajectories[frameNum, :, z_axis] * flip_z).tolist()   # skeleton z data
+    sk_x = (joint_trajectories[:, :, x_axis] * flip_x).tolist()   # skeleton x data
+    sk_y = (joint_trajectories[:, :, y_axis] * flip_y).tolist()   # skeleton y data
+    sk_z = (joint_trajectories[:, :, z_axis] * flip_z).tolist()   # skeleton z data
     sk_index = [i for i in range(0, joint_trajectories.shape[1])]              # get a list of the index numbers of each observation
 
 
-
-
 GoodSession = "sesh_2022-08-10_10_33_12"
-PlotInteractiveFrame(GoodSession, 200)
+trajectories2df(GoodSession, 200)
