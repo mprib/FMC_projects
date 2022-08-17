@@ -158,8 +158,6 @@ def trajectory_csv2trc(SessionID, TargetFolder, TargetFilename):
     orig_data_rate = 60
     orig_data_start_frame = 0
 
-
-
     create_trajectory_csv(SessionID, TargetFolder, TargetFilename)
     TargetPath = os.path.join(TargetFolder, TargetFilename + ".trc")
 
@@ -167,14 +165,33 @@ def trajectory_csv2trc(SessionID, TargetFolder, TargetFilename):
         tsv_writer = csv.writer(out_file, delimiter='\t')
         tsv_writer.writerow(["PathFileType","4", "(X/Y/Z)",	"Tpose_0-50.trc"])
         tsv_writer.writerow(["DataRate","CameraRate","NumFrames","NumMarkers", "Units","OrigDataRate","OrigDataStartFrame","OrigNumFrames"])
+        tsv_writer.writerow([data_rate, camera_rate,num_frames, num_markers, units, orig_data_rate, orig_data_start_frame, orig_num_frames])
 
+        # create names of trajectories, skipping two columns
+        header_names = ['Frame#', 'Time']
+        for trajectory in mediapipe_trajectories[0:33]:
+            header_names.append(trajectory)
+            header_names.append("\t")
+            header_names.append("\t")    
 
+        tsv_writer.writerow(header_names)
+
+        # create labels for x,y,z axes
+        header_names = ["\t","\t"]
+        for i in range(1,34):
+            header_names.append("X"+str(i))
+            header_names.append("Y"+str(i))
+            header_names.append("Z"+str(i))
+
+        tsv_writer.writerow(header_names)
+
+    
 
 GoodSession = "sesh_2022-08-10_10_33_12"
 target_folder = "C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\FMC_to_trc"
 target_filename = "dao_yin"
 
-create_trajectory_csv(GoodSession,target_folder, target_filename)
+#create_trajectory_csv(GoodSession,target_folder, target_filename)
 
-#trajectory_csv2trc(GoodSession,target_folder, target_filename)
+trajectory_csv2trc(GoodSession,target_folder, target_filename)
 
