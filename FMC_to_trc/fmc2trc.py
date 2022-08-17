@@ -176,6 +176,8 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
     orig_data_start_frame = 0
 
     traj_df = get_trajectory_df(SessionID, TargetFolder, TargetFilename)
+    traj_df = traj_df.fillna("")
+
     TargetPath = os.path.join(TargetFolder, TargetFilename + ".trc")
 
     with open(TargetPath, 'wt', newline='') as out_file:
@@ -215,17 +217,10 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
 
         traj_df = traj_df.reindex(columns=column_names)
 
-        #TODO: get the nan removal working correctly
-        # put in the actual x,y,z trajectory values
-        # filtering out nans
         for row in range(0, len(traj_df)):
-            tsv_writer.writerow(df_row_for_tsv(traj_df, row))
+            tsv_writer.writerow(traj_df.iloc[row].tolist())
 
 
-def df_row_for_tsv(dataframe, row):
-    df_row = dataframe.iloc[row].tolist()
-
-    return ['' if item == 'nan' else item for item in df_row]
 
 
 GoodSession = "sesh_2022-08-10_10_33_12"
@@ -235,3 +230,6 @@ target_filename = "dao_yin"
 # create_trajectory_csv(GoodSession,target_folder, target_filename)
 
 create_trajectory_trc(GoodSession,target_folder, target_filename)
+
+test_df = get_trajectory_df(GoodSession)
+print(test_df)
