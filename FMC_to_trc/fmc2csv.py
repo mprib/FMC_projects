@@ -24,9 +24,8 @@ GoodSession = "sesh_2022-08-10_10_33_12"
 
 
 # Build list of lists that can be used to iterate
-def trajectories2df(SessionID, frameNum, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
+def create_trajectory_csv(SessionID, TargetLocation, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
     """Takes a session ID and returns a dataframe of each of the trajectory positions by frames"""
-
 
     joint_trajectories = get_trajectories(SessionID)
     
@@ -40,11 +39,105 @@ def trajectories2df(SessionID, frameNum, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
     flip_y = FlipAxis[1]
     flip_z = FlipAxis[2]
 
-    sk_x = (joint_trajectories[:, :, x_axis] * flip_x).tolist()   # skeleton x data
-    sk_y = (joint_trajectories[:, :, y_axis] * flip_y).tolist()   # skeleton y data
-    sk_z = (joint_trajectories[:, :, z_axis] * flip_z).tolist()   # skeleton z data
-    sk_index = [i for i in range(0, joint_trajectories.shape[1])]              # get a list of the index numbers of each observation
+    # not interested in face mesh here, so only taking first 75 elements
+    # these represent the gross pose + hands
+    sk_x = (joint_trajectories[:, 0:75, x_axis] * flip_x)   # skeleton x data
+    sk_y = (joint_trajectories[:, 0:75, y_axis] * flip_y)   # skeleton y data
+    sk_z = (joint_trajectories[:, 0:75, z_axis] * flip_z)   # skeleton z data
+    
+
+    # convert to df and concatenate
+    x_df = pd.DataFrame(sk_x, columns = [name + "_x" for name in mediapipe_tracked_point_names])
+    y_df = pd.DataFrame(sk_y, columns = [name + "_y" for name in mediapipe_tracked_point_names])
+    z_df = pd.DataFrame(sk_z, columns = [name + "_z" for name in mediapipe_tracked_point_names])
+    merged_trajectories = pd.concat([x_df, y_df, z_df],axis = 1, join = "inner")    
+
+    merged_trajectories.to_csv(TargetLocation)
+
+
+
+
+mediapipe_tracked_point_names =  [
+    "nose",
+    "left_eye_inner",
+    "left_eye",
+    "left_eye_outer",
+    "right_eye_inner",
+    "right_eye",
+    "right_eye_outer",
+    "left_ear",
+    "right_ear",
+    "mouth_left",
+    "mouth_right",
+    "left_shoulder",
+    "right_shoulder",
+    "left_elbow",
+    "right_elbow",
+    "left_wrist",
+    "right_wrist",
+    "left_pinky",
+    "right_pinky",
+    "left_index",
+    "right_index",
+    "left_thumb",
+    "right_thumb",
+    "left_hip",
+    "right_hip",
+    "left_knee",
+    "right_knee",
+    "left_ankle",
+    "right_ankle",
+    "left_heel",
+    "right_heel",
+    "left_foot_index",
+    "right_foot_index",
+    "right_hand_wrist",
+    "right_hand_thumb_cmc",
+    "right_hand_thumb_mcp",
+    "right_hand_thumb_ip",
+    "right_hand_thumb_tip",
+    "right_hand_index_finger_mcp",
+    "right_hand_index_finger_pip",
+    "right_hand_index_finger_dip",
+    "right_hand_index_finger_tip",
+    "right_hand_middle_finger_mcp",
+    "right_hand_middle_finger_pip",
+    "right_hand_middle_finger_dip",
+    "right_hand_middle_finger_tip",
+    "right_hand_ring_finger_mcp",
+    "right_hand_ring_finger_pip",
+    "right_hand_ring_finger_dip",
+    "right_hand_ring_finger_tip",
+    "right_hand_pinky_finger_mcp",
+    "right_hand_pinky_finger_pip",
+    "right_hand_pinky_finger_dip",
+    "right_hand_pinky_finger_tip",
+    "left_hand_wrist",
+    "left_hand_thumb_cmc",
+    "left_hand_thumb_mcp",
+    "left_hand_thumb_ip",
+    "left_hand_thumb_tip",
+    "left_hand_index_finger_mcp",
+    "left_hand_index_finger_pip",
+    "left_hand_index_finger_dip",
+    "left_hand_index_finger_tip",
+    "left_hand_middle_finger_mcp",
+    "left_hand_middle_finger_pip",
+    "left_hand_middle_finger_dip",
+    "left_hand_middle_finger_tip",
+    "left_hand_ring_finger_mcp",
+    "left_hand_ring_finger_pip",
+    "left_hand_ring_finger_dip",
+    "left_hand_ring_finger_tip",
+    "left_hand_pinky_finger_mcp",
+    "left_hand_pinky_finger_pip",
+    "left_hand_pinky_finger_dip",
+    "left_hand_pinky_finger_tip",
+]
+
 
 
 GoodSession = "sesh_2022-08-10_10_33_12"
-trajectories2df(GoodSession, 200)
+target_csv = "C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\FMC_to_trc\\dao_yin.csv"
+
+create_trajectory_csv(GoodSession,target_csv)
