@@ -8,6 +8,8 @@
 import numpy as np
 from pathlib import Path 
 import pandas as pd
+import os
+import csv
  
 mediapipe_trajectories =  [
     "nose",
@@ -92,15 +94,16 @@ mediapipe_trajectories =  [
 
 def get_trajectories(sessionID):
     """returns the array of trajectories associated with a given motion capture session"""
-    FMC_Folder = Path("C:/Users/Mac Prible/FreeMocap_Data") #replace this with path to the unzipped session data folder, e.g. Path(r'C:/Users/Me/session_data_folder')
+    FMC_Folder = Path("C:/Users/Mac Prible/FreeMocap_Data") 
     dataArrayPath = FMC_Folder / sessionID / 'DataArrays'
     skeletonPath = dataArrayPath / 'mediaPipeSkel_3d.npy'
     return np.load(skeletonPath) #load 3d open pose data
 
-# Build list of lists that can be used to iterate
-def create_trajectory_csv(SessionID, TargetLocation, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
+
+def create_trajectory_csv(SessionID, TargetFolder, TargetFilename, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
     """builds a human readable csv of a session's trajectories at a given location"""
 
+    TargetPath = os.path.join(TargetFolder, TargetFilename + ".csv")
     joint_trajectories = get_trajectories(SessionID)
     
     # Order of the Axes
@@ -113,35 +116,65 @@ def create_trajectory_csv(SessionID, TargetLocation, Axes= [0,2,1] , FlipAxis=[1
     flip_y = FlipAxis[1]
     flip_z = FlipAxis[2]
 
-    # not interested in face mesh here, so only taking first 75 elements
+    # not interested in face mesh or hands here, 
+    # so only taking first 33 elements
     # these represent the gross pose + hands
-    sk_x = (joint_trajectories[:, 0:75, x_axis] * flip_x)   # skeleton x data
-    sk_y = (joint_trajectories[:, 0:75, y_axis] * flip_y)   # skeleton y data
-    sk_z = (joint_trajectories[:, 0:75, z_axis] * flip_z)   # skeleton z data
+    sk_x = (joint_trajectories[:, 0:33, x_axis] * flip_x)   # skeleton x data
+    sk_y = (joint_trajectories[:, 0:33, y_axis] * flip_y)   # skeleton y data
+    sk_z = (joint_trajectories[:, 0:33, z_axis] * flip_z)   # skeleton z data
     
-
+    marker_names = mediapipe_trajectories[0:33]
+    
     # convert to df and concatenate
-    x_df = pd.DataFrame(sk_x, columns = [name + "_x" for name in mediapipe_trajectories])
-    y_df = pd.DataFrame(sk_y, columns = [name + "_y" for name in mediapipe_trajectories])
-    z_df = pd.DataFrame(sk_z, columns = [name + "_z" for name in mediapipe_trajectories])
+    x_df = pd.DataFrame(sk_x, columns = [name + "_x" for name in marker_names])
+    y_df = pd.DataFrame(sk_y, columns = [name + "_y" for name in marker_names])
+    z_df = pd.DataFrame(sk_z, columns = [name + "_z" for name in marker_names])
     merged_trajectories = pd.concat([x_df, y_df, z_df],axis = 1, join = "inner")    
 
-    merged_trajectories.to_csv(TargetLocation)
+    # get the correct order for all dataframe columns
+    column_order = []
+    for marker in marker_names:
+        column_order.append(marker + "_x")
+        column_order.append(marker + "_y")
+        column_order.append(marker + "_z")
+
+    print(column_order)
+
+    # reorder the dataframe, note frame number in 0 position remains
+    for column in reversed(column_order):
+        merged_trajectories.insert(1, column, merged_trajectories.pop(column))
+
+    merged_trajectories.to_csv(TargetPath)
 
 # Convert a human readable csv to a trc
-def trajectory_csv2trc(SessionID, TargetLocation):
+def trajectory_csv2trc(SessionID, TargetFolder, TargetFilename):
+    
+    num_frames = 50
+    orig_num_frames = 50
+    num_markers = 21
+    data_rate= 60
+    camera_rate= 60
+    units = 'm'
+    orig_data_rate = 60
+    orig_data_start_frame = 0
 
-    create_trajectory_csv(SessionID, TargetLocation)
-
-    with open(TargetLocation+".trc")
 
 
+    create_trajectory_csv(SessionID, TargetFolder, TargetFilename)
+    TargetPath = os.path.join(TargetFolder, TargetFilename + ".trc")
 
-
+    with open(TargetPath, 'wt', newline='') as out_file:
+        tsv_writer = csv.writer(out_file, delimiter='\t')
+        tsv_writer.writerow(["PathFileType","4", "(X/Y/Z)",	"Tpose_0-50.trc"])
+        tsv_writer.writerow(["DataRate","CameraRate","NumFrames","NumMarkers", "Units","OrigDataRate","OrigDataStartFrame","OrigNumFrames"])
 
 
 
 GoodSession = "sesh_2022-08-10_10_33_12"
-target_csv = "C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\FMC_to_trc\\dao_yin.csv"
+target_folder = "C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\FMC_to_trc"
+target_filename = "dao_yin"
 
-create_trajectory_csv(GoodSession,target_csv)
+create_trajectory_csv(GoodSession,target_folder, target_filename)
+
+#trajectory_csv2trc(GoodSession,target_folder, target_filename)
+
