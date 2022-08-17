@@ -8,56 +8,8 @@
 import numpy as np
 from pathlib import Path 
 import pandas as pd
-
-#openPoseData_nCams_nFrames_nImgPts_XYC = np.load(dataArrayPath / 'openPoseData_2d.npy') #2d data too, if you're into that
-
-def get_trajectories(sessionID):
-
-    FMC_Folder = Path("C:/Users/Mac Prible/FreeMocap_Data") #replace this with path to the unzipped session data folder, e.g. Path(r'C:/Users/Me/session_data_folder')
-    dataArrayPath = FMC_Folder / sessionID / 'DataArrays'
-    skeletonPath = dataArrayPath / 'mediaPipeSkel_3d.npy'
-    return np.load(skeletonPath) #load 3d open pose data
-
-
-
-GoodSession = "sesh_2022-08-10_10_33_12"
-
-
-# Build list of lists that can be used to iterate
-def create_trajectory_csv(SessionID, TargetLocation, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
-    """Takes a session ID and returns a dataframe of each of the trajectory positions by frames"""
-
-    joint_trajectories = get_trajectories(SessionID)
-    
-    # Order of the Axes
-    x_axis = Axes[0]
-    y_axis = Axes[1]
-    z_axis = Axes[2]
-
-    # Adjust axes to have alignment with the vertical
-    flip_x = FlipAxis[0]
-    flip_y = FlipAxis[1]
-    flip_z = FlipAxis[2]
-
-    # not interested in face mesh here, so only taking first 75 elements
-    # these represent the gross pose + hands
-    sk_x = (joint_trajectories[:, 0:75, x_axis] * flip_x)   # skeleton x data
-    sk_y = (joint_trajectories[:, 0:75, y_axis] * flip_y)   # skeleton y data
-    sk_z = (joint_trajectories[:, 0:75, z_axis] * flip_z)   # skeleton z data
-    
-
-    # convert to df and concatenate
-    x_df = pd.DataFrame(sk_x, columns = [name + "_x" for name in mediapipe_tracked_point_names])
-    y_df = pd.DataFrame(sk_y, columns = [name + "_y" for name in mediapipe_tracked_point_names])
-    z_df = pd.DataFrame(sk_z, columns = [name + "_z" for name in mediapipe_tracked_point_names])
-    merged_trajectories = pd.concat([x_df, y_df, z_df],axis = 1, join = "inner")    
-
-    merged_trajectories.to_csv(TargetLocation)
-
-
-
-
-mediapipe_tracked_point_names =  [
+ 
+mediapipe_trajectories =  [
     "nose",
     "left_eye_inner",
     "left_eye",
@@ -134,6 +86,58 @@ mediapipe_tracked_point_names =  [
     "left_hand_pinky_finger_dip",
     "left_hand_pinky_finger_tip",
 ]
+
+
+#openPoseData_nCams_nFrames_nImgPts_XYC = np.load(dataArrayPath / 'openPoseData_2d.npy') #2d data too, if you're into that
+
+def get_trajectories(sessionID):
+    """returns the array of trajectories associated with a given motion capture session"""
+    FMC_Folder = Path("C:/Users/Mac Prible/FreeMocap_Data") #replace this with path to the unzipped session data folder, e.g. Path(r'C:/Users/Me/session_data_folder')
+    dataArrayPath = FMC_Folder / sessionID / 'DataArrays'
+    skeletonPath = dataArrayPath / 'mediaPipeSkel_3d.npy'
+    return np.load(skeletonPath) #load 3d open pose data
+
+# Build list of lists that can be used to iterate
+def create_trajectory_csv(SessionID, TargetLocation, Axes= [0,2,1] , FlipAxis=[1,1,-1]):
+    """builds a human readable csv of a session's trajectories at a given location"""
+
+    joint_trajectories = get_trajectories(SessionID)
+    
+    # Order of the Axes
+    x_axis = Axes[0]
+    y_axis = Axes[1]
+    z_axis = Axes[2]
+
+    # Adjust axes to have alignment with the vertical
+    flip_x = FlipAxis[0]
+    flip_y = FlipAxis[1]
+    flip_z = FlipAxis[2]
+
+    # not interested in face mesh here, so only taking first 75 elements
+    # these represent the gross pose + hands
+    sk_x = (joint_trajectories[:, 0:75, x_axis] * flip_x)   # skeleton x data
+    sk_y = (joint_trajectories[:, 0:75, y_axis] * flip_y)   # skeleton y data
+    sk_z = (joint_trajectories[:, 0:75, z_axis] * flip_z)   # skeleton z data
+    
+
+    # convert to df and concatenate
+    x_df = pd.DataFrame(sk_x, columns = [name + "_x" for name in mediapipe_trajectories])
+    y_df = pd.DataFrame(sk_y, columns = [name + "_y" for name in mediapipe_trajectories])
+    z_df = pd.DataFrame(sk_z, columns = [name + "_z" for name in mediapipe_trajectories])
+    merged_trajectories = pd.concat([x_df, y_df, z_df],axis = 1, join = "inner")    
+
+    merged_trajectories.to_csv(TargetLocation)
+
+# Convert a human readable csv to a trc
+def trajectory_csv2trc(SessionID, TargetLocation):
+
+    create_trajectory_csv(SessionID, TargetLocation)
+
+    with open(TargetLocation+".trc")
+
+
+
+
 
 
 
