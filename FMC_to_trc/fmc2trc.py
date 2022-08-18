@@ -163,12 +163,16 @@ def create_trajectory_csv(SessionID, TargetFolder="", TargetFilename="",
     df_traj.to_csv(TargetPath)
 
 
+#TODO: need to fix scaling factors (probably an issue with the charuco board), and fix open sim orientation
+
+#TODO: are some of the points jumping around? the IK looks like shit.
+
 # Convert a human readable csv to a trc
 def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
     
     num_frames = 50
     orig_num_frames = 50
-    num_markers = 21
+    num_markers = 33
     data_rate= 60
     camera_rate= 60
     units = 'm'
@@ -190,13 +194,13 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
         header_names = ['Frame#', 'Time']
         for trajectory in mediapipe_trajectories[0:33]:
             header_names.append(trajectory)
-            header_names.append("\t")
-            header_names.append("\t")    
+            header_names.append("")
+            header_names.append("")    
 
         tsv_writer.writerow(header_names)
 
         # create labels for x,y,z axes (second row of table)
-        header_names = ["\t","\t"]
+        header_names = ["",""]
         for i in range(1,34):
             header_names.append("X"+str(i))
             header_names.append("Y"+str(i))
