@@ -186,7 +186,7 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
         tsv_writer.writerow(["DataRate","CameraRate","NumFrames","NumMarkers", "Units","OrigDataRate","OrigDataStartFrame","OrigNumFrames"])
         tsv_writer.writerow([data_rate, camera_rate,num_frames, num_markers, units, orig_data_rate, orig_data_start_frame, orig_num_frames])
 
-        # create names of trajectories, skipping two columns
+        # create names of trajectories, skipping two columns (top of table)
         header_names = ['Frame#', 'Time']
         for trajectory in mediapipe_trajectories[0:33]:
             header_names.append(trajectory)
@@ -195,7 +195,7 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
 
         tsv_writer.writerow(header_names)
 
-        # create labels for x,y,z axes
+        # create labels for x,y,z axes (second row of table)
         header_names = ["\t","\t"]
         for i in range(1,34):
             header_names.append("X"+str(i))
@@ -204,16 +204,14 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
 
         tsv_writer.writerow(header_names)
 
-        # need to make sure the column orders are correct
+        # Create a list with the appropriate column order in it
         column_names = traj_df.columns
-
-        #TODO: get the time assignment working
-        # add in frame and Time stamp to 
-        traj_df.insert(0,"Frame", [i for i in range(0, len(traj_df))])
-        traj_df.assign(time = traj_df["Frame"] / camera_rate)
-
         column_names = column_names.insert(0, "Frame")
         column_names = column_names.insert(1, "time")
+
+        # add in frame and Time stamp to the data frame
+        traj_df["Frame"] = [float(i) for i in range(0, len(traj_df))]
+        traj_df["time"] = traj_df["Frame"] / float(camera_rate)
 
         traj_df = traj_df.reindex(columns=column_names)
 
