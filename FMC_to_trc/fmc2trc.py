@@ -109,6 +109,7 @@ def get_trajectory_df(SessionID, TargetFolder="", TargetFilename="",
 
     """
 
+    scale_factor = 0.003
 
     joint_trajectories = get_numpy_trajectories(SessionID)
     
@@ -125,9 +126,9 @@ def get_trajectory_df(SessionID, TargetFolder="", TargetFilename="",
     # not interested in face mesh or hands here, 
     # so only taking first 33 elements
     # these represent the gross pose + hands
-    sk_x = (joint_trajectories[:, 0:33, x_axis] * flip_x)   # skeleton x data
-    sk_y = (joint_trajectories[:, 0:33, y_axis] * flip_y)   # skeleton y data
-    sk_z = (joint_trajectories[:, 0:33, z_axis] * flip_z)   # skeleton z data
+    sk_x = (joint_trajectories[:, 0:33, x_axis] * flip_x * scale_factor)   # skeleton x data
+    sk_y = (joint_trajectories[:, 0:33, y_axis] * flip_y * scale_factor)   # skeleton y data
+    sk_z = (joint_trajectories[:, 0:33, z_axis] * flip_z * scale_factor)   # skeleton z data
     
     marker_names = mediapipe_trajectories[0:33]
     
@@ -168,19 +169,22 @@ def create_trajectory_csv(SessionID, TargetFolder="", TargetFilename="",
 #TODO: are some of the points jumping around? the IK looks like shit.
 
 # Convert a human readable csv to a trc
-def create_trajectory_trc(SessionID, TargetFolder, TargetFilename):
+def create_trajectory_trc(SessionID, TargetFolder, TargetFilename, 
+        Axes= [0,2,1] , FlipAxis=[1,1,-1]):
     
-    num_frames = 50
-    orig_num_frames = 50
     num_markers = 33
-    data_rate= 60
-    camera_rate= 60
+    data_rate= 25
+    camera_rate= 25
     units = 'm'
-    orig_data_rate = 60
+    orig_data_rate = 25
     orig_data_start_frame = 0
 
-    traj_df = get_trajectory_df(SessionID, TargetFolder, TargetFilename)
+    traj_df = get_trajectory_df(SessionID, TargetFolder, TargetFilename, Axes, FlipAxis)
     traj_df = traj_df.fillna("")
+
+
+    orig_num_frames = len(traj_df)
+    num_frames = orig_num_frames
 
     TargetPath = os.path.join(TargetFolder, TargetFilename + ".trc")
 
@@ -235,3 +239,4 @@ create_trajectory_trc(GoodSession,target_folder, target_filename)
 
 test_df = get_trajectory_df(GoodSession)
 print(test_df)
+
