@@ -45,11 +45,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.3155284938711662 1.3155284938711662 1.3155284938711662</scale_factors>
+							<scale_factors>1.3383792311484068 1.3383792311484068 1.3383792311484068</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -60,11 +62,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.3155284938711662 1.3155284938711662 1.3155284938711662</scale_factors>
+							<scale_factors>1.3383792311484068 1.3383792311484068 1.3383792311484068</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -80,9 +84,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>11.776999999999999</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>-0.093007864516691449 0 0</mass_center>
+					<mass_center>-0.094623411642192359 0 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.17790724442961733 0.15073658550408237 0.10020262113302376 0 0 0</inertia>
+					<inertia>0.1841414217427744 0.1560186559707748 0.1037138941527883 0 0 0</inertia>
 				</Body>
 				<Body name="sacrum">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -98,11 +102,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.3155284938711662 1.3155284938711662 1.3155284938711662</scale_factors>
+							<scale_factors>1.3383792311484068 1.3383792311484068 1.3383792311484068</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -136,13 +142,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0218760826509179 1.0218760826509179 1.0218760826509179</scale_factors>
+							<scale_factors>0.99892620975491297 0.99892620975491297 0.99892620975491297</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -158,9 +164,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>9.3013999999999992</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.17371893405065605 0</mass_center>
+					<mass_center>0 -0.16981745565833523 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.13982249451856466 0.03665249856311889 0.14744537883511075 0 0 0</inertia>
+					<inertia>0.13361259336247885 0.035024660395989601 0.14089692444198668 0 0 0</inertia>
 				</Body>
 				<Body name="patella_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -176,11 +182,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0218760826509179 1.0218760826509179 1.0218760826509179</scale_factors>
+							<scale_factors>0.99892620975491297 0.99892620975491297 0.99892620975491297</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -196,9 +204,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.086199999999999999</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.0018393769487716522 0.026977528581984232 0</mass_center>
+					<mass_center>0.0017980671775588433 0.026371651937529703 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>2.9969421902037385e-06 1.368986484793415e-05 1.368986484793415e-05 0 0 0</inertia>
+					<inertia>2.8638397531763579e-06 1.3081860335937998e-05 1.3081860335937998e-05 0 0 0</inertia>
 				</Body>
 				<Body name="tibia_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -214,11 +222,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98978723487228482 0.98978723487228482 0.98978723487228482</scale_factors>
+							<scale_factors>0.97153142607717136 0.97153142607717136 0.97153142607717136</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -229,11 +239,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98978723487228482 0.98978723487228482 0.98978723487228482</scale_factors>
+							<scale_factors>0.97153142607717136 0.97153142607717136 0.97153142607717136</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -249,9 +261,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>3.7075</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.18479327675065557 0</mass_center>
+					<mass_center>0 -0.18138491724860789 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.049375810023932626 0.00499636172861223 0.050061585163153913 0 0 0</inertia>
+					<inertia>0.047571214917519332 0.0048137538904632661 0.048231926235818207 0 0 0</inertia>
 				</Body>
 				<Body name="talus_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -267,11 +279,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.94529883352248401 0.94529883352248401 0.94529883352248401</scale_factors>
+							<scale_factors>0.90193477228320018 0.90193477228320018 0.90193477228320018</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -289,7 +303,7 @@
 					<!--The location (Vec3) of the mass center in the body frame.-->
 					<mass_center>0 0 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.00089358988465896899 0.00089358988465896899 0.00089358988465896899 0 0 0</inertia>
+					<inertia>0.00081348633345354818 0.00081348633345354818 0.00081348633345354818 0 0 0</inertia>
 				</Body>
 				<Body name="calcn_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -305,11 +319,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.94529883352248401 0.94529883352248401 0.94529883352248401</scale_factors>
+							<scale_factors>0.90193477228320018 0.90193477228320018 0.90193477228320018</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -325,9 +341,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>1.25</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.094529883352248406 0.02835896500567452 0</mass_center>
+					<mass_center>0.090193477228320024 0.027058043168496006 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0012510258385225565 0.0034850005501699788 0.0036637185271017731 0 0 0</inertia>
+					<inertia>0.0011388808668349674 0.0031725967004688376 0.0033352939671595478 0 0 0</inertia>
 				</Body>
 				<Body name="toes_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -343,11 +359,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.94529883352248401 0.94529883352248401 0.94529883352248401</scale_factors>
+							<scale_factors>0.90193477228320018 0.90193477228320018 0.90193477228320018</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -363,9 +381,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.21659999999999999</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.032707339639877944 0.0056717930011349043 -0.016542729586643472</mass_center>
+					<mass_center>0.031206943120998726 0.0054116086336992008 -0.015783858514956006</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>8.9358988465896896e-05 0.00017871797693179379 0.00089358988465896899 0 0 0</inertia>
+					<inertia>8.134863334535482e-05 0.00016269726669070964 0.00081348633345354818 0 0 0</inertia>
 				</Body>
 				<Body name="femur_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -381,11 +399,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0218760826509179 1.0218760826509179 1.0218760826509179</scale_factors>
+							<scale_factors>0.99892620975491297 0.99892620975491297 0.99892620975491297</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -401,9 +421,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>9.3013999999999992</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.17371893405065605 0</mass_center>
+					<mass_center>0 -0.16981745565833523 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.13982249451856466 0.03665249856311889 0.14744537883511075 0 0 0</inertia>
+					<inertia>0.13361259336247885 0.035024660395989601 0.14089692444198668 0 0 0</inertia>
 				</Body>
 				<Body name="patella_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -419,11 +439,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0218760826509179 1.0218760826509179 1.0218760826509179</scale_factors>
+							<scale_factors>0.99892620975491297 0.99892620975491297 0.99892620975491297</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -439,9 +461,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.086199999999999999</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.0018393769487716522 0.026977528581984232 0</mass_center>
+					<mass_center>0.0017980671775588433 0.026371651937529703 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>2.9969421902037385e-06 1.368986484793415e-05 1.368986484793415e-05 0 0 0</inertia>
+					<inertia>2.8638397531763579e-06 1.3081860335937998e-05 1.3081860335937998e-05 0 0 0</inertia>
 				</Body>
 				<Body name="tibia_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -457,11 +479,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98978723487228482 0.98978723487228482 0.98978723487228482</scale_factors>
+							<scale_factors>0.97153142607717136 0.97153142607717136 0.97153142607717136</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -472,11 +496,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98978723487228482 0.98978723487228482 0.98978723487228482</scale_factors>
+							<scale_factors>0.97153142607717136 0.97153142607717136 0.97153142607717136</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -492,9 +518,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>3.7075</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.18479327675065557 0</mass_center>
+					<mass_center>0 -0.18138491724860789 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.049375810023932626 0.00499636172861223 0.050061585163153913 0 0 0</inertia>
+					<inertia>0.047571214917519332 0.0048137538904632661 0.048231926235818207 0 0 0</inertia>
 				</Body>
 				<Body name="talus_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -510,11 +536,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.94529883352248401 0.94529883352248401 0.94529883352248401</scale_factors>
+							<scale_factors>0.90193477228320018 0.90193477228320018 0.90193477228320018</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -532,7 +560,7 @@
 					<!--The location (Vec3) of the mass center in the body frame.-->
 					<mass_center>0 0 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.00089358988465896899 0.00089358988465896899 0.00089358988465896899 0 0 0</inertia>
+					<inertia>0.00081348633345354818 0.00081348633345354818 0.00081348633345354818 0 0 0</inertia>
 				</Body>
 				<Body name="calcn_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -548,11 +576,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.94529883352248401 0.94529883352248401 0.94529883352248401</scale_factors>
+							<scale_factors>0.90193477228320018 0.90193477228320018 0.90193477228320018</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -568,9 +598,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>1.25</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.094529883352248406 0.02835896500567452 0</mass_center>
+					<mass_center>0.090193477228320024 0.027058043168496006 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0012510258385225565 0.0034850005501699788 0.0036637185271017731 0 0 0</inertia>
+					<inertia>0.0011388808668349674 0.0031725967004688376 0.0033352939671595478 0 0 0</inertia>
 				</Body>
 				<Body name="toes_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -586,11 +616,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.94529883352248401 0.94529883352248401 0.94529883352248401</scale_factors>
+							<scale_factors>0.90193477228320018 0.90193477228320018 0.90193477228320018</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -606,9 +638,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.21659999999999999</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.032707339639877944 0.0056717930011349043 0.016542729586643472</mass_center>
+					<mass_center>0.031206943120998726 0.0054116086336992008 0.015783858514956006</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>8.9358988465896896e-05 0.00017871797693179379 0.00089358988465896899 0 0 0</inertia>
+					<inertia>8.134863334535482e-05 0.00016269726669070964 0.00081348633345354818 0 0 0</inertia>
 				</Body>
 				<Body name="lumbar5">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -624,11 +656,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98649966528723643 0.98649966528723643 0.98649966528723643</scale_factors>
+							<scale_factors>1.0004169346305412 1.0004169346305412 1.0004169346305412</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -644,9 +678,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>1.8240000000000001</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.018329800232433812 0.019411767607264974 0</mass_center>
+					<mass_center>0.018588392075715859 0.019685623552407421 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.20052784157042641 0.024447572748447291 0.19295527584249528 0 0 0</inertia>
+					<inertia>0.20622573687630921 0.025142237932656554 0.19843800059461977 0 0 0</inertia>
 				</Body>
 				<Body name="lumbar4">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -662,11 +696,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98649966528723643 0.98649966528723643 0.98649966528723643</scale_factors>
+							<scale_factors>1.0004169346305412 1.0004169346305412 1.0004169346305412</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -682,9 +718,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>1.7989999999999999</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.019729993305744726 0.023119415220252584 0</mass_center>
+					<mass_center>0.02000833869261082 0.023445577650917239 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.19264247149296113 0.023268142823333265 0.18585754261637502 0 0 0</inertia>
+					<inertia>0.19811630807065103 0.023929295113865042 0.1911385889356455 0 0 0</inertia>
 				</Body>
 				<Body name="lumbar3">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -700,11 +736,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98649966528723643 0.98649966528723643 0.98649966528723643</scale_factors>
+							<scale_factors>1.0004169346305412 1.0004169346305412 1.0004169346305412</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -720,9 +758,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>1.6699999999999999</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.018980996086756213 0.024687843612826464 0</mass_center>
+					<mass_center>0.019248774824285421 0.025036133005266397 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.17743995506650093 0.022403430080106659 0.17153267868141353 0 0 0</inertia>
+					<inertia>0.18248181997229951 0.023040012003541374 0.17640669137217033 0 0 0</inertia>
 				</Body>
 				<Body name="lumbar2">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -738,11 +776,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98649966528723643 0.98649966528723643 0.98649966528723643</scale_factors>
+							<scale_factors>1.0004169346305412 1.0004169346305412 1.0004169346305412</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -758,9 +798,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>1.6890000000000001</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.026779965429865188 0.021440350359840574 0</mass_center>
+					<mass_center>0.027157769908676955 0.021742824999490696 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.18307493414012335 0.024726283674273226 0.17744895663051632 0 0 0</inertia>
+					<inertia>0.18827691407314653 0.025428868285847412 0.18249107731111877 0 0 0</inertia>
 				</Body>
 				<Body name="lumbar1">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -776,11 +816,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>0.98649966528723643 0.98649966528723643 0.98649966528723643</scale_factors>
+							<scale_factors>1.0004169346305412 1.0004169346305412 1.0004169346305412</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -796,9 +838,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>1.677</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.034729031227423782 0.020586338660353743 0.0014096443765557647</mass_center>
+					<mass_center>0.035218978967531088 0.020876765134898171 0.0014295312565590025</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.18302092475603113 0.027152317695965978 0.17769875003194288 0 0 0</inertia>
+					<inertia>0.18822137004023107 0.027923836814369035 0.18274796846335281 0 0 0</inertia>
 				</Body>
 				<Body name="torso">
 					<!--List of components that this component owns and serializes.-->
@@ -817,11 +859,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -832,7 +876,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.021745422729449834 0.42642243596286994 0</translation>
+							<translation>-0.02205220124723236 0.4324382878725565 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -850,11 +894,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -865,7 +911,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.021745422729449834 0.42642243596286994 0</translation>
+							<translation>-0.02205220124723236 0.4324382878725565 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -883,11 +929,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -898,7 +946,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.021745422729449834 0.42642243596286994 0</translation>
+							<translation>-0.02205220124723236 0.4324382878725565 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -916,11 +964,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -931,7 +981,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.021745422729449834 0.42642243596286994 0</translation>
+							<translation>-0.02205220124723236 0.4324382878725565 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -949,11 +999,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -964,7 +1016,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.021745422729449834 0.42642243596286994 0</translation>
+							<translation>-0.02205220124723236 0.4324382878725565 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -982,11 +1034,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -997,7 +1051,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.021745422729449834 0.42642243596286994 0</translation>
+							<translation>-0.02205220124723236 0.4324382878725565 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1015,11 +1069,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1030,7 +1086,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.021745422729449834 0.42642243596286994 0</translation>
+							<translation>-0.02205220124723236 0.4324382878725565 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1048,11 +1104,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1063,7 +1121,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1081,11 +1139,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1096,7 +1156,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1114,11 +1174,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1129,7 +1191,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1147,11 +1209,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1162,7 +1226,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1180,11 +1244,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1195,7 +1261,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1213,11 +1279,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1228,7 +1296,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1246,11 +1314,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1261,7 +1331,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1279,11 +1349,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1294,7 +1366,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1312,11 +1384,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1327,7 +1401,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1345,11 +1419,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1360,7 +1436,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1378,11 +1454,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1393,7 +1471,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1411,11 +1489,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>0.94406957215660259 0.94406957215660259 0.94406957215660259</scale_factors>
+									<scale_factors>0.9573882492700877 0.9573882492700877 0.9573882492700877</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1426,7 +1506,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0037126331489304595 0 0</translation>
+							<translation>0.0037650099690396707 0 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1444,11 +1524,13 @@
 									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 									<socket_frame>..</socket_frame>
 									<!--Scale factors in X, Y, Z directions respectively.-->
-									<scale_factors>1.0607523282658455 1.1668275610924301 1.0607523282658455</scale_factors>
+									<scale_factors>1.0757171340113345 1.1832888474124681 1.0757171340113345</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1459,7 +1541,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>..</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.009016394790259688 -0.047733854771963048 0</translation>
+							<translation>0.0091435956390963444 -0.048407271030510055 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0 0 -0</orientation>
 						</PhysicalOffsetFrame>
@@ -1482,15 +1564,15 @@
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
 								<xyz_body_rotation>-0 -0 0</xyz_body_rotation>
 								<!--Translation of the WrapObject.-->
-								<translation>-0.22063648427929586 0.042430093130633825 -0</translation>
+								<translation>-0.22374916387435756 0.043028685360453379 -0</translation>
 								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
 								<quadrant>all</quadrant>
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1500,9 +1582,9 @@
 									</SurfaceProperties>
 								</Appearance>
 								<!--The radius of the cylinder.-->
-								<radius>0.18032789580519376</radius>
+								<radius>0.18287191278192688</radius>
 								<!--The length of the cylinder.-->
-								<length>0.27579560534911984</length>
+								<length>0.27968645484294696</length>
 							</WrapCylinder>
 							<WrapEllipsoid name="Chest_r">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
@@ -1510,15 +1592,15 @@
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
 								<xyz_body_rotation>0 -0.40000000000000002 0.20000000000000001</xyz_body_rotation>
 								<!--Translation of the WrapObject.-->
-								<translation>0 0.22275798893582754 0.010607523282658456</translation>
+								<translation>0 0.22590059814238023 0.010757171340113345</translation>
 								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
 								<quadrant>z</quadrant>
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1528,7 +1610,7 @@
 									</SurfaceProperties>
 								</Appearance>
 								<!--The length of the radii of the ellipsoid.-->
-								<dimensions>0.079556424619938407 0.18032789580519376 0.13789780267455992</dimensions>
+								<dimensions>0.080678785050850105 0.18287191278192688 0.13984322742147348</dimensions>
 							</WrapEllipsoid>
 							<WrapEllipsoid name="Chest_l">
 								<!--Whether or not the WrapObject is considered active in computing paths-->
@@ -1536,15 +1618,15 @@
 								<!--Body-fixed Euler angle sequence for the orientation of the WrapObject-->
 								<xyz_body_rotation>0 0.40000000000000002 0.20000000000000001</xyz_body_rotation>
 								<!--Translation of the WrapObject.-->
-								<translation>0 0.22275798893582754 -0.010607523282658456</translation>
+								<translation>0 0.22590059814238023 -0.010757171340113345</translation>
 								<!--The name of quadrant over which the wrap object is active. For example, '+x' or '-y' to set the sidedness of the wrapping.-->
 								<quadrant>-z</quadrant>
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1554,7 +1636,7 @@
 									</SurfaceProperties>
 								</Appearance>
 								<!--The length of the radii of the ellipsoid.-->
-								<dimensions>0.079556424619938407 0.18032789580519376 0.13789780267455992</dimensions>
+								<dimensions>0.080678785050850105 0.18287191278192688 0.13984322742147348</dimensions>
 							</WrapEllipsoid>
 						</objects>
 						<groups />
@@ -1562,9 +1644,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>22.530000000000001</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.01721876369170447 0.19117506985089722 0</mass_center>
+					<mass_center>0.017461681333228854 0.19387211581296082 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>1.5372379036316681 0.78764546367834876 1.4923040591782775 0 0 0</inertia>
+					<inertia>1.5809177266753514 0.81002600373226719 1.5347071101818235 0 0 0</inertia>
 				</Body>
 				<Body name="head">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -1580,11 +1662,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.1129333272234672 1.1129333272234672 1.1129333272234672</scale_factors>
+							<scale_factors>1.1020238308577543 1.1020238308577543 1.1020238308577543</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1595,11 +1679,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.1129333272234672 1.1129333272234672 1.1129333272234672</scale_factors>
+							<scale_factors>1.1020238308577543 1.1020238308577543 1.1020238308577543</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1615,9 +1701,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>4.2778</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0.017881202831423273 0.065116518981483601 0</mass_center>
+					<mass_center>0.017705922864032365 0.064478216210060058 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.014232889325754497 0.010298762174930894 0.015520234597620862 0 0 0</inertia>
+					<inertia>0.013955221979710974 0.010097845137272772 0.015217452621870072 0 0 0</inertia>
 				</Body>
 				<Body name="Abdomen">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -1642,9 +1728,9 @@
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1680,13 +1766,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.2543822848772617 1.2543822848772617 1.2543822848772617</scale_factors>
+							<scale_factors>1.2496140199613703 1.2496140199613703 1.2496140199613703</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 								<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1707,9 +1793,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>2.0325000000000002</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.20634839462687932 0</mass_center>
+					<mass_center>0 -0.20556400551168535 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.018796731353869646 0.0064842901313658802 0.021098725156875782 0 0 0</inertia>
+					<inertia>0.018654099485868457 0.0064350865546010296 0.020938625481835772 0 0 0</inertia>
 				</Body>
 				<Body name="ulna_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -1725,13 +1811,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.2715591963011414 1.2715591963011414 1.2715591963011414</scale_factors>
+							<scale_factors>1.453955594249789 1.453955594249789 1.453955594249789</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1747,9 +1833,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.60750000000000004</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.15325467213419505 0</mass_center>
+					<mass_center>0 -0.1752379979969558 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0047891475830854902 0.00099922120403336681 0.0051949801432996899 0 0 0</inertia>
+					<inertia>0.0062616291090888615 0.0013064438856910589 0.0067922398134714771 0 0 0</inertia>
 				</Body>
 				<Body name="radius_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -1765,13 +1851,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.2715591963011414 1.2715591963011414 1.2715591963011414</scale_factors>
+							<scale_factors>1.453955594249789 1.453955594249789 1.453955594249789</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1787,9 +1873,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.60750000000000004</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.15325467213419505 0</mass_center>
+					<mass_center>0 -0.1752379979969558 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0047891475830854902 0.00099922120403336681 0.0051949801432996899 0 0 0</inertia>
+					<inertia>0.0062616291090888615 0.0013064438856910589 0.0067922398134714771 0 0 0</inertia>
 				</Body>
 				<Body name="hand_r">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -1805,13 +1891,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1822,13 +1908,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1839,13 +1925,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1856,13 +1942,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1873,13 +1959,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1890,13 +1976,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1907,13 +1993,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1924,13 +2010,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1941,13 +2027,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1958,13 +2044,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1975,13 +2061,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1992,13 +2078,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2009,13 +2095,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2026,13 +2112,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2043,13 +2129,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2060,13 +2146,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2077,13 +2163,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2094,13 +2180,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2111,13 +2197,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2128,13 +2214,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2145,13 +2231,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2162,13 +2248,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2179,13 +2265,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2196,13 +2282,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2213,13 +2299,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2230,13 +2316,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2247,13 +2333,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2269,9 +2355,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.45750000000000002</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.086586823472126234 0</mass_center>
+					<mass_center>0 -0.099007106190439384 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0014422416084106202 0.00088442394596480851 0.0021665961381953265 0 0 0</inertia>
+					<inertia>0.0018856762880848296 0.0011563508179174907 0.002832742405867345 0 0 0</inertia>
 				</Body>
 				<Body name="humerus_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -2287,13 +2373,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.2543822848772617 1.2543822848772617 1.2543822848772617</scale_factors>
+							<scale_factors>1.2496140199613703 1.2496140199613703 1.2496140199613703</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2309,9 +2395,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>2.0325000000000002</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.20634839462687932 0</mass_center>
+					<mass_center>0 -0.20556400551168535 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.018796731353869646 0.0064842901313658802 0.021098725156875782 0 0 0</inertia>
+					<inertia>0.018654099485868457 0.0064350865546010296 0.020938625481835772 0 0 0</inertia>
 				</Body>
 				<Body name="ulna_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -2327,13 +2413,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.2715591963011414 1.2715591963011414 1.2715591963011414</scale_factors>
+							<scale_factors>1.453955594249789 1.453955594249789 1.453955594249789</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2349,9 +2435,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.60750000000000004</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.15325467213419505 0</mass_center>
+					<mass_center>0 -0.1752379979969558 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0047891475830854902 0.00099922120403336681 0.0051949801432996899 0 0 0</inertia>
+					<inertia>0.0062616291090888615 0.0013064438856910589 0.0067922398134714771 0 0 0</inertia>
 				</Body>
 				<Body name="radius_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -2367,13 +2453,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.2715591963011414 1.2715591963011414 1.2715591963011414</scale_factors>
+							<scale_factors>1.453955594249789 1.453955594249789 1.453955594249789</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2389,9 +2475,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.60750000000000004</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.15325467213419505 0</mass_center>
+					<mass_center>0 -0.1752379979969558 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0047891475830854902 0.00099922120403336681 0.0051949801432996899 0 0 0</inertia>
+					<inertia>0.0062616291090888615 0.0013064438856910589 0.0067922398134714771 0 0 0</inertia>
 				</Body>
 				<Body name="hand_l">
 					<!--The geometry used to display the axes of this Frame.-->
@@ -2407,13 +2493,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2424,13 +2510,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2441,13 +2527,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2458,13 +2544,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2475,13 +2561,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2492,13 +2578,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2509,13 +2595,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2526,13 +2612,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2543,13 +2629,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2560,13 +2646,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2577,13 +2663,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2594,13 +2680,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2611,13 +2697,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2628,13 +2714,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2645,13 +2731,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2662,13 +2748,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2679,13 +2765,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2696,13 +2782,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2713,13 +2799,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2730,13 +2816,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2747,13 +2833,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2764,13 +2850,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2781,13 +2867,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2798,13 +2884,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2815,13 +2901,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2832,13 +2918,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2849,13 +2935,13 @@
 							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
 							<socket_frame>..</socket_frame>
 							<!--Scale factors in X, Y, Z directions respectively.-->
-							<scale_factors>1.0808253168559703 1.0808253168559703 1.0808253168559703</scale_factors>
+							<scale_factors>1.2358622551123206 1.2358622551123206 1.2358622551123206</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2871,9 +2957,9 @@
 					<!--The mass of the body (kg)-->
 					<mass>0.45750000000000002</mass>
 					<!--The location (Vec3) of the mass center in the body frame.-->
-					<mass_center>0 -0.086586823472126234 0</mass_center>
+					<mass_center>0 -0.099007106190439384 0</mass_center>
 					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
-					<inertia>0.0014422416084106202 0.00088442394596480851 0.0021665961381953265 0 0 0</inertia>
+					<inertia>0.0018856762880848296 0.0011563508179174907 0.002832742405867345 0 0 0</inertia>
 				</Body>
 			</objects>
 			<groups />
@@ -3102,7 +3188,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/pelvis</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.013155284938711662 -0.022363984395809826 0</translation>
+							<translation>0.013383792311484068 -0.02275244692952292 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -3192,7 +3278,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/pelvis</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.093007864516691449 -0.086956433444884101 0.10984662923824239</translation>
+							<translation>-0.094623411642192359 -0.088466867178909697 0.11175466580089198</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -3258,7 +3344,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -3273,7 +3359,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -3288,7 +3374,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -3330,7 +3416,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/femur_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0082669775086459257 -0.41688456667826845 -0.002810159227290024</translation>
+							<translation>-0.0080813130369172467 -0.40752193653161428 -0.0027470470768260107</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-1.64157 1.44618 1.5708</orientation>
 						</PhysicalOffsetFrame>
@@ -3345,7 +3431,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/tibia_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0080069234279887425 -0.010427210561932547 -0.0014695766991042762</translation>
+							<translation>-0.0078592423325083201 -0.010234889267437786 -0.0014424715695538193</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-1.64157 1.44618 1.5708</orientation>
 						</PhysicalOffsetFrame>
@@ -3399,7 +3485,7 @@
 										<y> 0 0.000479 0.000835 0.001086 0.001251 0.001346 0.001391 0.001403 0.0014 0.0014 0.001421 0.001481 0.001599</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -3415,7 +3501,7 @@
 										<y> 0 0.000988 0.001899 0.002734 0.003492 0.004173 0.004777 0.005305 0.005756 0.00613 0.006427 0.006648 0.006792</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -3430,7 +3516,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -3472,7 +3558,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/femur_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0082669775086459257 -0.41688456667826845 -0.002810159227290024</translation>
+							<translation>-0.0080813130369172467 -0.40752193653161428 -0.0027470470768260107</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -3540,7 +3626,7 @@
 										<y> 0.0524 0.0488 0.0437 0.0371 0.0296 0.0216 0.0136 0.0057 -0.0019 -0.0088 -0.0148 -0.0196 -0.0227</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -3556,7 +3642,7 @@
 										<y> -0.0108 -0.019 -0.0263 -0.0322 -0.0367 -0.0395 -0.0408 -0.0404 -0.0384 -0.0349 -0.0301 -0.0245 -0.0187</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -3571,7 +3657,7 @@
 										<value>0.0027499999999999998</value>
 									</Constant>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -3613,7 +3699,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/tibia_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0 -0.42560851099508246 0</translation>
+							<translation>0 -0.41775851321318369 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -3679,7 +3765,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>0.98978723487228482</scale>
+								<scale>0.97153142607717136</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -3694,7 +3780,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>0.98978723487228482</scale>
+								<scale>0.97153142607717136</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -3709,7 +3795,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>0.98978723487228482</scale>
+								<scale>0.97153142607717136</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -3751,7 +3837,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/talus_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.046102224110891543 -0.039655286066268204 0.0074867667614980735</translation>
+							<translation>-0.043987358844251673 -0.037836163697280246 0.0071433233964829455</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-1.7681899999999999 0.906223 1.8196000000000001</orientation>
 						</PhysicalOffsetFrame>
@@ -3809,7 +3895,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/calcn_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.16901943143382012 -0.001890597667044968 0.0010209227402042827</translation>
+							<translation>0.16126593728423619 -0.0018038695445664005 0.00097408955406585616</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-3.1415899999999999 0.61990100000000004 0</orientation>
 						</PhysicalOffsetFrame>
@@ -3899,7 +3985,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/pelvis</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.093007864516691449 -0.086956433444884101 -0.10984662923824239</translation>
+							<translation>-0.094623411642192359 -0.088466867178909697 -0.11175466580089198</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -3965,7 +4051,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -3980,7 +4066,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -3995,7 +4081,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -4037,7 +4123,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/femur_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0082669775086459257 -0.41688456667826845 0.002810159227290024</translation>
+							<translation>-0.0080813130369172467 -0.40752193653161428 0.0027470470768260107</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>1.64157 -1.44618 1.5708</orientation>
 						</PhysicalOffsetFrame>
@@ -4052,7 +4138,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/tibia_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0080069234279887425 -0.010427210561932547 0.0014695766991042762</translation>
+							<translation>-0.0078592423325083201 -0.010234889267437786 0.0014424715695538193</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>1.64157 -1.44618 1.5708</orientation>
 						</PhysicalOffsetFrame>
@@ -4106,7 +4192,7 @@
 										<y> 0 0.000479 0.000835 0.001086 0.001251 0.001346 0.001391 0.001403 0.0014 0.0014 0.001421 0.001481 0.001599</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -4122,7 +4208,7 @@
 										<y> 0 -0.000988 -0.001899 -0.002734 -0.003492 -0.004173 -0.004777 -0.005305 -0.005756 -0.00613 -0.006427 -0.006648 -0.006792</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -4137,7 +4223,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -4179,7 +4265,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/femur_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0082669775086459257 -0.41688456667826845 0.002810159227290024</translation>
+							<translation>-0.0080813130369172467 -0.40752193653161428 0.0027470470768260107</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -4247,7 +4333,7 @@
 										<y> 0.0524 0.0488 0.0437 0.0371 0.0296 0.0216 0.0136 0.0057 -0.0019 -0.0088 -0.0148 -0.0196 -0.0227</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -4263,7 +4349,7 @@
 										<y> -0.0108 -0.019 -0.0263 -0.0322 -0.0367 -0.0395 -0.0408 -0.0404 -0.0384 -0.0349 -0.0301 -0.0245 -0.0187</y>
 									</SimmSpline>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -4278,7 +4364,7 @@
 										<value>-0.0027499999999999998</value>
 									</Constant>
 								</function>
-								<scale>1.0218760826509179</scale>
+								<scale>0.99892620975491297</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -4320,7 +4406,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/tibia_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0 -0.42560851099508246 0</translation>
+							<translation>0 -0.41775851321318369 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -4386,7 +4472,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>0.98978723487228482</scale>
+								<scale>0.97153142607717136</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -4401,7 +4487,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>0.98978723487228482</scale>
+								<scale>0.97153142607717136</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -4416,7 +4502,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>0.98978723487228482</scale>
+								<scale>0.97153142607717136</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -4458,7 +4544,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/talus_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.046102224110891543 -0.039655286066268204 -0.0074867667614980735</translation>
+							<translation>-0.043987358844251673 -0.037836163697280246 -0.0071433233964829455</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>1.7681899999999999 -0.906223 1.8196000000000001</orientation>
 						</PhysicalOffsetFrame>
@@ -4516,7 +4602,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/calcn_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.16901943143382012 -0.001890597667044968 -0.0010209227402042827</translation>
+							<translation>0.16126593728423619 -0.0018038695445664005 -0.00097408955406585616</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-3.1415899999999999 -0.61990100000000004 0</orientation>
 						</PhysicalOffsetFrame>
@@ -4606,7 +4692,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/sacrum</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.12892179239937429 0.093402523064852791 -0</translation>
+							<translation>-0.13116116465254388 0.095024925411536884 -0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -4672,7 +4758,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -4687,7 +4773,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -4702,7 +4788,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -4776,7 +4862,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar5</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.010607523282658456 0.031398268916669032 0</translation>
+							<translation>0.010757171340113345 0.0318412271667355 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -4791,7 +4877,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar4</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0010607523282658456 -0.0026518808206646141 0</translation>
+							<translation>0.0010757171340113345 -0.0026892928350283362 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -4842,7 +4928,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -4857,7 +4943,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -4872,7 +4958,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -4946,7 +5032,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar4</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0 0.033944074504507059 0</translation>
+							<translation>0 0.034422948288362704 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -4961,7 +5047,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar3</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.00063645139695950727 -0.0012729027939190145 0</translation>
+							<translation>-0.00064543028040680065 -0.0012908605608136013 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5012,7 +5098,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -5027,7 +5113,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -5042,7 +5128,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -5116,7 +5202,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar3</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0084860186261267647 0.033095472641894379 0</translation>
+							<translation>-0.0086057370720906759 0.033562374581153638 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5131,7 +5217,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar2</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0013789780267455991 -0.0041369340802367973 0</translation>
+							<translation>-0.0013984322742147347 -0.0041952968226442048 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5182,7 +5268,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -5197,7 +5283,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -5212,7 +5298,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -5286,7 +5372,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar2</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.010607523282658456 0.026518808206646139 0</translation>
+							<translation>-0.010757171340113345 0.026892928350283365 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5301,7 +5387,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar1</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0014850532595721837 -0.0040308588474102132 0</translation>
+							<translation>0.0015060039876158683 -0.0040877251092430707 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5352,7 +5438,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -5367,7 +5453,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -5382,7 +5468,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -5456,7 +5542,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/lumbar1</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.011031824213964793 0.029170689027310754 0</translation>
+							<translation>-0.011187458193717878 0.029582221185311699 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5471,7 +5557,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/torso</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.013683705034629408 0.12241081868187857 0</translation>
+							<translation>-0.013876751028746215 0.124137757264908 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5522,7 +5608,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -5537,7 +5623,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -5552,7 +5638,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -5658,7 +5744,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/sacrum</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.12892179239937429 0.093402523064852791 -0</translation>
+							<translation>-0.13116116465254388 0.095024925411536884 -0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5744,7 +5830,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.3155284938711662</scale>
+								<scale>1.3383792311484068</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -5814,7 +5900,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/torso</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0 0.5743529535151104 0</translation>
+							<translation>0 0.58245576898830675 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5829,7 +5915,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/head</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0 0.60260665349176412 0</translation>
+							<translation>0 0.59669961940857796 0</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -5880,7 +5966,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.1261822617943344</scale>
+								<scale>1.1420701352711899</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -5895,7 +5981,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.1261822617943344</scale>
+								<scale>1.1420701352711899</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -5910,7 +5996,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.1261822617943344</scale>
+								<scale>1.1420701352711899</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -5984,7 +6070,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/torso</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0033466735956787425 0.39406948995076163 0.18032789580519376</translation>
+							<translation>0.0033938875578057603 0.39962891528521077 0.18287191278192688</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -6050,7 +6136,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -6065,7 +6151,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -6080,7 +6166,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -6122,7 +6208,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/humerus_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.016487600752426727 -0.35909577983866831 -0.012035798023397324</translation>
+							<translation>0.01642492667837225 -0.35773075433640139 -0.011990046521529348</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-0.0228627 0.228018 0.0051688999999999997</orientation>
 						</PhysicalOffsetFrame>
@@ -6180,7 +6266,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/ulna_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0085537787135177793 -0.016539170466288947 0.033166078517122673</translation>
+							<translation>-0.0097807592825183316 -0.018911600414407006 0.037923523764817245</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-1.56884 0.056427999999999999 1.5361400000000001</orientation>
 						</PhysicalOffsetFrame>
@@ -6254,7 +6340,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/radius_r</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.011185906249861141 -0.29988579241485752 0.017305920661658536</translation>
+							<translation>-0.012790447362615393 -0.34290234130346448 0.019788335637739629</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>-1.5708 0 -1.5708</orientation>
 						</PhysicalOffsetFrame>
@@ -6344,7 +6430,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/torso</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.0033466735956787425 0.39406948995076163 -0.18032789580519376</translation>
+							<translation>0.0033938875578057603 0.39962891528521077 -0.18287191278192688</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0 0 0</orientation>
 						</PhysicalOffsetFrame>
@@ -6410,7 +6496,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation2">
@@ -6425,7 +6511,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 						<TransformAxis name="translation3">
@@ -6440,7 +6526,7 @@
 										<value>0</value>
 									</Constant>
 								</function>
-								<scale>1.0607523282658455</scale>
+								<scale>1.0757171340113345</scale>
 							</MultiplierFunction>
 						</TransformAxis>
 					</SpatialTransform>
@@ -6482,7 +6568,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/humerus_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>0.016487600752426727 -0.35909577983866831 0.012035798023397324</translation>
+							<translation>0.01642492667837225 -0.35773075433640139 0.011990046521529348</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>0.0228627 -0.228018 0.0051688999999999997</orientation>
 						</PhysicalOffsetFrame>
@@ -6540,7 +6626,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/ulna_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.0085537787135177793 -0.016539170466288947 -0.033166078517122673</translation>
+							<translation>-0.0097807592825183316 -0.018911600414407006 -0.037923523764817245</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>1.56884 -0.056427999999999999 1.5361400000000001</orientation>
 						</PhysicalOffsetFrame>
@@ -6614,7 +6700,7 @@
 							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
 							<socket_parent>/bodyset/radius_l</socket_parent>
 							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
-							<translation>-0.011185906249861141 -0.29988579241485752 -0.017305920661658536</translation>
+							<translation>-0.012790447362615393 -0.34290234130346448 -0.019788335637739629</translation>
 							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
 							<orientation>1.5708 0 1.5708</orientation>
 						</PhysicalOffsetFrame>
@@ -6981,7 +7067,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/head</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.10698760851568292 0.58693077031030338 0.0006788074314160753</location>
+					<location>0.10593886561462341 0.58117739861318685 0.00067215344143760325</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -6989,7 +7075,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/head</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.075730010459084701 0.62319015723505433 0.030911481878235166</location>
+					<location>0.074987669248097771 0.61708135395888219 0.030608472981870534</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -6997,7 +7083,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/head</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.078101891829447767 0.62114999732413845 -0.030696002772726532</location>
+					<location>0.077336300320750354 0.61506119265577974 -0.030395106103986796</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7005,7 +7091,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/torso</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.012198618973786608 0.38967924013100835 0.16854419635336584</location>
+					<location>0.012370713777108315 0.39517672901339784 0.17092197209870039</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7013,7 +7099,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/torso</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.0053455935334072412 0.38981991602553417 -0.17266772717313755</location>
+					<location>0.0054210077151065272 0.39531938952523593 -0.1751036765713212</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7021,7 +7107,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/humerus_l</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.0054467983950820635 -0.33931344941588715 0.0039137650858283995</location>
+					<location>0.0054260935605158264 -0.33802362219507448 0.0038988877482154707</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7029,7 +7115,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/humerus_r</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.0082774816108767482 -0.36912326071277762 0.0035066698090473478</location>
+					<location>0.0082460165418679482 -0.36772011789506132 0.0034933399567178948</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7037,7 +7123,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/radius_l</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>-0.010251902587718293 -0.29394381456747259 -0.0099878896963372255</location>
+					<location>-0.011722467316092439 -0.33610802771016518 -0.011420583596094038</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7045,7 +7131,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/radius_r</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>-0.012949100271704022 -0.3006652509977632 0.015560879662916704</location>
+					<location>-0.014806559407782896 -0.34379360784488733 0.017792980541652507</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7053,7 +7139,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/pelvis</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>-0.093324445078465587 -0.08874653330935596 0.11176428326518263</location>
+					<location>-0.094945491210090563 -0.090288061088013544 0.11370562948897785</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7061,7 +7147,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/pelvis</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>-0.087460797478414218 -0.089802146477017564 -0.09968535391641016</location>
+					<location>-0.088979992018515836 -0.091362010262286186 -0.10141688907003468</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7069,7 +7155,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/femur_r</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.007828772053427727 -0.41177409243815288 0.0045706730890138396</location>
+					<location>0.0076529490484584075 -0.40252623622176303 0.0044680223192943465</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7077,7 +7163,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/femur_l</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.0073169813567364808 -0.41261485800615799 -0.0014252995840978344</location>
+					<location>0.0071526524376331804 -0.4033481193995756 -0.0013932893972962042</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7085,7 +7171,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/tibia_r</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.00094773988550142909 -0.41901926142845541 0.0033584687294593773</location>
+					<location>0.00093025960536885163 -0.41129079691749959 0.0032965245450839449</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7093,7 +7179,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/calcn_r</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.0083346197026402009 0.010460537364159434 -0.0065426878699700701</location>
+					<location>0.0079522824497265856 0.0099806770630894263 -0.0062425526033203912</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7101,7 +7187,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/toes_r</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.05763940046092763 -0.00011094502329535043 0.010435756978462572</location>
+					<location>0.054995285814060435 -0.00010585559906910239 0.0099570334376685599</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7109,7 +7195,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/tibia_l</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>-0.0038361634364404459 -0.41856231081521356 0.00081751620613730602</location>
+					<location>-0.0037654085673786133 -0.41084227438125276 0.00080243779431269301</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7117,7 +7203,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/calcn_l</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.0085657311777067105 0.01265962062864813 0.0059832135149795003</location>
+					<location>0.0081727920581637463 0.012078880925245396 0.0057087432331275013</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
@@ -7125,7 +7211,7 @@
 					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
 					<socket_parent_frame>/bodyset/toes_l</socket_parent_frame>
 					<!--The fixed location of the station expressed in its parent frame.-->
-					<location>0.059717324704419351 0.006789003486962205 -0.011060603462821702</location>
+					<location>0.056977888630136878 0.0064775688881641546 -0.010553216096100881</location>
 					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
 					<fixed>true</fixed>
 				</Marker>
