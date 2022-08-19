@@ -104,12 +104,13 @@ mediapipe_trajectories =  [
 #             self.output_folder = output_folder
 #             self.output_filename = output_filename
 
+# changing a file to check on something
 
 def get_numpy_trajectories(sessionID):
     """returns the array of trajectories associated with a given motion capture session"""
     FMC_Folder = Path("C:/Users/Mac Prible/FreeMocap_Data") 
     dataArrayPath = FMC_Folder / sessionID / 'DataArrays'
-    skeletonPath = dataArrayPath / 'mediaPipeSkel_3d.npy'
+    skeletonPath = dataArrayPath / 'mediaPipeSkel_3d_smoothed.npy'
     return np.load(skeletonPath) #load 3d open pose data
 
 
@@ -195,7 +196,7 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename,
     traj_df = get_trajectory_df(SessionID, TargetFolder, TargetFilename, Axes, FlipAxis)
     # traj_df = traj_df.fillna("")
     traj_df = traj_df.dropna()
-
+    
 
     orig_num_frames = len(traj_df) - 1
     num_frames = orig_num_frames
