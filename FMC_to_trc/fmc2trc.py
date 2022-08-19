@@ -175,7 +175,7 @@ class FMCSession():
 
         return merged_trajectories
 
-    def create_trajectory_csv(csv_filename):
+    def create_trajectory_csv(self, csv_filename):
 
         # TargetPath = os.path.join(TargetFolder, TargetFilename + ".csv")    
         df_traj = self.get_trajectory_df()
