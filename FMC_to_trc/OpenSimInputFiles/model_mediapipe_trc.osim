@@ -48,8 +48,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -63,8 +65,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -101,8 +105,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -142,7 +148,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -179,8 +185,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -217,8 +225,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -232,8 +242,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -270,8 +282,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -308,8 +322,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -346,8 +362,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -384,8 +402,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -422,8 +442,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -460,8 +482,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -475,8 +499,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -513,8 +539,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -551,8 +579,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -589,8 +619,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -627,8 +659,10 @@
 							<scale_factors>0.93000000000000005 0.93000000000000005 0.93000000000000005</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -665,8 +699,10 @@
 							<scale_factors>0.93000000000000005 0.93000000000000005 0.93000000000000005</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -703,8 +739,10 @@
 							<scale_factors>0.93000000000000005 0.93000000000000005 0.93000000000000005</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -741,8 +779,10 @@
 							<scale_factors>0.93000000000000005 0.93000000000000005 0.93000000000000005</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -779,8 +819,10 @@
 							<scale_factors>0.93000000000000005 0.93000000000000005 0.93000000000000005</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -820,8 +862,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -853,8 +897,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -886,8 +932,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -919,8 +967,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -952,8 +1002,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -985,8 +1037,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1018,8 +1072,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1051,8 +1107,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1084,8 +1142,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1117,8 +1177,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1150,8 +1212,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1183,8 +1247,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1216,8 +1282,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1249,8 +1317,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1282,8 +1352,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1315,8 +1387,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1348,8 +1422,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1381,8 +1457,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1414,8 +1492,10 @@
 									<scale_factors>0.89000000000000001 0.89000000000000001 0.89000000000000001</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1447,8 +1527,10 @@
 									<scale_factors>1 1.1000000000000001 1</scale_factors>
 									<!--Default appearance attributes for this Geometry-->
 									<Appearance>
+										<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+										<visible>true</visible>
 										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-										<opacity>0.56999999999999995</opacity>
+										<opacity>1</opacity>
 										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 										<color>1 1 1</color>
 									</Appearance>
@@ -1488,9 +1570,9 @@
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1516,9 +1598,9 @@
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1542,9 +1624,9 @@
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1583,8 +1665,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1598,8 +1682,10 @@
 							<scale_factors>1 1 1</scale_factors>
 							<!--Default appearance attributes for this Geometry-->
 							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1642,9 +1728,9 @@
 								<!--Default appearance for this Geometry-->
 								<Appearance>
 									<!--Flag indicating whether the associated Geometry is visible or hidden.-->
-									<visible>false</visible>
+									<visible>true</visible>
 									<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-									<opacity>0.56999999999999995</opacity>
+									<opacity>0.050000000000000003</opacity>
 									<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 									<color>0 1 1</color>
 									<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1686,7 +1772,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 								<!--Visuals applied to surfaces associated with this Appearance.-->
@@ -1731,7 +1817,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1771,7 +1857,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1811,7 +1897,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1828,7 +1914,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1845,7 +1931,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1862,7 +1948,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1879,7 +1965,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1896,7 +1982,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1913,7 +1999,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1930,7 +2016,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1947,7 +2033,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1964,7 +2050,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1981,7 +2067,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -1998,7 +2084,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2015,7 +2101,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2032,7 +2118,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2049,7 +2135,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2066,7 +2152,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2083,7 +2169,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2100,7 +2186,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2117,7 +2203,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2134,7 +2220,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2151,7 +2237,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2168,7 +2254,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2185,7 +2271,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2202,7 +2288,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2219,7 +2305,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2236,7 +2322,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2253,7 +2339,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2293,7 +2379,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2333,7 +2419,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2373,7 +2459,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2413,7 +2499,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2430,7 +2516,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2447,7 +2533,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2464,7 +2550,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2481,7 +2567,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2498,7 +2584,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2515,7 +2601,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2532,7 +2618,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2549,7 +2635,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2566,7 +2652,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2583,7 +2669,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2600,7 +2686,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2617,7 +2703,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2634,7 +2720,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2651,7 +2737,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2668,7 +2754,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2685,7 +2771,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2702,7 +2788,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2719,7 +2805,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2736,7 +2822,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2753,7 +2839,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2770,7 +2856,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2787,7 +2873,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2804,7 +2890,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2821,7 +2907,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2838,7 +2924,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>
@@ -2855,7 +2941,7 @@
 								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
 								<visible>true</visible>
 								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
-								<opacity>0.56999999999999995</opacity>
+								<opacity>1</opacity>
 								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
 								<color>1 1 1</color>
 							</Appearance>

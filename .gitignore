@@ -4,5 +4,6 @@ FMC_to_trc/~$trajectory_map.xlsx
 *.mot
 *.log
 *.sto
+*.trc
 *~*.xlsx
 FMC_to_trc/fmc2trc.py

@@ -5,6 +5,7 @@
 
 
 # This code copied from https://github.com/freemocap/freemocap/wiki
+from turtle import down
 import numpy as np
 from pathlib import Path 
 import pandas as pd
@@ -182,7 +183,7 @@ def create_trajectory_csv(SessionID, TargetFolder="", TargetFilename="",
 
 # Convert a human readable csv to a trc
 def create_trajectory_trc(SessionID, TargetFolder, TargetFilename, 
-        Axes= [0,2,1] , FlipAxis=[1,1,-1]):
+        Axes= [0,1,2] , FlipAxis=[1,-1,-1]):
     
     num_markers = 33
     data_rate= 25
@@ -234,13 +235,19 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename,
         tsv_writer.writerow("")
 
         # add in frame and Time stamp to the data frame
-        traj_df["Frame"] = [i for i in range(0, len(traj_df))]
-        traj_df["time"] = traj_df["Frame"] / float(camera_rate)
+
+        traj_df["Frame"] = [str(i) for i in range(0, len(traj_df))]
+        traj_df["time"] = traj_df["Frame"].astype(float) / float(camera_rate)
+        
+        # pd.to_string(traj_df["Frame"], downcast='string')
 
         traj_df = traj_df.reindex(columns=column_names)
 
         for row in range(0, len(traj_df)):
             tsv_writer.writerow(traj_df.iloc[row].tolist())
+
+
+        print(traj_df)
 
 
 
