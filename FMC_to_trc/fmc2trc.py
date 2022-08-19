@@ -10,7 +10,8 @@ from pathlib import Path
 import pandas as pd
 import os
 import csv
- 
+
+
 mediapipe_trajectories =  [
     "nose",
     "left_eye_inner",
@@ -89,8 +90,19 @@ mediapipe_trajectories =  [
     "left_hand_pinky_finger_tip",
 ]
 
+#TODO: convert this module into a FmcSession class object with methods after the export pipeline is working
+#  make it work in a rough way, and then clean it up. You can start the "right" way when you have more experience with it.
 
-#openPoseData_nCams_nFrames_nImgPts_XYC = np.load(dataArrayPath / 'openPoseData_2d.npy') #2d data too, if you're into that
+# class FmcSession():
+#     """Provide a session object to manage FMC output processing"""
+
+
+#     def __init__(self, sessionID, output_folder, output_filename,
+#             camera_rate):
+#             self.sessionID = sessionID
+#             self.output_folder = output_folder
+#             self.output_filename = output_filename
+
 
 def get_numpy_trajectories(sessionID):
     """returns the array of trajectories associated with a given motion capture session"""
@@ -180,15 +192,16 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename,
     orig_data_start_frame = 0
 
     traj_df = get_trajectory_df(SessionID, TargetFolder, TargetFilename, Axes, FlipAxis)
-    traj_df = traj_df.fillna("")
+    # traj_df = traj_df.fillna("")
+    traj_df = traj_df.dropna()
 
 
-    orig_num_frames = len(traj_df)
+    orig_num_frames = len(traj_df) - 1
     num_frames = orig_num_frames
 
     TargetPath = os.path.join(TargetFolder, TargetFilename + ".trc")
 
-    with open(TargetPath, 'wt', newline='') as out_file:
+    with open(TargetPath, 'wt', newline='', encoding='utf-8') as out_file:
         tsv_writer = csv.writer(out_file, delimiter='\t')
         tsv_writer.writerow(["PathFileType","4", "(X/Y/Z)",	"Tpose_0-50.trc"])
         tsv_writer.writerow(["DataRate","CameraRate","NumFrames","NumMarkers", "Units","OrigDataRate","OrigDataStartFrame","OrigNumFrames"])
@@ -217,8 +230,11 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename,
         column_names = column_names.insert(0, "Frame")
         column_names = column_names.insert(1, "time")
 
+        # the .trc fileformat expects a blank fourth line
+        tsv_writer.writerow("")
+
         # add in frame and Time stamp to the data frame
-        traj_df["Frame"] = [float(i) for i in range(0, len(traj_df))]
+        traj_df["Frame"] = [i for i in range(0, len(traj_df))]
         traj_df["time"] = traj_df["Frame"] / float(camera_rate)
 
         traj_df = traj_df.reindex(columns=column_names)
@@ -231,7 +247,7 @@ def create_trajectory_trc(SessionID, TargetFolder, TargetFilename,
 
 GoodSession = "sesh_2022-08-10_10_33_12"
 target_folder = "C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\FMC_to_trc"
-target_filename = "dao_yin"
+target_filename = "dao_yin_dropped"
 
 # create_trajectory_csv(GoodSession,target_folder, target_filename)
 

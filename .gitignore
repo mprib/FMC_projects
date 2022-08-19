@@ -1,8 +1,8 @@
 FMC_to_trc/~$trajectory_map.xlsx
-*.trc
 *.csv
 *.vtp
 *.mot
 *.log
 *.sto
 *~*.xlsx
+FMC_to_trc/fmc2trc.py
