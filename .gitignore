@@ -6,4 +6,4 @@ FMC_to_trc/~$trajectory_map.xlsx
 *.sto
 *.trc
 *~*.xlsx
-FMC_to_trc/fmc2trc.py
+FMC_to_trc/dao_yin_dropped.trc
