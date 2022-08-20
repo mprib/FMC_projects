@@ -117,9 +117,14 @@ class FMCSession():
 
         # These will manipulate the orientation of the markers 
         # to make them line up better by default with OpenSim
-        axes_order= [0,2,1]
-        axes_flip=[1,1,-1]
+        # axes_order= [0,2,1]
+        # axes_flip=[1,1,-1]
+    
+        # flip y and z (1 and 2); y becomes negative
+        axes_order= [0,1,2]
+        axes_flip=[1,-1,-1]
         
+
         # Order of the Axes
         x_axis = axes_order[0]
         y_axis = axes_order[1]
@@ -148,12 +153,22 @@ class FMCSession():
         z_df = pd.DataFrame(sk_z, columns = [name + "_z" for name in marker_names])
         merged_trajectories = pd.concat([x_df, y_df, z_df],axis = 1, join = "inner")    
 
+
+        # add in frame and Time stamp to the data frame
+        merged_trajectories["Frame"] = [str(i) for i in range(0, len(merged_trajectories))]
+        merged_trajectories["Time"] = merged_trajectories["Frame"].astype(float) / float(self.camera_rate)
+        
+
         # get the correct order for all dataframe columns
         column_order = []
         for marker in marker_names:
             column_order.append(marker + "_x")
             column_order.append(marker + "_y")
             column_order.append(marker + "_z")
+
+        # Add Frame and Time
+        column_order.insert(0, "Frame")
+        column_order.insert(1, "Time")
 
         # reorder the dataframe, note frame number in 0 position remains
         merged_trajectories = merged_trajectories.reindex(columns=column_order)
@@ -168,7 +183,7 @@ class FMCSession():
 
         # TargetPath = os.path.join(TargetFolder, TargetFilename + ".csv")    
         df_traj = self.get_trajectory_dataframe()
-        df_traj.to_csv(csv_filename)
+        df_traj.to_csv(csv_filename, index=False)
 
 
     # Convert a human readable csv to a trc
@@ -182,10 +197,13 @@ class FMCSession():
         orig_data_start_frame = 0
 
         trajectories_for_trc = self.trajectories
+
+        # going to recreate these later after potentially dropping frames
+        original_column_order = trajectories_for_trc.columns
+        trajectories_for_trc = trajectories_for_trc.drop(columns=["Frame", "Time"]) 
         # traj_df = traj_df.fillna("")
         trajectories_for_trc = trajectories_for_trc.dropna()
         
-
         orig_num_frames = len(trajectories_for_trc) - 1
         num_frames = orig_num_frames
 
@@ -197,7 +215,7 @@ class FMCSession():
             tsv_writer.writerow(["PathFileType",
                                 "4", 
                                 "(X/Y/Z)",	
-                                "Tpose_0-50.trc"])
+                                trc_filename])
             tsv_writer.writerow(["DataRate",
                                 "CameraRate",
                                 "NumFrames",
@@ -233,25 +251,23 @@ class FMCSession():
 
             tsv_writer.writerow(header_names)
 
-            # Create a list with the appropriate column order in it
-            column_names = trajectories_for_trc.columns
-            column_names = column_names.insert(0, "Frame")
-            column_names = column_names.insert(1, "time")
-
             # the .trc fileformat expects a blank fourth line
             tsv_writer.writerow("")
 
-            # add in frame and Time stamp to the data frame
+            # add in frame and Time stamp to the data frame 
+            # this redundent step is due to potentially dropping frames earlier
+            # trajectories_for_trc["Frame"] = [str(i) for i in range(0, len(trajectories_for_trc))]
+            # trajectories_for_trc["Time"] = trajectories_for_trc["Frame"].astype(float) / float(self.camera_rate)
+            trajectories_for_trc.insert(0, "Frame", [str(i) for i in range(0, len(trajectories_for_trc))])
+            trajectories_for_trc.insert(1, "Time", trajectories_for_trc["Frame"].astype(float) / float(self.camera_rate))
 
-            trajectories_for_trc["Frame"] = [str(i) for i in range(0, len(trajectories_for_trc))]
-            trajectories_for_trc["time"] = trajectories_for_trc["Frame"].astype(float) / float(camera_rate)
-            
-            # pd.to_string(traj_df["Frame"], downcast='string')
-
-            trajectories_for_trc = trajectories_for_trc.reindex(columns=column_names)
+        
+            # trajectories_for_trc = trajectories_for_trc.reindex(columns=column_names)
 
             for row in range(0, len(trajectories_for_trc)):
                 tsv_writer.writerow(trajectories_for_trc.iloc[row].tolist())
+
+            #print(column_names)
 
 
 
@@ -260,12 +276,16 @@ class FMCSession():
 #TODO: interpolate missing data
 #def interpolate_trajectories(self):
 
+GoodSession = "sesh_2022-08-10_10_33_12"
+FMC_folder = Path("C:/Users/Mac Prible/FreeMocap_Data")
+trc_filename = "FMC_to_trc/dao_yin_dropped.trc"
+csv_filename = "FMC_to_trc/dao_yin_dropped.csv"
 
-# target_folder = "C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\FMC_to_trc"
+testSession = FMCSession(GoodSession, FMC_folder, 25)
 
-# create_trajectory_csv(GoodSession,target_folder, target_filename)
+trajectories = testSession.get_trajectory_dataframe()
 
-# create_trajectory_trc(GoodSession,target_folder, target_filename)
+testSession.create_trajectory_csv(csv_filename)
+testSession.create_trajectory_trc(trc_filename)
 
-# test_df = get_trajectory_df(GoodSession)
-# print(test_df)
+print(trajectories)
