@@ -90,9 +90,6 @@ mediapipe_trajectories =  [
     "left_hand_pinky_finger_tip",
 ]
 
-#TODO: convert this module into a FmcSession class object with methods after the export pipeline is working
-#  make it work in a rough way, and then clean it up. You can start the "right" way when you have more experience with it.
-
 class FMCSession():
     """Provide a session object to manage FMC output processing"""
 
@@ -270,6 +267,9 @@ class FMCSession():
 
 
 
+#TODO: interpolate missing data
+#def interpolate_trajectories(self):
+
 
 # target_folder = "C:\\Users\\Mac Prible\\Box\\Research\\FMC_projects\\FMC_to_trc"
 
@@ -279,13 +279,3 @@ class FMCSession():
 
 # test_df = get_trajectory_df(GoodSession)
 # print(test_df)
-
-GoodSession = "sesh_2022-08-10_10_33_12"
-FMC_Folder = Path("C:/Users/Mac Prible/FreeMocap_Data")
-target_filename = "FMC_to_trc/dao_yin_refactored.trc"
-
-testSession = FMCSession(GoodSession, FMC_Folder, 25)
-
-testSession.create_trajectory_trc(target_filename)
-
-print("inspect")
