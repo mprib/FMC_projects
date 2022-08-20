@@ -93,38 +93,32 @@ mediapipe_trajectories =  [
 class FMCSession():
     """Provide a session object to manage FMC output processing"""
 
-
     def __init__(self, sessionID, FMC_folder, camera_rate):
             self.sessionID = sessionID
             self.camera_rate = camera_rate
             self.FMC_folder =  FMC_folder
 
-            self.trajectories = self.get_trajectory_df()
+            self.trajectories = self.get_trajectory_dataframe()
 
-    # changing a file to check on something
-    def get_numpy_trajectories(self):
-        """returns the array of trajectories associated with a session"""
+  
+    def get_trajectory_array(self):
+        """returns the array of 3D trajectories associated with a session"""
 
         dataArrayPath = self.FMC_folder / self.sessionID / 'DataArrays'
         skeletonPath = dataArrayPath / 'mediaPipeSkel_3d_smoothed.npy'
         return np.load(skeletonPath) #load 3d open pose data
 
 
-    def get_trajectory_df(self):
-        """returns a dataframe of trajectories for a session
+    def get_trajectory_dataframe(self):
+        """returns a dataframe of trajectories for a session"""
 
-        if a target folder and filename are provided, will also create 
-        a csv file
-        """
-
+        #TODO: resolve this via a good charuco board, not this hack
+        scale_factor = 0.003
 
         # These will manipulate the orientation of the markers 
         # to make them line up better by default with OpenSim
         axes_order= [0,2,1]
         axes_flip=[1,1,-1]
-
-        #TODO: resolve this via a good charuco board, not this hack
-        scale_factor = 0.003
         
         # Order of the Axes
         x_axis = axes_order[0]
@@ -136,7 +130,7 @@ class FMCSession():
         flip_y = axes_flip[1]
         flip_z = axes_flip[2]
 
-        joint_trajectories = self.get_numpy_trajectories()
+        joint_trajectories = self.get_trajectory_array()
 
         # not interested in face mesh or hands here, 
         # so only taking first 33 elements
@@ -161,8 +155,6 @@ class FMCSession():
             column_order.append(marker + "_y")
             column_order.append(marker + "_z")
 
-        print(column_order)
-
         # reorder the dataframe, note frame number in 0 position remains
         merged_trajectories = merged_trajectories.reindex(columns=column_order)
         
@@ -175,7 +167,7 @@ class FMCSession():
     def create_trajectory_csv(self, csv_filename):
 
         # TargetPath = os.path.join(TargetFolder, TargetFilename + ".csv")    
-        df_traj = self.get_trajectory_df()
+        df_traj = self.get_trajectory_dataframe()
         df_traj.to_csv(csv_filename)
 
 
@@ -183,8 +175,8 @@ class FMCSession():
     def create_trajectory_trc(self, trc_filename):
         
         num_markers = 33
-        data_rate= 25
-        camera_rate= 25
+        data_rate= self.camera_rate # not sure how this is different from camera rate
+        camera_rate= self.camera_rate
         units = 'm'
         orig_data_rate = 25
         orig_data_start_frame = 0
@@ -198,7 +190,6 @@ class FMCSession():
         num_frames = orig_num_frames
 
         trc_path = os.path.join(trc_filename)
-        print(trc_path)
 
         # this will create the formatted .trc file
         with open(trc_path, 'wt', newline='', encoding='utf-8') as out_file:
@@ -263,7 +254,6 @@ class FMCSession():
                 tsv_writer.writerow(trajectories_for_trc.iloc[row].tolist())
 
 
-            print(trajectories_for_trc)
 
 
 
