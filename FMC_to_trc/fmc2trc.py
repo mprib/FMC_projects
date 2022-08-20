@@ -182,8 +182,7 @@ class FMCSession():
     def create_trajectory_csv(self, csv_filename):
 
         # TargetPath = os.path.join(TargetFolder, TargetFilename + ".csv")    
-        df_traj = self.get_trajectory_dataframe()
-        df_traj.to_csv(csv_filename, index=False)
+        self.trajectories.to_csv(csv_filename, index=False)
 
 
     # Convert a human readable csv to a trc
@@ -269,6 +268,8 @@ class FMCSession():
 
             #print(column_names)
 
+    def interpolate_trajectory_gaps(self):
+        self.trajectories.interpolate(method='polynomial', order=3, inplace=True)
 
 
 
@@ -284,8 +285,9 @@ csv_filename = "FMC_to_trc/dao_yin_dropped.csv"
 testSession = FMCSession(GoodSession, FMC_folder, 25)
 
 trajectories = testSession.get_trajectory_dataframe()
+testSession.interpolate_trajectory_gaps()
 
 testSession.create_trajectory_csv(csv_filename)
 testSession.create_trajectory_trc(trc_filename)
 
-print(trajectories)
+# print(trajectories)
