@@ -1,0 +1,1666 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>How to run the model</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-01-25"><meta name="DC.source" content="das3doc_run.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>How to run the model</h1><!--introduction--><p>The file <tt>das3.mexw64</tt> (or <tt>das3.mexw32</tt> for 32-bit) is a Matlab MEX function that contains the system dynamics, and other functions, accessible via a Matlab function interface.  The file <tt>model_struct.mat</tt> contains model parameters for the passive joint properties, muscle models, muscle path polynomials and GH force vector polynomials. During initialization, the MEX function reads in the parameters from struct <tt>model</tt>.</p><p>To run das3driver, which displays the model movement in real time using the OpenSim Visualizer, you have to set up the Opensim-Matlab scripting environment. To do this, follow these instructions: <a href="http://simtk-confluence.stanford.edu:8080/display/OpenSim/Scripting+with+Matlab">http://simtk-confluence.stanford.edu:8080/display/OpenSim/Scripting+with+Matlab</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">How to use the model</a></li><li><a href="#2">Initialization</a></li><li><a href="#3">Dynamics</a></li><li><a href="#4">Extract mass of the muscle elements</a></li><li><a href="#5">Extract LCEopt of the muscle elements</a></li><li><a href="#6">Extract SEEslack of the muscle elements</a></li><li><a href="#7">Extract dof limits</a></li><li><a href="#8">Compute stick figure coordinates</a></li><li><a href="#9">Compute scapula contact</a></li><li><a href="#10">Compute joint moments</a></li><li><a href="#11">Compute muscle forces</a></li><li><a href="#12">Compute moment arms</a></li><li><a href="#13">Compute muscle-tendon lengths</a></li><li><a href="#14">Find muscle name</a></li><li><a href="#15">Find if muscle crosses the glenohumeral joint</a></li></ul></div><h2>How to use the model<a name="1"></a></h2><p>The MEX function has several ways in which it can be used.</p><h2>Initialization<a name="2"></a></h2><p>This needs to be done first.</p><pre class="codeinput">load <span class="string">model_struct</span>;
+das3(<span class="string">'Initialize'</span>,model);
+</pre><pre class="codeoutput">*****************************************************
+*                      DAS3MEX                      *
+*  (c) 2010-2012 Case Western Reserve University    *
+*****************************************************
+Initializing...
+</pre><h2>Dynamics<a name="3"></a></h2><p>This is to evaluate the model dynamics in the implicit form f(x, xdot, u) = 0.</p><p>Inputs</p><div><ul><li>x		(nstates x 1) 	Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).</li><li>xdot	(nstates x 1) 	State derivatives</li><li>u		(nmus x 1) 	    Muscle excitations</li></ul></div><p>Optional inputs</p><div><ul><li>M		(5 x 1)		Moments applied to the thorax-humerus YZY axes and the elbow flexion and supination axes</li><li>exF   (2 x 1)     Vertical force of amplitude exF(2) applied to the ulna at a distance of exF(1) (meters) from the elbow (to simulate a mobile arm support)</li><li>handF	(3 x 1) 	Force applied to the centre of mass of the hand (defined in the global frame: +X is laterally, +Y is upwards and +Z is posteriorly)</li></ul></div><p>Outputs</p><div><ul><li>f		(nstates x 1) Dynamics imbalance</li></ul></div><p>Optional outputs</p><div><ul><li>dfdx	(nstates x nstates sparse) 	    Jacobian of f with respect to x</li><li>dfdxdot	(nstates x nstates sparse) 	Jacobian of f with respect to xdot</li><li>dfdu	(nstates x nmus sparse)	        Jacobian of f with respect to u</li><li>FGH		(3 x 1)				        3D GH contact force, acting on scapula, expressed in scapula reference frame</li><li>FSCAP 	(3 x 2)				        3D Contact forces acting on TS and AI, expressed in thorax reference frame</li><li>qTH		(3 x 1)				        angles between thorax and humerus (YZY sequence)</li></ul></div><p>Notes:</p><div><ol><li>FGH is only correct when dynamics are satisfied, i.e. f is zero</li><li>The three Jacobians must always be requested together, or not at all.</li></ol></div><pre class="codeinput">load(<span class="string">'equilibrium.mat'</span>);
+ndof = model.nDofs;
+nmus = model.nMus;
+nstates = 2*ndof + 2*nmus;
+xdot = zeros(nstates,1);
+u = zeros(nmus,1);
+M = zeros(5,1);
+exF = zeros(2,1);
+handF = zeros(3,1);
+
+[f, dfdx, dfdxdot, dfdu, FGH, FSCAP, qTH] = das3(<span class="string">'Dynamics'</span>,x, xdot, u, M, exF, handF);
+</pre><h2>Extract mass of the muscle elements<a name="4"></a></h2><p>Output</p><div><ul><li>MusMass	(nmus x 1)	Mass for all muscle elements (in kg)</li></ul></div><pre class="codeinput">MusMass = das3(<span class="string">'MuscleMass'</span>)
+</pre><pre class="codeoutput">
+MusMass =
+
+    0.0195
+    0.0216
+    0.0242
+    0.0149
+    0.0128
+    0.0103
+    0.0096
+    0.0121
+    0.0142
+    0.0116
+    0.0141
+    0.0171
+    0.0097
+    0.0173
+    0.0154
+    0.0041
+    0.0132
+    0.0130
+    0.0072
+    0.0057
+    0.0113
+    0.0203
+    0.0118
+    0.0089
+    0.0114
+    0.0208
+    0.0193
+    0.0163
+    0.0091
+    0.0135
+    0.0061
+    0.0073
+    0.0072
+    0.0048
+    0.0023
+    0.0121
+    0.0370
+    0.0227
+    0.0421
+    0.0089
+    0.0089
+    0.0249
+    0.0127
+    0.0173
+    0.0238
+    0.0379
+    0.0201
+    0.0122
+    0.0170
+    0.0098
+    0.0126
+    0.0151
+    0.0115
+    0.0094
+    0.0196
+    0.0225
+    0.0149
+    0.0163
+    0.0241
+    0.0156
+    0.0071
+    0.0122
+    0.0104
+    0.0264
+    0.0155
+    0.0348
+    0.0197
+    0.0074
+    0.0076
+    0.0165
+    0.0082
+    0.0028
+    0.0057
+    0.0202
+    0.0238
+    0.0103
+    0.0129
+    0.0151
+    0.0053
+    0.0182
+    0.0036
+    0.0012
+    0.0662
+    0.0208
+    0.0311
+    0.0270
+    0.0296
+    0.0296
+    0.0320
+    0.0150
+    0.0288
+    0.0430
+    0.0352
+    0.0316
+    0.0407
+    0.0269
+    0.0245
+    0.0348
+    0.0330
+    0.0227
+    0.0324
+    0.0277
+    0.0140
+    0.0184
+    0.0176
+    0.0120
+    0.0140
+    0.0077
+    0.0291
+    0.0159
+    0.0147
+    0.0070
+    0.0066
+    0.0041
+    0.0065
+    0.0047
+    0.0140
+    0.0060
+    0.0275
+    0.0043
+    0.0008
+    0.0036
+    0.0034
+    0.0030
+    0.0068
+    0.0016
+    0.0035
+    0.0049
+    0.0125
+    0.0332
+    0.0152
+    0.0162
+    0.0059
+    0.0008
+    0.0015
+    0.0006
+    0.0022
+    0.0033
+
+</pre><h2>Extract LCEopt of the muscle elements<a name="5"></a></h2><p>Output</p><div><ul><li>Lceopt	(nmus x 1)	Optimal fiber length parameters for all muscle elements (in meters)</li></ul></div><pre class="codeinput">LCEopt = das3(<span class="string">'LCEopt'</span>)
+</pre><pre class="codeoutput">
+LCEopt =
+
+    0.1446
+    0.1127
+    0.1070
+    0.0952
+    0.0924
+    0.0893
+    0.0868
+    0.0770
+    0.1011
+    0.1264
+    0.1355
+    0.1547
+    0.1680
+    0.1578
+    0.1302
+    0.0765
+    0.1086
+    0.1075
+    0.1381
+    0.0986
+    0.1077
+    0.1259
+    0.1267
+    0.1170
+    0.1635
+    0.1667
+    0.1622
+    0.1289
+    0.1259
+    0.1220
+    0.1133
+    0.0845
+    0.0800
+    0.0660
+    0.0885
+    0.0945
+    0.1128
+    0.0949
+    0.0833
+    0.0666
+    0.0656
+    0.0767
+    0.0754
+    0.0710
+    0.0732
+    0.0748
+    0.0737
+    0.0836
+    0.0940
+    0.0824
+    0.0991
+    0.0660
+    0.0683
+    0.0727
+    0.0633
+    0.0719
+    0.0677
+    0.0693
+    0.0698
+    0.0753
+    0.0501
+    0.0550
+    0.0506
+    0.1411
+    0.1595
+    0.1526
+    0.1093
+    0.0541
+    0.0591
+    0.0564
+    0.0554
+    0.0556
+    0.0649
+    0.0676
+    0.0744
+    0.0797
+    0.0762
+    0.0820
+    0.0765
+    0.0721
+    0.0676
+    0.0643
+    0.1292
+    0.1170
+    0.1149
+    0.1008
+    0.0881
+    0.1183
+    0.1226
+    0.2343
+    0.2857
+    0.2951
+    0.3206
+    0.3129
+    0.3402
+    0.1884
+    0.1830
+    0.1853
+    0.1833
+    0.1500
+    0.1449
+    0.1363
+    0.1091
+    0.0807
+    0.0773
+    0.0602
+    0.0746
+    0.0807
+    0.0876
+    0.0953
+    0.0870
+    0.0758
+    0.0619
+    0.0472
+    0.0621
+    0.1613
+    0.1613
+    0.1066
+    0.0610
+    0.0391
+    0.0267
+    0.0260
+    0.0252
+    0.0263
+    0.0274
+    0.0377
+    0.0386
+    0.0352
+    0.0758
+    0.0766
+    0.0656
+    0.0638
+    0.0638
+    0.0252
+    0.0202
+    0.0228
+    0.0270
+    0.0266
+
+</pre><h2>Extract SEEslack of the muscle elements<a name="6"></a></h2><p>Output</p><div><ul><li>SEEslack (nmus x 1)	Slack length of series elastic element for all muscle elements (in meters)</li></ul></div><pre class="codeinput">SEEslack = das3(<span class="string">'SEEslack'</span>)
+</pre><pre class="codeoutput">
+SEEslack =
+
+    0.0100
+    0.0270
+    0.0540
+    0.0530
+    0.0350
+    0.0330
+    0.0360
+    0.0480
+    0.0340
+    0.0350
+    0.0310
+    0.0470
+    0.0420
+    0.0190
+    0.0180
+    0.0510
+    0.0410
+    0.0290
+    0.0260
+    0.0150
+    0.0660
+    0.0320
+    0.0310
+    0.0400
+    0.0250
+    0.0090
+    0.0070
+    0.0110
+    0.0110
+    0.0110
+    0.0090
+    0.0110
+    0.0070
+    0.0050
+    0.0050
+    0.0050
+    0.0800
+    0.0760
+    0.0620
+    0.0450
+    0.0350
+    0.0670
+    0.0820
+    0.0650
+    0.0710
+    0.0640
+    0.0480
+    0.0620
+    0.0880
+    0.0670
+    0.0730
+    0.0920
+    0.1040
+    0.1130
+    0.0380
+    0.1070
+    0.0840
+    0.0710
+    0.0500
+    0.0350
+    0.0490
+    0.0510
+    0.0180
+    0.0060
+    0.0120
+    0.0150
+    0.0340
+    0.0170
+    0.0250
+    0.0520
+    0.0310
+    0.0280
+    0.0440
+    0.0590
+    0.0550
+    0.0660
+    0.0770
+    0.0790
+    0.0400
+    0.0590
+    0.0100
+    0.0100
+    0.2335
+    0.1913
+    0.1927
+    0.2041
+    0.2193
+    0.2180
+    0.2197
+    0.0900
+    0.0830
+    0.1050
+    0.1200
+    0.0720
+    0.0690
+    0.0360
+    0.0430
+    0.0530
+    0.0280
+    0.0260
+    0.0360
+    0.0170
+    0.0140
+    0.0875
+    0.1122
+    0.0107
+    0.0404
+    0.0738
+    0.0807
+    0.0592
+    0.0394
+    0.0317
+    0.0209
+    0.0350
+    0.0076
+    0.1197
+    0.1197
+    0.1542
+    0.0851
+    0.0484
+    0.0254
+    0.0231
+    0.0150
+    0.0145
+    0.0139
+    0.0050
+    0.0050
+    0.0050
+    0.1707
+    0.1770
+    0.1911
+    0.1570
+    0.1570
+    0.0064
+    0.0080
+    0.0043
+    0.0300
+    0.0200
+
+</pre><h2>Extract dof limits<a name="7"></a></h2><p>Output</p><div><ul><li>limits	(2 x ndof)	Lower and upper limits of the ndof dofs, in radians</li></ul></div><pre class="codeinput">limits = das3(<span class="string">'Limits'</span>)
+</pre><pre class="codeoutput">
+limits =
+
+  Columns 1 through 7
+
+   -1.1345    0.0873         0    0.5760   -0.3819   -0.2967   -2.9671
+   -0.3316    0.5236    1.4486    1.2043    0.3491    0.3142    3.0543
+
+  Columns 8 through 11
+
+   -0.5236   -3.0892    0.0873    0.0873
+    1.4661    3.1241    2.4435    2.7925
+
+</pre><h2>Compute stick figure coordinates<a name="8"></a></h2><p>Inputs</p><div><ul><li>x		(nstates x 1) 	        Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).</li></ul></div><p>Outputs</p><div><ul><li>stick   	(nSegments x 12)	Position(3) and orientation(3x3) of nSegments segments</li></ul></div><p>Notes:</p><p>#	Output only depends on the first ndofs elements of x (the joint angles)</p><pre class="codeinput">stick = das3(<span class="string">'Visualization'</span>, x)
+</pre><pre class="codeoutput">
+stick =
+
+  Columns 1 through 7
+
+         0         0         0    1.0000         0         0         0
+    0.0014   -0.0152    0.0028    0.9320   -0.0000   -0.3624   -0.0000
+    0.0014   -0.0152    0.0028    0.9239   -0.1225   -0.3624    0.1314
+    0.0014   -0.0152    0.0028    0.9239   -0.1995   -0.3264    0.1314
+    0.1841    0.0058    0.1033    0.9415   -0.1995    0.2717    0.2342
+    0.1841    0.0058    0.1033    0.9378    0.2161    0.2717   -0.1953
+    0.1841    0.0058    0.1033    0.9378    0.1218    0.3251   -0.1953
+    0.1689   -0.0256    0.0681    0.7140    0.1218    0.6894   -0.2629
+    0.1689   -0.0256    0.0681    0.6854   -0.2342    0.6894    0.2275
+    0.1689   -0.0256    0.0681    0.4741   -0.2342    0.8487    0.1914
+    0.2439   -0.3052    0.0404    0.4686    0.3393    0.8156    0.1798
+    0.2341   -0.3061    0.0152   -0.6923    0.2308    0.6837    0.5711
+    0.1218   -0.4893   -0.0840   -0.6923    0.2308    0.6837    0.5711
+
+  Columns 8 through 12
+
+    1.0000         0         0         0    1.0000
+    1.0000   -0.0000    0.3624   -0.0000    0.9320
+    0.9913   -0.0000    0.3592   -0.0476    0.9320
+    0.9668   -0.2190    0.3592    0.1594    0.9195
+    0.9668   -0.1017   -0.2424    0.1594    0.9570
+    0.9755   -0.1017   -0.2871    0.0423    0.9570
+    0.9593    0.2038   -0.2871   -0.2546    0.9235
+    0.9593    0.1027   -0.6489   -0.2546    0.7170
+    0.9683    0.1027   -0.6917    0.0865    0.7170
+    0.9683    0.1603   -0.8594    0.0865    0.5040
+    0.8673   -0.4641   -0.8649    0.3642    0.3455
+    0.7544    0.3236   -0.4411    0.6145   -0.6541
+    0.7544    0.3236   -0.4411    0.6145   -0.6541
+
+</pre><h2>Compute scapula contact<a name="9"></a></h2><p>Inputs</p><div><ul><li>x		(nstates x 1) 	Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).</li></ul></div><p>Outputs</p><div><ul><li>F_contact (2 x 1)	    Thorax surface equation solved for TS and AI</li></ul></div><pre class="codeinput">F_contact = das3(<span class="string">'Scapulacontact'</span>, x)
+</pre><pre class="codeoutput">
+F_contact =
+
+   -0.0231
+   -0.0132
+
+</pre><h2>Compute joint moments<a name="10"></a></h2><p>Inputs</p><div><ul><li>x		(nstates x 1) 	        Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).</li></ul></div><p>Outputs</p><div><ul><li>moments (ndof x 1)			Joint moments (N m)</li></ul></div><pre class="codeinput">moments = das3(<span class="string">'Jointmoments'</span>, x)
+</pre><pre class="codeoutput">
+moments =
+
+    4.0430
+  -12.5695
+   26.3852
+  -12.3026
+   40.6593
+   18.4577
+   -0.0436
+    1.3738
+   -0.2188
+    0.6510
+    0.0400
+
+</pre><h2>Compute muscle forces<a name="11"></a></h2><p>Inputs</p><div><ul><li>x		(nstates x 1) 	        Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).</li></ul></div><p>Outputs</p><div><ul><li>forces	(nmus x 1)			Muscle forces (N)</li></ul></div><pre class="codeinput">forces = das3(<span class="string">'Muscleforces'</span>, x)
+</pre><pre class="codeoutput">
+forces =
+
+   19.1221
+    7.8202
+   -0.1549
+   -0.1781
+   -0.1266
+   -0.0520
+    0.0047
+   12.1040
+   28.9155
+   16.8419
+   41.1334
+   -0.1646
+   -0.2617
+   -0.2206
+   -0.2586
+   -0.1274
+   -0.1426
+   -0.2100
+   -0.2083
+   -0.1906
+   -0.1309
+   -0.3063
+   -0.4244
+   -0.4801
+    2.3729
+   11.8943
+   22.6993
+   81.1908
+   35.7430
+   20.0015
+    0.0349
+    3.0283
+   -0.0247
+   -0.1091
+   -0.1989
+   -0.2885
+    0.4169
+   -0.0260
+   -0.0086
+    2.3817
+    2.1835
+    0.2761
+    0.7456
+    0.0824
+   -0.0018
+   -0.0488
+   -0.0260
+   51.1191
+   -0.2471
+   -0.2043
+    9.1881
+    0.1107
+    0.1534
+    0.0982
+   -0.0428
+   -0.0156
+   -0.0045
+   -0.0403
+   -0.0433
+   -0.0561
+   -0.0374
+   -0.0403
+   -0.0372
+   -0.1352
+   -0.1311
+   -0.1600
+   -0.1823
+    6.3710
+    3.1391
+   -0.0156
+   -0.0157
+   -0.1005
+   -0.0924
+   -0.1221
+   -0.1132
+   -0.1813
+   -0.1009
+   -0.1661
+   -0.1640
+   -0.1258
+   -0.1179
+   -0.1658
+   -0.1974
+   -0.1684
+   -0.2171
+   -0.1657
+   -0.1262
+   -0.1364
+   -0.0856
+   -0.6512
+   -0.6985
+   -0.7307
+   -0.6699
+   -0.5558
+   -0.8528
+   -0.2849
+   -0.1576
+   -0.1937
+   -0.0905
+    8.1968
+   -0.0096
+    5.0386
+   -0.0249
+   -0.1189
+   -0.1188
+   -0.1064
+   -0.1199
+   -0.0733
+   -0.0421
+   -0.0236
+    0.0027
+   -0.0284
+   -0.0081
+   -0.0239
+   -0.0132
+    0.3316
+   -0.0012
+    0.8262
+   -0.0118
+    1.7257
+   -0.0410
+   -0.0665
+   -0.0359
+   -0.0254
+   -0.0315
+    1.9911
+    0.8073
+   -0.0026
+   -0.0961
+   -0.1180
+   -0.0997
+   -0.1171
+   -0.0618
+   -0.0346
+   -0.0162
+    0.0325
+   -0.0144
+   -0.0294
+
+</pre><h2>Compute moment arms<a name="12"></a></h2><p>Inputs</p><div><ul><li>x		(nstates x 1) 	                Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).</li></ul></div><p>Outputs</p><div><ul><li>momentarms	(nmus x ndof sparse)	Moment arms of nmus muscle elements at ndof joints (meters)</li></ul></div><pre class="codeinput">momentarms = das3(<span class="string">'Momentarms'</span>, x)
+</pre><pre class="codeoutput">
+momentarms =
+
+   (1,1)      -0.1276
+   (2,1)      -0.0814
+   (3,1)      -0.1223
+   (4,1)      -0.1349
+   (5,1)      -0.1257
+   (6,1)      -0.1217
+   (7,1)      -0.1466
+   (8,1)      -0.1252
+   (9,1)      -0.1086
+  (10,1)      -0.0833
+  (11,1)      -0.0554
+  (12,1)      -0.0840
+  (13,1)      -0.0699
+  (14,1)      -0.0672
+  (15,1)       0.0046
+  (16,1)       0.0419
+  (17,1)       0.0404
+  (18,1)       0.0510
+  (19,1)       0.0382
+  (20,1)      -0.0340
+  (21,1)      -0.0485
+  (22,1)      -0.0240
+  (23,1)      -0.0221
+  (24,1)      -0.0035
+  (25,1)       0.0745
+  (26,1)       0.0611
+  (27,1)       0.0869
+  (28,1)       0.0844
+  (29,1)       0.0863
+  (30,1)       0.1231
+  (31,1)       0.1003
+  (32,1)       0.0714
+  (33,1)       0.0828
+  (34,1)       0.1166
+  (35,1)       0.0804
+  (36,1)       0.0888
+  (90,1)      -0.0650
+  (91,1)      -0.0419
+  (92,1)      -0.0252
+  (93,1)      -0.0324
+  (94,1)      -0.0203
+  (95,1)      -0.0115
+  (96,1)       0.0362
+  (97,1)       0.0674
+  (98,1)       0.0646
+  (99,1)       0.0186
+ (100,1)       0.0204
+ (101,1)       0.0190
+   (1,2)       0.0488
+   (2,2)       0.0933
+   (3,2)       0.0570
+   (4,2)       0.0532
+   (5,2)       0.0464
+   (6,2)       0.0105
+   (7,2)      -0.0102
+   (8,2)      -0.0311
+   (9,2)      -0.0734
+  (10,2)      -0.0678
+  (11,2)      -0.0914
+  (12,2)       0.0728
+  (13,2)       0.0454
+  (14,2)       0.0949
+  (15,2)       0.0217
+  (16,2)      -0.0287
+  (17,2)      -0.0580
+  (18,2)      -0.0690
+  (19,2)      -0.0966
+  (20,2)       0.0712
+  (21,2)       0.0812
+  (22,2)       0.0644
+  (23,2)       0.0179
+  (24,2)       0.3844
+  (25,2)      -0.1040
+  (26,2)      -0.3057
+  (27,2)      -0.0483
+  (28,2)      -0.0443
+  (29,2)       0.0364
+  (30,2)       0.0074
+  (31,2)       0.0287
+  (32,2)       0.0209
+  (33,2)       0.0126
+  (34,2)      -0.0014
+  (35,2)      -0.0472
+  (36,2)      -0.0607
+  (90,2)      -0.0802
+  (91,2)      -0.0621
+  (92,2)      -0.0929
+  (93,2)      -0.1119
+  (94,2)      -0.1565
+  (95,2)      -0.1117
+  (96,2)      -0.1049
+  (97,2)      -0.0980
+  (98,2)      -0.0602
+  (99,2)      -0.1842
+ (100,2)      -0.0238
+ (101,2)      -0.0037
+   (1,3)      -0.0036
+   (2,3)      -0.0034
+   (3,3)      -0.0158
+   (4,3)      -0.0203
+   (5,3)      -0.0169
+   (6,3)      -0.0061
+   (7,3)       0.0192
+   (8,3)       0.0273
+   (9,3)       0.0497
+  (10,3)       0.0357
+  (11,3)       0.0675
+  (12,3)      -0.0009
+  (13,3)       0.0040
+  (14,3)      -0.1001
+  (15,3)      -0.0475
+  (16,3)       0.0002
+  (17,3)       0.0029
+  (18,3)      -0.0192
+  (19,3)      -0.0052
+  (20,3)      -0.0820
+  (21,3)      -0.0871
+  (22,3)      -0.0499
+  (23,3)      -0.0548
+  (24,3)      -0.0588
+  (25,3)       0.1615
+  (26,3)       0.1362
+  (27,3)       0.1492
+  (28,3)       0.1266
+  (29,3)       0.1050
+  (30,3)       0.0565
+  (31,3)       0.0041
+  (32,3)      -0.0001
+  (33,3)      -0.0112
+  (34,3)      -0.0105
+  (35,3)      -0.0048
+  (36,3)       0.0005
+  (90,3)      -0.0312
+  (91,3)      -0.0479
+  (92,3)      -0.0275
+  (93,3)      -0.0274
+  (94,3)      -0.0276
+  (95,3)      -0.0284
+  (96,3)      -0.0019
+  (97,3)       0.0435
+  (98,3)      -0.0143
+  (99,3)       0.0351
+ (100,3)       0.0015
+ (101,3)       0.0245
+   (1,4)       0.0096
+   (2,4)      -0.0146
+   (3,4)      -0.0317
+   (4,4)      -0.0480
+   (5,4)      -0.0452
+   (6,4)      -0.0500
+   (7,4)       0.0030
+   (8,4)      -0.0126
+   (9,4)      -0.0173
+  (10,4)      -0.0061
+  (11,4)      -0.0164
+  (14,4)      -0.0899
+  (15,4)      -0.0988
+  (16,4)      -0.0068
+  (17,4)      -0.0163
+  (18,4)      -0.0238
+  (19,4)       0.0100
+  (20,4)      -0.0873
+  (21,4)      -0.0405
+  (22,4)      -0.1179
+  (23,4)      -0.1305
+  (24,4)      -0.1540
+  (25,4)      -0.0648
+  (26,4)      -0.0618
+  (27,4)      -0.0634
+  (28,4)      -0.0658
+  (29,4)      -0.0677
+  (30,4)      -0.0475
+  (31,4)      -0.0524
+  (32,4)      -0.0428
+  (33,4)      -0.0454
+  (34,4)      -0.0879
+  (35,4)      -0.0706
+  (36,4)      -0.0683
+  (48,4)      -0.0059
+  (49,4)       0.0018
+  (50,4)       0.0017
+  (51,4)      -0.0005
+  (90,4)       0.0447
+  (91,4)       0.0510
+  (92,4)       0.0390
+  (93,4)       0.0593
+  (94,4)       0.0293
+  (95,4)       0.0111
+  (96,4)       0.0271
+  (97,4)       0.0325
+  (98,4)       0.0351
+  (99,4)       0.0176
+ (100,4)       0.0395
+ (101,4)       0.0425
+ (102,4)      -0.0361
+ (103,4)      -0.0069
+   (1,5)       0.0303
+   (2,5)      -0.0011
+   (3,5)      -0.0063
+   (4,5)      -0.0144
+   (5,5)      -0.0044
+   (6,5)      -0.0014
+   (7,5)       0.0077
+   (8,5)       0.0321
+   (9,5)       0.0673
+  (10,5)       0.0653
+  (11,5)       0.0627
+  (14,5)      -0.0852
+  (15,5)      -0.0420
+  (16,5)       0.0085
+  (17,5)       0.0094
+  (18,5)       0.0036
+  (19,5)       0.0149
+  (20,5)      -0.0766
+  (21,5)      -0.0540
+  (22,5)      -0.0943
+  (23,5)      -0.1194
+  (24,5)      -0.1136
+  (25,5)       0.1361
+  (26,5)       0.0990
+  (27,5)       0.1184
+  (28,5)       0.0984
+  (29,5)       0.0827
+  (30,5)       0.0097
+  (31,5)       0.0034
+  (32,5)       0.0014
+  (33,5)      -0.0080
+  (34,5)       0.0010
+  (35,5)       0.0028
+  (36,5)       0.0066
+  (48,5)       0.0763
+  (49,5)      -0.1196
+  (50,5)      -0.1216
+  (51,5)      -0.0006
+  (90,5)      -0.0534
+  (91,5)      -0.0576
+  (92,5)      -0.0553
+  (93,5)      -0.0271
+  (94,5)       0.0083
+  (95,5)      -0.0030
+  (96,5)      -0.0080
+  (97,5)      -0.0084
+  (98,5)      -0.0075
+  (99,5)      -0.0072
+ (100,5)      -0.0055
+ (101,5)      -0.0182
+ (102,5)      -0.0294
+ (103,5)      -0.0385
+   (1,6)       0.0336
+   (2,6)      -0.0169
+   (3,6)      -0.0049
+   (4,6)      -0.0047
+   (5,6)      -0.0046
+   (6,6)      -0.0036
+   (7,6)      -0.0061
+   (8,6)      -0.0016
+   (9,6)      -0.0086
+  (10,6)      -0.0017
+  (11,6)      -0.0004
+  (14,6)       0.0130
+  (15,6)      -0.0007
+  (16,6)      -0.0465
+  (17,6)      -0.0559
+  (18,6)      -0.0625
+  (19,6)      -0.0464
+  (20,6)       0.0106
+  (21,6)       0.0447
+  (22,6)       0.0261
+  (23,6)       0.0170
+  (24,6)       0.0187
+  (25,6)       0.0202
+  (26,6)       0.0205
+  (27,6)       0.0116
+  (28,6)       0.0114
+  (29,6)       0.0052
+  (30,6)       0.0442
+  (31,6)       0.0208
+  (32,6)       0.0118
+  (33,6)      -0.0186
+  (34,6)      -0.0202
+  (35,6)      -0.0279
+  (36,6)      -0.0378
+  (48,6)       0.2236
+  (49,6)      -0.4827
+  (50,6)      -0.4924
+  (51,6)       0.1050
+  (90,6)      -0.0061
+  (91,6)      -0.0042
+  (92,6)      -0.0166
+  (93,6)      -0.0146
+  (94,6)      -0.0427
+  (95,6)      -0.0607
+  (96,6)       0.0013
+  (97,6)       0.0183
+  (98,6)       0.0339
+  (99,6)       0.0306
+ (100,6)       0.0540
+ (101,6)      -0.0007
+ (102,6)       0.1613
+ (103,6)       0.0431
+  (37,7)      -0.0087
+  (38,7)      -0.0120
+  (39,7)      -0.0161
+  (40,7)      -0.0172
+  (41,7)      -0.0122
+  (42,7)      -0.0153
+  (43,7)      -0.0151
+  (44,7)      -0.0092
+  (45,7)      -0.0113
+  (46,7)      -0.0068
+  (47,7)      -0.0022
+  (48,7)       0.0047
+  (49,7)       0.0059
+  (50,7)       0.0046
+  (51,7)       0.0049
+  (52,7)       0.0114
+  (53,7)       0.0122
+  (54,7)       0.0135
+  (55,7)      -0.0117
+  (56,7)      -0.0094
+  (57,7)      -0.0097
+  (58,7)      -0.0095
+  (59,7)      -0.0111
+  (60,7)      -0.0095
+  (61,7)      -0.0105
+  (62,7)      -0.0081
+  (63,7)      -0.0118
+  (64,7)       0.0029
+  (65,7)       0.0051
+  (66,7)       0.0011
+  (67,7)       0.0028
+  (68,7)      -0.0080
+  (69,7)      -0.0082
+  (70,7)       0.0045
+  (71,7)       0.0049
+  (72,7)       0.0173
+  (73,7)       0.0155
+  (74,7)       0.0119
+  (75,7)       0.0152
+  (76,7)       0.0124
+  (77,7)       0.0126
+  (78,7)       0.0112
+  (79,7)       0.0140
+  (80,7)       0.0129
+  (81,7)       0.0088
+  (82,7)       0.0074
+  (84,7)       0.0139
+  (85,7)       0.0139
+  (86,7)      -0.0049
+  (87,7)      -0.0012
+  (88,7)      -0.0051
+  (89,7)      -0.0013
+  (90,7)       0.0124
+  (91,7)       0.0120
+  (92,7)       0.0128
+  (93,7)       0.0091
+  (94,7)       0.0080
+  (95,7)       0.0094
+  (96,7)       0.0199
+  (97,7)       0.0293
+  (98,7)       0.0296
+  (99,7)       0.0311
+ (100,7)       0.0229
+ (101,7)       0.0263
+ (102,7)       0.0238
+ (103,7)       0.0214
+  (37,8)      -0.0417
+  (38,8)      -0.0246
+  (39,8)      -0.0094
+  (40,8)      -0.0058
+  (41,8)       0.0097
+  (42,8)       0.0010
+  (43,8)       0.0035
+  (44,8)       0.0116
+  (45,8)       0.0167
+  (46,8)       0.0243
+  (47,8)       0.0275
+  (48,8)       0.0217
+  (49,8)       0.0038
+  (50,8)       0.0030
+  (51,8)       0.0032
+  (52,8)       0.0103
+  (53,8)       0.0111
+  (54,8)       0.0122
+  (55,8)      -0.0008
+  (56,8)       0.0073
+  (57,8)       0.0074
+  (58,8)       0.0123
+  (59,8)       0.0135
+  (60,8)       0.0012
+  (61,8)      -0.0068
+  (62,8)      -0.0029
+  (63,8)      -0.0038
+  (64,8)      -0.0593
+  (65,8)      -0.0780
+  (66,8)      -0.0699
+  (67,8)      -0.0410
+  (70,8)       0.0224
+  (71,8)       0.0217
+  (72,8)      -0.0013
+  (73,8)       0.0025
+  (74,8)       0.0082
+  (75,8)       0.0084
+  (76,8)       0.0096
+  (77,8)       0.0014
+  (78,8)       0.0016
+  (79,8)       0.0015
+  (80,8)       0.0034
+  (81,8)      -0.0060
+  (82,8)      -0.0213
+  (84,8)       0.0125
+  (85,8)       0.0125
+  (86,8)      -0.0443
+  (87,8)      -0.0286
+  (88,8)      -0.0314
+  (89,8)      -0.0286
+  (90,8)      -0.0092
+  (91,8)      -0.0200
+  (92,8)      -0.0230
+  (93,8)      -0.0218
+  (94,8)      -0.0318
+  (95,8)      -0.0246
+  (96,8)      -0.0292
+  (97,8)      -0.0059
+  (98,8)      -0.0000
+  (99,8)       0.0131
+ (100,8)       0.0077
+ (101,8)       0.0046
+ (102,8)       0.0110
+ (103,8)       0.0102
+  (37,9)      -0.0057
+  (38,9)      -0.0057
+  (39,9)      -0.0045
+  (40,9)      -0.0050
+  (41,9)      -0.0040
+  (42,9)      -0.0032
+  (43,9)      -0.0032
+  (44,9)      -0.0004
+  (45,9)      -0.0036
+  (46,9)      -0.0027
+  (47,9)      -0.0004
+  (48,9)       0.0004
+  (49,9)       0.0039
+  (50,9)       0.0032
+  (51,9)       0.0032
+  (52,9)       0.0000
+  (53,9)      -0.0006
+  (55,9)      -0.0140
+  (56,9)      -0.0127
+  (57,9)      -0.0131
+  (58,9)      -0.0130
+  (59,9)      -0.0130
+  (60,9)      -0.0081
+  (61,9)      -0.0109
+  (62,9)      -0.0078
+  (63,9)      -0.0112
+  (64,9)       0.0100
+  (65,9)       0.0081
+  (66,9)       0.0076
+  (67,9)       0.0119
+  (68,9)      -0.0078
+  (69,9)      -0.0077
+  (70,9)       0.0006
+  (71,9)       0.0007
+  (72,9)       0.0145
+  (73,9)       0.0129
+  (74,9)       0.0115
+  (75,9)       0.0145
+  (76,9)       0.0135
+  (77,9)       0.0161
+  (78,9)       0.0183
+  (79,9)       0.0202
+  (80,9)       0.0179
+  (81,9)       0.0148
+  (82,9)       0.0115
+  (86,9)      -0.0001
+  (87,9)      -0.0021
+  (88,9)      -0.0027
+  (89,9)      -0.0022
+  (90,9)       0.0134
+  (91,9)       0.0127
+  (92,9)       0.0123
+  (93,9)       0.0143
+  (94,9)       0.0116
+  (95,9)       0.0097
+  (96,9)       0.0147
+  (97,9)       0.0154
+  (98,9)       0.0154
+  (99,9)       0.0157
+ (100,9)       0.0153
+ (101,9)       0.0144
+ (102,9)       0.0099
+ (103,9)       0.0089
+  (83,10)      0.0413
+  (84,10)      0.0432
+  (85,10)      0.0432
+  (86,10)     -0.0189
+  (87,10)     -0.0189
+  (88,10)     -0.0189
+  (89,10)     -0.0189
+ (104,10)     -0.0191
+ (105,10)     -0.0192
+ (106,10)     -0.0185
+ (107,10)     -0.0191
+ (108,10)     -0.0192
+ (109,10)      0.0280
+ (110,10)      0.0273
+ (111,10)      0.0205
+ (112,10)      0.0261
+ (113,10)      0.0207
+ (114,10)      0.0198
+ (115,10)      0.0213
+ (116,10)      0.0532
+ (117,10)      0.0372
+ (118,10)      0.0284
+ (119,10)      0.0081
+ (129,10)     -0.0197
+ (130,10)     -0.0196
+ (131,10)     -0.0191
+ (132,10)     -0.0190
+ (133,10)     -0.0189
+ (134,10)     -0.0075
+ (135,10)     -0.0061
+ (136,10)     -0.0070
+ (137,10)     -0.0047
+ (138,10)     -0.0058
+  (83,11)     -0.0040
+  (84,11)     -0.0040
+  (85,11)     -0.0040
+ (116,11)     -0.0054
+ (117,11)     -0.0040
+ (118,11)     -0.0028
+ (119,11)      0.0027
+ (120,11)      0.0025
+ (121,11)     -0.0174
+ (122,11)     -0.0136
+ (123,11)     -0.0105
+ (124,11)     -0.0095
+ (125,11)     -0.0088
+ (126,11)      0.0055
+ (127,11)      0.0069
+ (128,11)      0.0087
+
+</pre><h2>Compute muscle-tendon lengths<a name="13"></a></h2><p>Inputs</p><div><ul><li>x		(nstates x 1) 	Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).</li></ul></div><p>Outputs</p><div><ul><li>lengths	(nmus x 1)	    Length of nmus muscle elements (meters)</li></ul></div><pre class="codeinput">lengths = das3(<span class="string">'Musclelengths'</span>, x)
+</pre><pre class="codeoutput">
+lengths =
+
+    0.1871
+    0.1534
+    0.1300
+    0.1126
+    0.1021
+    0.1119
+    0.1230
+    0.1383
+    0.1631
+    0.1940
+    0.2178
+    0.1688
+    0.1577
+    0.1327
+    0.0965
+    0.1020
+    0.1211
+    0.0945
+    0.1224
+    0.0755
+    0.1475
+    0.0966
+    0.0728
+    0.0610
+    0.2061
+    0.2061
+    0.2112
+    0.2021
+    0.1895
+    0.1640
+    0.1237
+    0.1049
+    0.0821
+    0.0492
+    0.0537
+    0.0418
+    0.1948
+    0.1653
+    0.1433
+    0.1169
+    0.1055
+    0.1448
+    0.1603
+    0.1365
+    0.1436
+    0.1287
+    0.1162
+    0.1765
+    0.1319
+    0.1080
+    0.1884
+    0.1589
+    0.1736
+    0.1870
+    0.0927
+    0.1758
+    0.1508
+    0.1392
+    0.1251
+    0.1066
+    0.1066
+    0.1199
+    0.0814
+    0.1201
+    0.1453
+    0.1356
+    0.1068
+    0.0836
+    0.0897
+    0.1053
+    0.0833
+    0.0635
+    0.0904
+    0.1018
+    0.1064
+    0.1094
+    0.1330
+    0.1278
+    0.0837
+    0.1059
+    0.0540
+    0.0411
+    0.3620
+    0.3331
+    0.3331
+    0.3209
+    0.3251
+    0.3548
+    0.3497
+    0.1941
+    0.2290
+    0.2540
+    0.3066
+    0.2737
+    0.2386
+    0.1674
+    0.1945
+    0.1996
+    0.1932
+    0.1968
+    0.1790
+    0.1661
+    0.1181
+    0.1652
+    0.1889
+    0.0737
+    0.1127
+    0.1560
+    0.1774
+    0.1688
+    0.1352
+    0.1321
+    0.0998
+    0.0869
+    0.0857
+    0.3220
+    0.3130
+    0.3007
+    0.1620
+    0.0901
+    0.0439
+    0.0410
+    0.0406
+    0.0410
+    0.0432
+    0.0500
+    0.0451
+    0.0397
+    0.2424
+    0.2450
+    0.2488
+    0.2090
+    0.2050
+    0.0247
+    0.0241
+    0.0275
+    0.0526
+    0.0379
+
+</pre><h2>Find muscle name<a name="14"></a></h2><p>Inputs</p><div><ul><li>number	(scalar)    Number of a muscle element, must be in the range 1..nmus</li></ul></div><p>Outputs</p><div><ul><li>name	(string)	Name of the muscle element, as define on the das3.bio file</li></ul></div><pre class="codeinput">number = 1;
+name = das3(<span class="string">'Musclename'</span>, number)
+</pre><pre class="codeoutput">
+name =
+
+trapscap1
+
+</pre><h2>Find if muscle crosses the glenohumeral joint<a name="15"></a></h2><p>Inputs</p><div><ul><li>number	(scalar) 	        Number of a muscle element, must be in the range 1..nmus</li></ul></div><p>Outputs</p><div><ul><li>crossGH_flag	(scalar)	1 if the muscle crosses GH, 0 if it doesn't</li></ul></div><pre class="codeinput">crossGH_flag = das3(<span class="string">'crossGH'</span>, number)
+</pre><pre class="codeoutput">
+crossGH_flag =
+
+     0
+
+</pre><p>
+<b>Next:</b> <a href="das3doc_model.html">Model reference</a><br>
+<b>Previous:</b> <a href="das3doc_files.html">Simtk project and files included in this release</a><br>
+<b>Home:</b> <a href="../das3doc_main.html">Main</a>
+</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% How to run the model
+%
+% The file |das3.mexw64| (or |das3.mexw32| for 32-bit) is a Matlab MEX function that contains the system
+% dynamics, and other functions, accessible via a Matlab function
+% interface.  The file |model_struct.mat| 
+% contains model parameters for the passive joint properties, muscle models,
+% muscle path polynomials and GH force vector polynomials. During
+% initialization, the MEX function reads in the parameters from struct
+% |model|.
+%
+% To run das3driver, which displays the model movement in real time using
+% the OpenSim Visualizer, you have to set up the Opensim-Matlab scripting
+% environment. To do this, follow these instructions:
+% <http://simtk-confluence.stanford.edu:8080/display/OpenSim/Scripting+with+Matlab>
+%
+%
+%% How to use the model
+% The MEX function has several ways in which it can be used.
+
+%% Initialization
+%
+% This needs to be done first.  
+load model_struct;
+das3('Initialize',model);
+
+%% Dynamics
+%
+% This is to evaluate the model dynamics in the implicit form f(x, xdot, u) = 0.
+%
+% Inputs
+%
+% * x		(nstates x 1) 	Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).
+% * xdot	(nstates x 1) 	State derivatives
+% * u		(nmus x 1) 	    Muscle excitations
+%
+% Optional inputs
+%
+% * M		(5 x 1)		Moments applied to the thorax-humerus YZY axes and the elbow flexion and supination axes
+% * exF   (2 x 1)     Vertical force of amplitude exF(2) applied to the ulna at a distance of exF(1) (meters) from the elbow (to simulate a mobile arm support)
+% * handF	(3 x 1) 	Force applied to the centre of mass of the hand (defined in the global frame: +X is laterally, +Y is upwards and +Z is posteriorly)
+%
+% Outputs
+%
+% * f		(nstates x 1) Dynamics imbalance
+%
+% Optional outputs
+%
+% * dfdx	(nstates x nstates sparse) 	    Jacobian of f with respect to x
+% * dfdxdot	(nstates x nstates sparse) 	Jacobian of f with respect to xdot
+% * dfdu	(nstates x nmus sparse)	        Jacobian of f with respect to u
+% * FGH		(3 x 1)				        3D GH contact force, acting on scapula, expressed in scapula reference frame
+% * FSCAP 	(3 x 2)				        3D Contact forces acting on TS and AI, expressed in thorax reference frame
+% * qTH		(3 x 1)				        angles between thorax and humerus (YZY sequence)
+%
+% Notes:
+% 
+% # FGH is only correct when dynamics are satisfied, i.e. f is zero
+% # The three Jacobians must always be requested together, or not at all.
+% 
+
+load('equilibrium.mat');
+ndof = model.nDofs;
+nmus = model.nMus;
+nstates = 2*ndof + 2*nmus;
+xdot = zeros(nstates,1);
+u = zeros(nmus,1);
+M = zeros(5,1);
+exF = zeros(2,1);
+handF = zeros(3,1);
+
+[f, dfdx, dfdxdot, dfdu, FGH, FSCAP, qTH] = das3('Dynamics',x, xdot, u, M, exF, handF);
+
+%% Extract mass of the muscle elements
+%
+% Output
+%
+% * MusMass	(nmus x 1)	Mass for all muscle elements (in kg)
+%
+
+MusMass = das3('MuscleMass')
+
+%% Extract LCEopt of the muscle elements
+%
+% Output
+%
+% * Lceopt	(nmus x 1)	Optimal fiber length parameters for all muscle elements (in meters)
+%
+
+LCEopt = das3('LCEopt')
+
+%% Extract SEEslack of the muscle elements
+%
+% Output 
+%
+% * SEEslack (nmus x 1)	Slack length of series elastic element for all muscle elements (in meters)
+%
+
+SEEslack = das3('SEEslack')
+
+%% Extract dof limits
+%
+% Output
+%
+% * limits	(2 x ndof)	Lower and upper limits of the ndof dofs, in radians
+%
+
+limits = das3('Limits')
+
+%% Compute stick figure coordinates
+%
+% Inputs
+%
+% * x		(nstates x 1) 	        Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).
+%
+% Outputs
+%
+% * stick   	(nSegments x 12)	Position(3) and orientation(3x3) of nSegments segments
+%
+% Notes:
+%
+% #	Output only depends on the first ndofs elements of x (the joint angles)
+%
+
+stick = das3('Visualization', x)
+
+%% Compute scapula contact
+%
+% Inputs
+%
+% * x		(nstates x 1) 	Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).
+%
+% Outputs
+%
+% * F_contact (2 x 1)	    Thorax surface equation solved for TS and AI
+%
+
+F_contact = das3('Scapulacontact', x)
+
+%% Compute joint moments
+%
+% Inputs
+%
+% * x		(nstates x 1) 	        Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).
+%
+% Outputs
+%
+% * moments (ndof x 1)			Joint moments (N m)
+%
+
+moments = das3('Jointmoments', x)
+
+%% Compute muscle forces
+%
+% Inputs
+%
+% * x		(nstates x 1) 	        Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).
+%
+% Outputs
+%
+% * forces	(nmus x 1)			Muscle forces (N)
+%
+
+forces = das3('Muscleforces', x)
+
+%% Compute moment arms
+%
+% Inputs
+%
+% * x		(nstates x 1) 	                Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).
+%
+% Outputs
+%
+% * momentarms	(nmus x ndof sparse)	Moment arms of nmus muscle elements at ndof joints (meters)
+%
+
+momentarms = das3('Momentarms', x)
+
+%% Compute muscle-tendon lengths
+%
+% Inputs
+%
+% * x		(nstates x 1) 	Model state, consists of ndof generalized coordinates (rad), ndof generalized velocities (rad/s), nmus CE lengths (relative to LCEopt), and nmus muscle active states (between 0 and 1).
+%
+% Outputs
+%
+% * lengths	(nmus x 1)	    Length of nmus muscle elements (meters)
+%
+
+lengths = das3('Musclelengths', x)
+
+%% Find muscle name
+%
+% Inputs
+%
+% * number	(scalar)    Number of a muscle element, must be in the range 1..nmus
+%
+% Outputs
+%
+% * name	(string)	Name of the muscle element, as define on the das3.bio file
+%
+
+number = 1;
+name = das3('Musclename', number)
+
+%% Find if muscle crosses the glenohumeral joint
+%
+% Inputs
+%
+% * number	(scalar) 	        Number of a muscle element, must be in the range 1..nmus
+%
+% Outputs
+%
+% * crossGH_flag	(scalar)	1 if the muscle crosses GH, 0 if it doesn't
+%
+
+crossGH_flag = das3('crossGH', number)
+
+%%
+% <html> 
+% <b>Next:</b> <a href="das3doc_model.html">Model reference</a><br>
+% <b>Previous:</b> <a href="das3doc_files.html">Simtk project and files included in this release</a><br>
+% <b>Home:</b> <a href="../das3doc_main.html">Main</a>
+% </html>
+%
+##### SOURCE END #####
+--></body></html>

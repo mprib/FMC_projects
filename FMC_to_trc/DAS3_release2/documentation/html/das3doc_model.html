@@ -1,0 +1,323 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Model reference</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-01-25"><meta name="DC.source" content="das3doc_model.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Model reference</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Degrees of freedom</a></li><li><a href="#2">Muscles</a></li><li><a href="#3">Muscle-skeleton coupling</a></li></ul></div><h2>Degrees of freedom<a name="1"></a></h2><p>The generalized coordinates (degrees of freedom, DOF) of the model are:</p><pre class="codeoutput">  1.             SC_y
+  2.             SC_z
+  3.             SC_x
+  4.             AC_y
+  5.             AC_z
+  6.             AC_x
+  7.             GH_y
+  8.             GH_z
+  9.            GH_yy
+ 10.             EL_x
+ 11.             PS_y
+</pre><h2>Muscles<a name="2"></a></h2><p>The muscle elements of the model are:</p><pre class="codeoutput">  1.   trapscap1
+  2.   trapscap2
+  3.   trapscap3
+  4.   trapscap4
+  5.   trapscap5
+  6.   trapscap6
+  7.   trapscap7
+  8.   trapscap8
+  9.   trapscap9
+ 10.  trapscap10
+ 11.  trapscap11
+ 12.   trapclav1
+ 13.   trapclav2
+ 14.    levscap1
+ 15.    levscap2
+ 16.    pectmin1
+ 17.    pectmin2
+ 18.    pectmin3
+ 19.    pectmin4
+ 20.   rhomboid1
+ 21.   rhomboid2
+ 22.   rhomboid3
+ 23.   rhomboid4
+ 24.   rhomboid5
+ 25.    serrant1
+ 26.    serrant2
+ 27.    serrant3
+ 28.    serrant4
+ 29.    serrant5
+ 30.    serrant6
+ 31.    serrant7
+ 32.    serrant8
+ 33.    serrant9
+ 34.   serrant10
+ 35.   serrant11
+ 36.   serrant12
+ 37.   deltscap1
+ 38.   deltscap2
+ 39.   deltscap3
+ 40.   deltscap4
+ 41.   deltscap5
+ 42.   deltscap6
+ 43.   deltscap7
+ 44.   deltscap8
+ 45.   deltscap9
+ 46.  deltscap10
+ 47.  deltscap11
+ 48.   deltclav1
+ 49.   deltclav2
+ 50.   deltclav3
+ 51.   deltclav4
+ 52.   coracobr1
+ 53.   coracobr2
+ 54.   coracobr3
+ 55.      infra1
+ 56.      infra2
+ 57.      infra3
+ 58.      infra4
+ 59.      infra5
+ 60.      infra6
+ 61.     termin1
+ 62.     termin2
+ 63.     termin3
+ 64.     termaj1
+ 65.     termaj2
+ 66.     termaj3
+ 67.     termaj4
+ 68.      supra1
+ 69.      supra2
+ 70.      supra3
+ 71.      supra4
+ 72.    subscap1
+ 73.    subscap2
+ 74.    subscap3
+ 75.    subscap4
+ 76.    subscap5
+ 77.    subscap6
+ 78.    subscap7
+ 79.    subscap8
+ 80.    subscap9
+ 81.   subscap10
+ 82.   subscap11
+ 83.        bicl
+ 84.       bicb1
+ 85.       bicb2
+ 86.   triclong1
+ 87.   triclong2
+ 88.   triclong3
+ 89.   triclong4
+ 90.   latdorsi1
+ 91.   latdorsi2
+ 92.   latdorsi3
+ 93.   latdorsi4
+ 94.   latdorsi5
+ 95.   latdorsi6
+ 96.   pectmajt1
+ 97.   pectmajt2
+ 98.   pectmajt3
+ 99.   pectmajt4
+100.   pectmajt5
+101.   pectmajt6
+102.   pectmajc1
+103.   pectmajc2
+104.    tricmed1
+105.    tricmed2
+106.    tricmed3
+107.    tricmed4
+108.    tricmed5
+109.  brachialis1
+110.  brachialis2
+111.  brachialis3
+112.  brachialis4
+113.  brachialis5
+114.  brachialis6
+115.  brachialis7
+116.  brachiorad1
+117.  brachiorad2
+118.  brachiorad3
+119.  pronteres1
+120.  pronteres2
+121.  supinator1
+122.  supinator2
+123.  supinator3
+124.  supinator4
+125.  supinator5
+126.   pronquad1
+127.   pronquad2
+128.   pronquad3
+129.    triclat1
+130.    triclat2
+131.    triclat3
+132.    triclat4
+133.    triclat5
+134.   anconeus1
+135.   anconeus2
+136.   anconeus3
+137.   anconeus4
+138.   anconeus5
+</pre><h2>Muscle-skeleton coupling<a name="3"></a></h2><p>In the Opensim model, muscles are coupled to the skeleton by a muscle path model.  The muscle path model consists of an origin point, an insertion point, and points or objects in between which ensure that the muscle wraps realistically around the bones.  For the real-time simulator, we want to avoid using such a path model, for two reasons: (1) computation speed, and (2) differentiability.</p><p>Fortunately, we can achieve these goals and stay consistent with the Opensim model.  We will represent the muscle-skeleton model by an analytical function <img src="das3doc_model_eq08312748018380590909.png" alt="$L_M(\textbf{q})$"> which produces the muscle-tendon length as a function of the joint angles.  If this function is the same as what Opensim produces with its path model, the muscle is coupled to the skeleton in a way that is mechanically equivalent as far as the simulated movement is concerned.</p><p>For fast computation and differentiability, we choose a multivariate polynomial function:</p><p><img src="das3doc_model_eq13126323726456793036.png" alt="$$L_{M}(q) = \sum_{i=1}^{Nterms}c_{i}\prod_{j=1}^{Ndof}q_{j}^{e_{ij}}$$"></p><p>The muscle path model is now fully encoded in a series of coefficients <img src="das3doc_model_eq01785314991289452091.png" alt="$c_i$"> and exponents <img src="das3doc_model_eq00131725924539301631.png" alt="$e_{ij}$">. The exponents and coefficients are formatted in the <tt>model</tt> struct as follows:</p><pre class="codeoutput">For example, muscle trapscap1:
+model.muscles{1}.dof_indeces:
+     1
+     2
+     3
+     4
+     5
+     6
+
+model.muscles{1}.lparams (e_ij):
+     0     0     0     0     0     0
+     2     1     0     0     0     0
+     1     2     1     0     0     0
+     0     0     0     3     0     1
+     0     0     0     0     1     0
+     1     0     0     0     0     0
+     0     2     0     0     0     0
+     0     0     0     0     1     1
+     1     0     0     1     1     1
+     0     2     1     0     0     0
+     0     0     0     1     0     0
+     0     0     1     3     0     0
+
+model.muscles{1}.lcoefs (c_i):
+    0.2259
+    0.0607
+    0.1113
+    0.0063
+   -0.0050
+    0.1261
+   -0.2573
+    0.0998
+    0.0829
+    0.2236
+   -0.0036
+    0.0018
+
+This muscle has 12 terms in its path polynomial.
+There are 6 joint angles involved, so each term has 6 integer exponents e_ij  and one coefficient c_i.
+</pre><p>
+<b>Next:</b> <a href="das3doc_test.html">Model testing</a><br>
+<b>Previous:</b> <a href="das3doc_run.html">How to run the model</a><br>
+<b>Home:</b> <a href="../das3doc_main.html">Main</a>
+</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Model reference
+%% Degrees of freedom
+% The generalized coordinates (degrees of freedom, DOF) of the model are:
+dofnames = cell(model.nDofs,1);
+for idof = 1:model.nDofs
+    fprintf('%3d.  %15s\n',idof,model.dofs{idof}.osim_name);
+end
+
+%% Muscles
+% The muscle elements of the model are:
+musclenames = cell(model.nMus,1);
+for imus=1:model.nMus
+    fprintf('%3d.  %10s\n',imus,model.muscles{imus}.name);
+end
+
+%% Muscle-skeleton coupling
+%
+% In the Opensim model, muscles are coupled to the skeleton by a muscle
+% path model.  The muscle path model consists of an origin point, an
+% insertion point, and points or objects in between which ensure that the
+% muscle wraps realistically around the bones.  For the real-time
+% simulator, we want to avoid using such a path model, for two reasons: (1)
+% computation speed, and (2) differentiability.
+%
+% Fortunately, we can achieve these goals and stay consistent with the
+% Opensim model.  We will represent the muscle-skeleton model by an
+% analytical function $L_M(\textbf{q})$ which produces the muscle-tendon length as a
+% function of the joint angles.  If this function is the same as what
+% Opensim produces with its path model, the muscle is coupled to the
+% skeleton in a way that is mechanically equivalent as far as the simulated
+% movement is concerned.
+%
+% For fast computation and differentiability, we choose a multivariate
+% polynomial function:
+%
+% $$L_{M}(q) = \sum_{i=1}^{Nterms}c_{i}\prod_{j=1}^{Ndof}q_{j}^{e_{ij}}$$
+%
+% The muscle path model is now fully encoded in a series of coefficients $c_i$
+% and exponents $e_{ij}$. The exponents and coefficients are formatted 
+% in the |model| struct as follows:
+
+fprintf('For example, muscle %s:\n',model.muscles{1}.name); 
+fprintf('model.muscles{1}.dof_indeces:\n');
+disp(model.muscles{1}.dof_indeces);
+fprintf('model.muscles{1}.lparams (e_ij):\n');
+disp(model.muscles{1}.lparams);
+fprintf('model.muscles{1}.lcoefs (c_i):\n');
+disp(model.muscles{1}.lcoefs);
+
+fprintf('This muscle has %d terms in its path polynomial.\n',model.muscles{1}.lparam_count); 
+fprintf('There are %d joint angles involved, so each term has %d integer exponents e_ij  and one coefficient c_i.\n',model.muscles{1}.dof_count, model.muscles{1}.dof_count);  
+
+%%
+% <html> 
+% <b>Next:</b> <a href="das3doc_test.html">Model testing</a><br>
+% <b>Previous:</b> <a href="das3doc_run.html">How to run the model</a><br>
+% <b>Home:</b> <a href="../das3doc_main.html">Main</a>
+% </html>
+%
+##### SOURCE END #####
+--></body></html>

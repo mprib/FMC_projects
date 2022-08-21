@@ -1,0 +1,165 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Simtk project and files included in this release</title><meta name="generator" content="MATLAB 8.4"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2016-01-25"><meta name="DC.source" content="das3doc_files.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Simtk project and files included in this release</h1><!--introduction--><p>The Simtk project can be found at <a href="https://simtk.org/home/das/">https://simtk.org/home/das/</a></p><!--/introduction--><p><b>Files included in this release</b></p><p>This release contains the following folders:</p><p><b>documentation</b>:</p><p>This folder contains the model manual as a set of html files built in Matlab. It also contains the .m files used to publish the manual. This process runs various test routines on the model (contained in <tt>das3test.m</tt>), which allows the user to verify that the model works as it should, before using it.</p><p>
+<table border=1><tr><td>das3doc_main.html</td><td>This manual</td></tr>
+<tr><td>build_manual.m</td><td>Script that builds the manual</td></tr>
+<tr><td>das3doc_main.m</td><td>Script to publish 1st page of manual (main)</td></tr>
+<tr><td>das3doc_files.m</td><td>Script to publish 2nd page of manual (included files) </td></tr>
+<tr><td>das3doc_run.m</td><td>Script to publish 3rd page of manual (how to run) </td></tr>
+<tr><td>das3doc_model.m</td><td>Script to publish 4th page of manual (model reference) </td></tr>
+<tr><td>das3doc_test.m</td><td>Script to publish 5th page of manual (testing) </td></tr>
+<tr><td>html/</td><td>Other html pages and images required for this manual</td></tr></table>
+</p><p><b>OpenSim_model</b>:</p><p>This folder contains the OpenSim model used to extract muscle moment arms and lengths (see <a href="https://simtk.org/docman/view.php/322/1865/TBME-01023-2013.R2-preprint.pdf">this publication</a> for more information).</p><p>
+<table border=1><tr><td>das3.osim</td><td>OpenSim model</td></tr>
+<tr><td>Geometry</td><td>Geometry files for the OpenSim model</td></tr></table>
+</p><p><b>realtime_model</b>:</p><p>This folder contains the realtime model and functions for testing and using it</p><p>
+<table border=1><tr><td>das3.mexw32</td><td>The MEX function that contains the system dynamics for 32 bit Matlab</td></tr>
+<tr><td>das3.mexw64</td><td>The same MEX function for 64 bit Matlab</td></tr>
+<tr><td>model_struct.mat</td><td>A Matlab structure containing all model parameters</td></tr>
+<tr><td>equilibrium.mat</td><td>Passive equilibrium state used as initial condition to start simulator</td></tr>
+<tr><td>eq_position.sto</td><td>OpenSim motion file of the passive equilibrium state</td></tr>
+<tr><td>ode15s_simulation.mat</td><td>Output of the ode15s test, to allow comparison with the real-time solver</td></tr>
+<tr><td>ode15s_simulation.sto</td><td>OpenSim motion file of the ode15s test output</td></tr>
+<tr><td>das3test.m</td><td>Routines used to test the MEX function and the realtime model</td></tr>
+<tr><td>das3stick.m</td><td>Function that draws a stick figure of the model</td></tr>
+<tr><td>das3step.m</td><td>Advances the model by one time step using a first order Rosenbrock formula</td></tr>
+<tr><td>das3driver.m</td><td>Matlab GUI application to run real-time simulator and display movement in the Opensim Visualizer</td></tr>
+<tr><td>das3driver.fig</td><td>Figure file for the above GUI</td></tr></table>
+</p><p>
+<b>Next:</b> <a href="das3doc_run.html">How to run the model</a><br>
+<b>Home:</b> <a href="../das3doc_main.html">Main</a>
+</p><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Simtk project and files included in this release
+% The Simtk project can be found at <https://simtk.org/home/das/>
+%
+%% 
+% *Files included in this release*
+%
+% This release contains the following folders:
+%
+% *documentation*:
+%
+% This folder contains the model manual as a set of html files built in
+% Matlab. It also contains the .m files used to publish the manual. This
+% process runs various test routines on the model (contained in
+% |das3test.m|), which allows the user to verify that the model works as it
+% should, before using it.
+%
+% <html>
+% <table border=1><tr><td>das3doc_main.html</td><td>This manual</td></tr>
+% <tr><td>build_manual.m</td><td>Script that builds the manual</td></tr>
+% <tr><td>das3doc_main.m</td><td>Script to publish 1st page of manual (main)</td></tr>
+% <tr><td>das3doc_files.m</td><td>Script to publish 2nd page of manual (included files) </td></tr>
+% <tr><td>das3doc_run.m</td><td>Script to publish 3rd page of manual (how to run) </td></tr>
+% <tr><td>das3doc_model.m</td><td>Script to publish 4th page of manual (model reference) </td></tr>
+% <tr><td>das3doc_test.m</td><td>Script to publish 5th page of manual (testing) </td></tr>
+% <tr><td>html/</td><td>Other html pages and images required for this manual</td></tr></table>
+% </html>
+%
+%%
+% *OpenSim_model*:
+%
+% This folder contains the OpenSim model used to extract muscle moment arms
+% and lengths (see <https://simtk.org/docman/view.php/322/1865/TBME-01023-2013.R2-preprint.pdf this publication> for more information). 
+%
+% <html>
+% <table border=1><tr><td>das3.osim</td><td>OpenSim model</td></tr>
+% <tr><td>Geometry</td><td>Geometry files for the OpenSim model</td></tr></table>
+% </html>
+% 
+%%
+% *realtime_model*:
+%
+% This folder contains the realtime model and functions for testing and
+% using it
+%
+% <html>
+% <table border=1><tr><td>das3.mexw32</td><td>The MEX function that contains the system dynamics for 32 bit Matlab</td></tr>
+% <tr><td>das3.mexw64</td><td>The same MEX function for 64 bit Matlab</td></tr>
+% <tr><td>model_struct.mat</td><td>A Matlab structure containing all model parameters</td></tr>
+% <tr><td>equilibrium.mat</td><td>Passive equilibrium state used as initial condition to start simulator</td></tr>
+% <tr><td>eq_position.sto</td><td>OpenSim motion file of the passive equilibrium state</td></tr>
+% <tr><td>ode15s_simulation.mat</td><td>Output of the ode15s test, to allow comparison with the real-time solver</td></tr>
+% <tr><td>ode15s_simulation.sto</td><td>OpenSim motion file of the ode15s test output</td></tr>
+% <tr><td>das3test.m</td><td>Routines used to test the MEX function and the realtime model</td></tr>
+% <tr><td>das3stick.m</td><td>Function that draws a stick figure of the model</td></tr>
+% <tr><td>das3step.m</td><td>Advances the model by one time step using a first order Rosenbrock formula</td></tr>
+% <tr><td>das3driver.m</td><td>Matlab GUI application to run real-time simulator and display movement in the Opensim Visualizer</td></tr>
+% <tr><td>das3driver.fig</td><td>Figure file for the above GUI</td></tr></table>
+% </html>
+%
+%%
+% <html> 
+% <b>Next:</b> <a href="das3doc_run.html">How to run the model</a><br>
+% <b>Home:</b> <a href="../das3doc_main.html">Main</a>
+% </html>
+%
+##### SOURCE END #####
+--></body></html>

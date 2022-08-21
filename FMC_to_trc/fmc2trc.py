@@ -279,15 +279,15 @@ class FMCSession():
 
 GoodSession = "sesh_2022-08-10_10_33_12"
 FMC_folder = Path("C:/Users/Mac Prible/FreeMocap_Data")
-trc_filename = "FMC_to_trc/dao_yin_dropped.trc"
-csv_filename = "FMC_to_trc/dao_yin_dropped.csv"
 
-testSession = FMCSession(GoodSession, FMC_folder, 25)
+testSession = FMCSession(GoodSession, FMC_folder, camera_rate=25)
 
-trajectories = testSession.get_trajectory_dataframe()
+trc_filename = "FMC_to_trc/dao_yin_dropped.trc" 
+testSession.create_trajectory_trc(trc_filename)
+
 testSession.interpolate_trajectory_gaps()
 
-testSession.create_trajectory_csv(csv_filename)
+trc_filename = "FMC_to_trc/dao_yin_interpolated.trc" 
 testSession.create_trajectory_trc(trc_filename)
 
 # print(trajectories)
