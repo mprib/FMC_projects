@@ -1,10 +1,6 @@
-FMC_to_trc/~$trajectory_map.xlsx
 *.csv
-*.vtp
 *.mot
 *.log
 *.sto
-*.trc
 *~*.xlsx
 *.pyc
-FMC_to_trc/dao_yin_dropped.trc
