@@ -2,12 +2,6 @@
     "folders": [
         {
             "path": "."
-        },
-        {
-            "path": "..\\..\\..\\FreeMocap_Data"
-        },
-        {
-            "path": ".."
         }
     ],
     "settings": {

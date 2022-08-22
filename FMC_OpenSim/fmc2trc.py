@@ -10,85 +10,8 @@ import csv
 from pathlib import Path 
 import numpy as np
 import pandas as pd
+import json
 
-
-mediapipe_trajectories =  [
-    "nose",
-    "left_eye_inner",
-    "left_eye",
-    "left_eye_outer",
-    "right_eye_inner",
-    "right_eye",
-    "right_eye_outer",
-    "left_ear",
-    "right_ear",
-    "mouth_left",
-    "mouth_right",
-    "left_shoulder",
-    "right_shoulder",
-    "left_elbow",
-    "right_elbow",
-    "left_wrist",
-    "right_wrist",
-    "left_pinky",
-    "right_pinky",
-    "left_index",
-    "right_index",
-    "left_thumb",
-    "right_thumb",
-    "left_hip",
-    "right_hip",
-    "left_knee",
-    "right_knee",
-    "left_ankle",
-    "right_ankle",
-    "left_heel",
-    "right_heel",
-    "left_foot_index",
-    "right_foot_index",
-    "right_hand_wrist",
-    "right_hand_thumb_cmc",
-    "right_hand_thumb_mcp",
-    "right_hand_thumb_ip",
-    "right_hand_thumb_tip",
-    "right_hand_index_finger_mcp",
-    "right_hand_index_finger_pip",
-    "right_hand_index_finger_dip",
-    "right_hand_index_finger_tip",
-    "right_hand_middle_finger_mcp",
-    "right_hand_middle_finger_pip",
-    "right_hand_middle_finger_dip",
-    "right_hand_middle_finger_tip",
-    "right_hand_ring_finger_mcp",
-    "right_hand_ring_finger_pip",
-    "right_hand_ring_finger_dip",
-    "right_hand_ring_finger_tip",
-    "right_hand_pinky_finger_mcp",
-    "right_hand_pinky_finger_pip",
-    "right_hand_pinky_finger_dip",
-    "right_hand_pinky_finger_tip",
-    "left_hand_wrist",
-    "left_hand_thumb_cmc",
-    "left_hand_thumb_mcp",
-    "left_hand_thumb_ip",
-    "left_hand_thumb_tip",
-    "left_hand_index_finger_mcp",
-    "left_hand_index_finger_pip",
-    "left_hand_index_finger_dip",
-    "left_hand_index_finger_tip",
-    "left_hand_middle_finger_mcp",
-    "left_hand_middle_finger_pip",
-    "left_hand_middle_finger_dip",
-    "left_hand_middle_finger_tip",
-    "left_hand_ring_finger_mcp",
-    "left_hand_ring_finger_pip",
-    "left_hand_ring_finger_dip",
-    "left_hand_ring_finger_tip",
-    "left_hand_pinky_finger_mcp",
-    "left_hand_pinky_finger_pip",
-    "left_hand_pinky_finger_dip",
-    "left_hand_pinky_finger_tip",
-]
 
 class FMCSession():
     """Provide a session object to manage FMC output processing"""
@@ -101,6 +24,15 @@ class FMCSession():
             self.trajectories = self.get_trajectory_dataframe()
 
   
+    def get_landmark_index(self):
+        """Read in a dictionary of the landmarks being tracked"""
+        
+        with open("reference\mediapipe_landmarks.json") as f_obj:
+            landmarks = json.load(f_obj)
+
+        return landmarks
+
+
     def get_trajectory_array(self):
         """returns the array of 3D trajectories associated with a session"""
 
@@ -117,13 +49,10 @@ class FMCSession():
 
         # These will manipulate the orientation of the markers 
         # to make them line up better by default with OpenSim
-        # axes_order= [0,2,1]
-        # axes_flip=[1,1,-1]
     
         # flip y and z (1 and 2); y becomes negative
         axes_order= [0,1,2]
         axes_flip=[1,-1,-1]
-        
 
         # Order of the Axes
         x_axis = axes_order[0]
@@ -135,33 +64,37 @@ class FMCSession():
         flip_y = axes_flip[1]
         flip_z = axes_flip[2]
 
-        joint_trajectories = self.get_trajectory_array()
+        landmark_trajectories = self.get_trajectory_array()
+
+        # this grabs a list of the landmarks contained in the trajectory file
+        landmarks = [lm for lm in self.get_landmark_index().values()]
+        
+        # currently only care about the core pose and hands (first 75)
+        landmark_count = 75
+        landmarks = landmarks[0:landmark_count]
 
         # not interested in face mesh or hands here, 
         # so only taking first 33 elements
         # these represent the gross pose + simple hands
-        sk_x = (joint_trajectories[:, 0:33, x_axis] * flip_x * scale_factor)   # skeleton x data
-        sk_y = (joint_trajectories[:, 0:33, y_axis] * flip_y * scale_factor)   # skeleton y data
-        sk_z = (joint_trajectories[:, 0:33, z_axis] * flip_z * scale_factor)   # skeleton z data
+        lm_x = (landmark_trajectories[:, 0:landmark_count, x_axis] * flip_x * scale_factor)   # skeleton x data
+        lm_y = (landmark_trajectories[:, 0:landmark_count, y_axis] * flip_y * scale_factor)   # skeleton y data
+        lm_z = (landmark_trajectories[:, 0:landmark_count, z_axis] * flip_z * scale_factor)   # skeleton z data
         
 
-        marker_names = mediapipe_trajectories[0:33]
-        
-        # convert to df and concatenate
-        x_df = pd.DataFrame(sk_x, columns = [name + "_x" for name in marker_names])
-        y_df = pd.DataFrame(sk_y, columns = [name + "_y" for name in marker_names])
-        z_df = pd.DataFrame(sk_z, columns = [name + "_z" for name in marker_names])
+        # convert landmark trajectory arrays to df and merge together
+        x_df = pd.DataFrame(lm_x, columns = [name + "_x" for name in landmarks])
+        y_df = pd.DataFrame(lm_y, columns = [name + "_y" for name in landmarks])
+        z_df = pd.DataFrame(lm_z, columns = [name + "_z" for name in landmarks])
         merged_trajectories = pd.concat([x_df, y_df, z_df],axis = 1, join = "inner")    
 
 
-        # add in frame and Time stamp to the data frame
+        # add in Frame Number and Time stamp 
         merged_trajectories["Frame"] = [str(i) for i in range(0, len(merged_trajectories))]
-        merged_trajectories["Time"] = merged_trajectories["Frame"].astype(float) / float(self.camera_rate)
-        
+        merged_trajectories["Time"] = merged_trajectories["Frame"].astype(float) / float(self.camera_rate)        
 
         # get the correct order for all dataframe columns
         column_order = []
-        for marker in marker_names:
+        for marker in landmarks:
             column_order.append(marker + "_x")
             column_order.append(marker + "_y")
             column_order.append(marker + "_z")
@@ -172,16 +105,12 @@ class FMCSession():
 
         # reorder the dataframe, note frame number in 0 position remains
         merged_trajectories = merged_trajectories.reindex(columns=column_order)
-        
-        # for column in reversed(column_order):
-        #     merged_trajectories.insert(0, column, merged_trajectories.pop(column))
-
 
         return merged_trajectories
 
     def create_trajectory_csv(self, csv_filename):
 
-        # TargetPath = os.path.join(TargetFolder, TargetFilename + ".csv")    
+          
         self.trajectories.to_csv(csv_filename, index=False)
 
 
@@ -269,25 +198,27 @@ class FMCSession():
             #print(column_names)
 
     def interpolate_trajectory_gaps(self):
+        """
+        Gap fill with a simple method just to play out IK for longer
+        Future iterations of this may involve multiple methods, or perhaps
+        a pose estimation function based on previous ML to patch data
+        """
         self.trajectories.interpolate(method='polynomial', order=3, inplace=True)
 
 
 
-
-#TODO: interpolate missing data
-#def interpolate_trajectories(self):
 
 GoodSession = "sesh_2022-08-10_10_33_12"
 FMC_folder = Path("C:/Users/Mac Prible/FreeMocap_Data")
 
 testSession = FMCSession(GoodSession, FMC_folder, camera_rate=25)
 
-trc_filename = "FMC_to_trc/dao_yin_dropped.trc" 
+trc_filename = "FMC_OpenSim/trc/dao_yin_dropped.trc" 
 testSession.create_trajectory_trc(trc_filename)
 
 testSession.interpolate_trajectory_gaps()
 
-trc_filename = "FMC_to_trc/dao_yin_interpolated.trc" 
+trc_filename = "FMC_OpenSim/trc/dao_yin_interpolated.trc" 
 testSession.create_trajectory_trc(trc_filename)
 
 # print(trajectories)
