@@ -34,7 +34,7 @@ class FMCSession():
             #TODO this should get refactored to pull in the modelled 
             # trajectories directly from the osim file
             #pose_modeled = "mediapipe_body"
-            pose_modeled = "mediapipe_body_hands"
+            pose_modeled = "mediapipe_body"
             self.model_landmarks = self.get_landmark_index(pose_modeled)
 
     def get_landmark_index(self, pose_key):
@@ -121,7 +121,7 @@ class FMCSession():
     # Convert a human readable csv to a trc
     def create_trajectory_trc(self, trc_filename):
         
-        num_markers = 33
+        num_markers = len(self.model_landmarks)
         data_rate= self.camera_rate # not sure how this is different from camera rate
         camera_rate= self.camera_rate
         units = 'm'
@@ -221,20 +221,6 @@ class FMCSession():
         self.trajectories.interpolate(method='polynomial', order=3, inplace=True)
 
 
-GoodSession = "sesh_2022-08-10_10_33_12"
-FMC_folder = Path("C:/Users/Mac Prible/FreeMocap_Data")
-osim_file = "FMC_OpenSim\models\mediapipe_fullbody\mediapipe_fullbody_model.osim"
 
-testSession = FMCSession(GoodSession, FMC_folder, osim_file=osim_file, camera_rate=25)
-
-trc_filename = "FMC_OpenSim/trc/dao_yin_dropped_working.trc" 
-testSession.create_trajectory_trc(trc_filename)
-
-
-testSession.create_trajectory_csv("FMC_OpenSim/trc/dao_yin.csv")
-testSession.interpolate_trajectory_gaps()
-
-trc_filename = "FMC_OpenSim/trc/dao_yin_interpolated.trc" 
-testSession.create_trajectory_trc(trc_filename)
 
 # print(trajectories)
