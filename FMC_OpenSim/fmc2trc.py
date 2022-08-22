@@ -21,9 +21,15 @@ class FMCSession():
             self.camera_rate = camera_rate
             self.FMC_folder =  FMC_folder
 
+
+            # get a landmark list to reference
+            landmarks = [lm for lm in self.get_landmark_index().values()]            
+            # currently only care about the core pose and hands (first 75)
+            self.landmark_count = 75
+            self.landmarks = landmarks[0:self.landmark_count]
+
             self.trajectories = self.get_trajectory_dataframe()
 
-  
     def get_landmark_index(self):
         """Read in a dictionary of the landmarks being tracked"""
         
@@ -66,25 +72,20 @@ class FMCSession():
 
         landmark_trajectories = self.get_trajectory_array()
 
-        # this grabs a list of the landmarks contained in the trajectory file
-        landmarks = [lm for lm in self.get_landmark_index().values()]
-        
-        # currently only care about the core pose and hands (first 75)
-        landmark_count = 75
-        landmarks = landmarks[0:landmark_count]
+
 
         # not interested in face mesh or hands here, 
         # so only taking first 33 elements
         # these represent the gross pose + simple hands
-        lm_x = (landmark_trajectories[:, 0:landmark_count, x_axis] * flip_x * scale_factor)   # skeleton x data
-        lm_y = (landmark_trajectories[:, 0:landmark_count, y_axis] * flip_y * scale_factor)   # skeleton y data
-        lm_z = (landmark_trajectories[:, 0:landmark_count, z_axis] * flip_z * scale_factor)   # skeleton z data
+        lm_x = (landmark_trajectories[:, 0:self.landmark_count, x_axis] * flip_x * scale_factor)   # skeleton x data
+        lm_y = (landmark_trajectories[:, 0:self.landmark_count, y_axis] * flip_y * scale_factor)   # skeleton y data
+        lm_z = (landmark_trajectories[:, 0:self.landmark_count, z_axis] * flip_z * scale_factor)   # skeleton z data
         
 
         # convert landmark trajectory arrays to df and merge together
-        x_df = pd.DataFrame(lm_x, columns = [name + "_x" for name in landmarks])
-        y_df = pd.DataFrame(lm_y, columns = [name + "_y" for name in landmarks])
-        z_df = pd.DataFrame(lm_z, columns = [name + "_z" for name in landmarks])
+        x_df = pd.DataFrame(lm_x, columns = [name + "_x" for name in self.landmarks])
+        y_df = pd.DataFrame(lm_y, columns = [name + "_y" for name in self.landmarks])
+        z_df = pd.DataFrame(lm_z, columns = [name + "_z" for name in self.landmarks])
         merged_trajectories = pd.concat([x_df, y_df, z_df],axis = 1, join = "inner")    
 
 
@@ -94,7 +95,7 @@ class FMCSession():
 
         # get the correct order for all dataframe columns
         column_order = []
-        for marker in landmarks:
+        for marker in self.landmarks:
             column_order.append(marker + "_x")
             column_order.append(marker + "_y")
             column_order.append(marker + "_z")
@@ -163,7 +164,7 @@ class FMCSession():
 
             # create names of trajectories, skipping two columns (top of table)
             header_names = ['Frame#', 'Time']
-            for trajectory in mediapipe_trajectories[0:33]:
+            for trajectory in self.landmarks:
                 header_names.append(trajectory)
                 header_names.append("")
                 header_names.append("")    
@@ -172,7 +173,7 @@ class FMCSession():
 
             # create labels for x,y,z axes (second row of table)
             header_names = ["",""]
-            for i in range(1,34):
+            for i in range(1,self.landmark_count):
                 header_names.append("X"+str(i))
                 header_names.append("Y"+str(i))
                 header_names.append("Z"+str(i))
