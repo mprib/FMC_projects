@@ -1,1 +1,0 @@
-& 'C:\\OpenSim 4.4\\bin\\opensim-cmd.exe' run-tools IK_Setup_Pose2Sim_Body25b.xml
