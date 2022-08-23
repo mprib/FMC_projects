@@ -2,18 +2,14 @@
 
 from pathlib import Path
 import sys
+import unittest
 
 
 # add the source directory to the top of sys.path so you can import
-# the module correclty
+# the module correctly
 repo = Path(__file__).parent.parent
 source = Path(repo, "FMC_OpenSim")
 sys.path.insert(0, str(source))
-
-# for p in sys.path:
-#     print(p)
-
-import unittest
 
 from fmc2trc import FMCSession
 
@@ -26,7 +22,7 @@ class TestFMC2trc(unittest.TestCase):
         Provided with the dao yin session and full body model,
         create a trc file for OpenSim
         """
-        FMC_folder = Path( "tests", "FMC_Sessions")
+        FMC_folder = Path("tests", "FMC_Sessions")
         
         GoodSession = "sesh_2022-08-10_10_33_12"
 
@@ -35,6 +31,7 @@ class TestFMC2trc(unittest.TestCase):
         testSession = FMCSession(GoodSession, FMC_folder, osim_file=osim_file, camera_rate=25)
 
         trc_filename = Path("tests", "output", "dao_yin_dropped_working.trc")
+        print(trc_filename)
         testSession.create_trajectory_trc(trc_filename)
 
 
@@ -50,7 +47,6 @@ class TestFMC2trc(unittest.TestCase):
     # def test_model_inverse_kinematics(self):
 
 
-# This remains something of a point of confusion for me
-#TODO: figure out why this fixed the problem you were having
+
 if __name__ == '__main__':
     unittest.main()
