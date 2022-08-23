@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import json
-
+import subprocess
 
 class FMCSession():
     """Provide a session object to manage FMC output processing"""
@@ -222,5 +222,8 @@ class FMCSession():
 
 
 
+    # def scale_model(self):
+
 
 # print(trajectories)
+

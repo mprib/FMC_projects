@@ -5,8 +5,11 @@ from fmc2trc import FMCSession
 class TestFMC2trc(unittest.TestCase):
 
 
-    def test_fullbody_daoyin(self):
-        
+    def test_trc_creation(self):
+        """
+        Provided with the dao yin session and full body model files,
+        create a specific .mot file        
+        """
         FMC_folder = Path("C:/Users/Mac Prible/FreeMocap_Data")
         GoodSession = "sesh_2022-08-10_10_33_12"
 
@@ -23,3 +26,15 @@ class TestFMC2trc(unittest.TestCase):
 
         trc_filename = "FMC_OpenSim/trc/dao_yin_interpolated.trc" 
         testSession.create_trajectory_trc(trc_filename)
+
+
+    def test_model_scaling(self):
+
+
+
+
+    def test_model_inverse_kinematics(self):
+
+    
+
+subprocess.run('dir', shell=True)
