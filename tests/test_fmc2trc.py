@@ -2,6 +2,10 @@
 
 from pathlib import Path
 import sys
+
+
+# add the source directory to the top of sys.path so you can import
+# the module correclty
 repo = Path(__file__).parent.parent
 source = Path(repo, "FMC_OpenSim")
 sys.path.insert(0, str(source))
@@ -44,6 +48,9 @@ class TestFMC2trc(unittest.TestCase):
     # def test_model_scaling(self):
 
     # def test_model_inverse_kinematics(self):
-   
+
+
+# This remains something of a point of confusion for me
+#TODO: figure out why this fixed the problem you were having
 if __name__ == '__main__':
     unittest.main()
