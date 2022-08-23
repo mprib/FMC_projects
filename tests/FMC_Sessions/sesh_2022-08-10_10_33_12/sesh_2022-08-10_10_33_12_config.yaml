@@ -1,0 +1,23 @@
+recording_parameters:
+  numCams: 3
+  numFrames: 481
+  numTrackedPoints:
+  RotationInputs:
+    0: 0
+    1: 0
+    2: 0
+  ParameterDict:
+    exposure: -5
+    resWidth: 640
+    resHeight: 480
+    framerate: 25
+    codec: DIVX
+session_paths:
+  RawVideos: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\RawVideos
+  SyncedVideos: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\SyncedVideos
+  CalVideos: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\CalVideos
+  DataArrays: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\DataArrays
+  DLCData: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\DLCData
+  OpenPoseData: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\OpenPoseData
+  MediaPipeData: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\MediaPipeData
+  imOut: C:\Users\Mac Prible\FreeMocap_Data\sesh_2022-08-10_10_33_12\imOut

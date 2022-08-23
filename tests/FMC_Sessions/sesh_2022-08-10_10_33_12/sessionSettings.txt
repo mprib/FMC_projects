@@ -1,0 +1,3 @@
+Session ID = sesh_2022-08-10_10_33_12
+Parameters = {'exposure': -5, 'resWidth': 640, 'resHeight': 480, 'framerate': 25, 'codec': 'DIVX'}
+Rotations = [0, 0, 0]

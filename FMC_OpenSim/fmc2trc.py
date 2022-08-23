@@ -40,7 +40,7 @@ class FMCSession():
     def get_landmark_index(self, pose_key):
         """Read in a dictionary of the landmarks being tracked"""
         
-        with open("reference\landmarks.json") as f_obj:
+        with open("FMC_OpenSim\json\landmarks.json") as f_obj:
             landmarks = json.load(f_obj)
 
         return landmarks[pose_key]
