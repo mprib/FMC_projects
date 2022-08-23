@@ -3,6 +3,7 @@
 from pathlib import Path
 import sys
 import unittest
+import filecmp
 
 
 # add the source directory to the top of sys.path so you can import
@@ -16,30 +17,55 @@ from fmc2trc import FMCSession
 
 class TestFMC2trc(unittest.TestCase):
 
-
-    def test_trc_creation(self):
-        """
-        Provided with the dao yin session and full body model,
-        create a trc file for OpenSim
-        """
-        FMC_folder = Path("tests", "FMC_Sessions")
+    def setUp(self):
         
-        GoodSession = "sesh_2022-08-10_10_33_12"
+        self.FMC_folder = Path("tests", "FMC_Sessions")
+        self.GoodSession = "sesh_2022-08-10_10_33_12"
 
-        osim_file = Path("models", "mediapipe_fullbody", "mediapipe_fullbody_model.osim")
+        # this currently doesn't really matter because it's not being processed
+        # in the module, but future iterations may look to pull out the 
+        # actual utilized marker set to make the trc column selection automatic
+        self.osim_file = Path("models", "mediapipe_fullbody", "mediapipe_fullbody_model.osself.im")
 
-        testSession = FMCSession(GoodSession, FMC_folder, osim_file=osim_file, camera_rate=25)
+        self.testSession = FMCSession(self.GoodSession, self.FMC_folder, osim_file=self.osim_file, camera_rate=25)
+        
+    def test_trc_creation(self):
+        """Provided with a FMC session, create an OpenSim .trc file"""
 
-        trc_filename = Path("tests", "output", "dao_yin_dropped_working.trc")
-        print(trc_filename)
-        testSession.create_trajectory_trc(trc_filename)
+        test_output = Path("tests", "output", "dao_yin_dropped_working.trc")
+        self.testSession.create_trajectory_trc(test_output)
+        reference_output = Path("tests", "reference", "dao_yin_dropped_working.trc")
+
+        try:
+            #note, shallow is only looking at metadata
+            self.assertTrue(filecmp.cmp(test_output,reference_output, shallow=False), "This is a message")
+        except:
+            print("---")
+            print("*******.trc created by fm2trc has changed*********")
+            print("see test output: " + str(test_output))
+            print("see reference output: " + str(reference_output))
+            print("---")
 
 
-        testSession.create_trajectory_csv(Path( "tests", "output", "dao_yin.csv"))
-        testSession.interpolate_trajectory_gaps()
+    def test_csv_creation(self):
+        """Provided with a FMC session, create a complete human readable CSV"""
 
-        trc_filename = Path( "tests", "output", "dao_yin_interpolated.trc")
-        testSession.create_trajectory_trc(trc_filename)
+        test_output = Path("tests", "output", "dao_yin.csv")
+        self.testSession.create_trajectory_csv(test_output)
+        reference_output = Path("tests", "reference", "dao_yin.csv")
+
+        try:
+            #note, shallow is only looking at metadata
+            self.assertTrue(filecmp.cmp(test_output,reference_output, shallow=False), "This is a message")
+        except:
+            print("---")
+            print("*******.csv created by fm2trc has changed*********")
+            print("see test output: " + str(test_output))
+            print("see reference output: " + str(reference_output))
+            print("---")
+
+        # trc_filename = Path( "tests", "output", "dao_yin_interpolated.trc")
+        # testSession.create_trajectory_trc(trc_filename)
 
         
     # def test_model_scaling(self):

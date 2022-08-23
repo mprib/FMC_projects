@@ -138,8 +138,6 @@ class FMCSession():
             keep_trajectories.append(lm+"_y")
             keep_trajectories.append(lm+"_z")
 
-        print(keep_trajectories)
-
         # going to recreate these later after potentially dropping frames
         trajectories_for_trc = trajectories_for_trc[keep_trajectories]
         
