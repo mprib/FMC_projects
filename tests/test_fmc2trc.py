@@ -67,12 +67,6 @@ class TestFMC2trc(unittest.TestCase):
         # trc_filename = Path( "tests", "output", "dao_yin_interpolated.trc")
         # testSession.create_trajectory_trc(trc_filename)
 
-        
-    # def test_model_scaling(self):
-
-    # def test_model_inverse_kinematics(self):
-
-
 
 if __name__ == '__main__':
     unittest.main()
