@@ -2,6 +2,8 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as md
 
+# Don't worry about this yet, Mac.
+# Dive straight into the object model when you know what you are doing
 # class OsimModel():
 
 #     def __init__(self, osim_path):
@@ -21,5 +23,9 @@ print(xmlparse)
 
 markers = xmlparse.getElementsByTagName("Marker")
 
+model_markers = []
+
 for m in markers:
-    print(m.getAttribute("name"))
+    model_markers.append(m.getAttribute("name"))
+
+print(model_markers)

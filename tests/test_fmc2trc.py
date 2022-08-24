@@ -21,11 +21,7 @@ class TestFMC2trc(unittest.TestCase):
         
         self.FMC_folder = Path("tests", "FMC_Sessions")
         self.GoodSession = "sesh_2022-08-10_10_33_12"
-
-        # this currently doesn't really matter because it's not being processed
-        # in the module, but future iterations may look to pull out the 
-        # actual utilized marker set to make the trc column selection automatic
-        self.osim_file = Path("models", "mediapipe_fullbody", "mediapipe_fullbody_model.osself.im")
+        self.osim_file = Path("tests", "osim_models", "mediapipe_fullbody_model.osim")
 
         self.testSession = FMCSession(self.GoodSession, self.FMC_folder, osim_file=self.osim_file, camera_rate=25)
         

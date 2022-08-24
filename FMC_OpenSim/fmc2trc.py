@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import json
 import subprocess
+import xml.dom.minidom as md
 
 class FMCSession():
     """Provide a session object to manage FMC output processing"""
@@ -35,7 +36,19 @@ class FMCSession():
             # trajectories directly from the osim file
             #pose_modeled = "mediapipe_body"
             pose_modeled = "mediapipe_body"
-            self.model_landmarks = self.get_landmark_index(pose_modeled)
+            self.model_landmarks = self.get_model_landmarks()
+
+    def get_model_landmarks(self):
+        """return the landmarks included in the osim model"""
+        osim_model = open(Path(self.osim_file))
+        xmlparse = md.parse(osim_model)
+        markers = xmlparse.getElementsByTagName("Marker")
+
+        model_markers = []
+        for m in markers:
+            model_markers.append(m.getAttribute("name"))
+
+        return(model_markers)
 
     def get_landmark_index(self, pose_key):
         """Read in a dictionary of the landmarks being tracked"""
