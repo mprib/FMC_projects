@@ -37,6 +37,7 @@ class TestFMC2trc(unittest.TestCase):
             self.assertTrue(filecmp.cmp(test_output,reference_output, shallow=False), "This is a message")
         except:
             print("---")
+            print("<<<<<<<<<<<<<<<<<<<<<FAIL>>>>>>>>>>>>>>>>>>>>>>>>>")
             print("*******.trc created by fm2trc has changed*********")
             print("see test output: " + str(test_output))
             print("see reference output: " + str(reference_output))
