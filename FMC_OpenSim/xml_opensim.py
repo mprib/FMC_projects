@@ -15,30 +15,53 @@ osim_root = osim_tree.getroot()
 
 joint_csv = [["JointName", "PhysicalOffsetFrame", "Translation", "Socket_Parent"]]
 
-for child in osim_root[0]:
-    if child.tag == "JointSet":
-        for child2 in child[0]:
-            #print("JointName: " + child2.attrib['name'])
-            joint_name = child2.attrib['name']
-            for child3 in child2:
-                if child3.tag == "frames":
-                    for child4 in child3:
-                        #print("    PhysicalOffsetFrame: " + child4.attrib['name'])
-                        offset_frame = child4.attrib['name']
-                        for child5 in child4:
-                            if child5.tag == "translation":
-                                #print("        translation: " + child5.text)
-                                translation = child5.text
+# %%
 
-                            if child5.tag == "socket_parent":
-                                #print("        socket_parent: " + child5.text)
-                                socket_parent = child5.text
-                        if translation != "0 0 0":
-                            joint_csv.append([joint_name, offset_frame, "'" + translation, socket_parent])
+for joint in osim_root.findall("Model/JointSet/objects/"):
+    joint_name = joint.attrib['name']
+    for frame in joint.findall("frames/PhysicalOffsetFrame"):
+        physical_offset_frame = frame.attrib['name']
+
+        print(frame.findall("socket_parent")[0].text)
+        print(frame.findall("translation")[0].text)
+
+        # for parent in frame.findall("socket_parent"):
+        #     socket_parent = parent.text
+        # for translation in frame.findall("translation"):
+        #     trans = translation.text
+        #     # print(translation)
+        #     # print(translation == '0 0 0')
+       
+            # joint_csv.append([joint_name, physical_offset_frame, "'" + trans, socket_parent])
+# %%
 
 with open('model_joints.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerows(joint_csv)
+# %%
+# for child in osim_root[0]:
+#     if child.tag == "JointSet":
+#         for child2 in child[0]:
+#             #print("JointName: " + child2.attrib['name'])
+#             joint_name = child2.attrib['name']
+#             for child3 in child2:
+#                 if child3.tag == "frames":
+#                     for child4 in child3:
+#                         #print("    PhysicalOffsetFrame: " + child4.attrib['name'])
+#                         offset_frame = child4.attrib['name']
+#                         for child5 in child4:
+#                             if child5.tag == "translation":
+#                                 #print("        translation: " + child5.text)
+#                                 translation = child5.text
+
+#                             if child5.tag == "socket_parent":
+#                                 #print("        socket_parent: " + child5.text)
+#                                 socket_parent = child5.text
+#                         if translation != "0 0 0":
+#                             joint_csv.append([joint_name, offset_frame, "'" + translation, socket_parent])
+
 
 
 # %%
+
+import 
