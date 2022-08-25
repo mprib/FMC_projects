@@ -1,6 +1,7 @@
 
 # %%
 from pathlib import Path
+from tkinter.filedialog import test
 import lxml.etree as etree
 import pandas as pd
 
@@ -9,15 +10,15 @@ import pandas as pd
 class OsimModel():
 
     def __init__(self, osim_path):
-        self.osim_tree = etree.parse(osim_path)
-        self.osim_root = self.osim_tree.getroot()        
+        self.tree = etree.parse(osim_path)
+        self.root = self.tree.getroot()        
 
 
     def get_joint_locations(self):
 
         joint_locations = []
 
-        for joint in self.osim_root.xpath('Model/JointSet/objects')[0]:
+        for joint in self.root.xpath('Model/JointSet/objects')[0]:
             joint_name = joint.attrib['name']
 
             for frame in joint.xpath("frames/PhysicalOffsetFrame"):
@@ -39,7 +40,17 @@ class OsimModel():
         joint_loc_df = self.get_joint_locations()
         joint_loc_df.to_csv(csv_path)
 
-# with open('../tests/reference/model_joints.csv', 'w', newline='') as f:
-#     writer = csv.writer(f)
-#     writer.writerows(joint_csv)   
+# Prototyping OsimModel.add_marker()
+# %%
+repo = Path(__file__).parent.parent
+
+test_model_path =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
+test_model = OsimModel(test_model_path)
+
+# %%
+
+for marker in test_model.root.xpath("Model/MarkerSet/objects")[0]:
+    print(marker.attrib['name'])
+    marker.getparent().remove(marker)
+    
 # %%
