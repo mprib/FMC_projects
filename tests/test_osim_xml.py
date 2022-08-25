@@ -47,10 +47,6 @@ class TestOsimModel(unittest.TestCase):
         osim_model = OsimModel(osim_path)
         
         osim_model.add_marker(marker_name, location, parent_frame)
-
-        l
-        
-        
         
         pass
 

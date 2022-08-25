@@ -48,9 +48,24 @@ test_model_path =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model_n
 test_model = OsimModel(test_model_path)
 
 # %%
-
+# remove markers from element tree
 for marker in test_model.root.xpath("Model/MarkerSet/objects")[0]:
     print(marker.attrib['name'])
     marker.getparent().remove(marker)
-    
+
+etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
+
+
+# %%
+# add markers back into osim file
+marker_parent = test_model.root.xpath("Model/MarkerSet/objects")[0]
+
+new_marker = etree.SubElement(marker_parent, "marker")
+
+marker_name = 'nose'
+location = '(0.0890481 0.532978 0.000609926)'
+parent_frame = "/bodyset/head"
+
+new_marker.attrib['name'] = marker_name
+etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
 # %%
