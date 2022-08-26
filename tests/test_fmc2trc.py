@@ -4,7 +4,9 @@ from pathlib import Path
 import sys
 import unittest
 import filecmp
+import tracemalloc
 
+tracemalloc.start()
 
 # add the source directory to the top of sys.path so you can import
 # the module correctly
