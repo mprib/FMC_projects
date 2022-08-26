@@ -11,9 +11,9 @@ A proof of concept currently exists for taking the output from FMC and generatin
 1. Create a test case that will perform the following unit tests:
    1. ~~produce a trc file from a freemocap session and given model~~
    2. ~~produce a list of markers used in a given model~~
-   3. produce a file summarizing each joint's placement relative to it's socket
-      1. note that this functionalit is programmed into xml_opensim.py but no test case as such yet
-   4. update an osim model file based on in input of markers and the associated joints
+   3. ~~produce a file summarizing each joint's placement relative to it's socket~~
+      ~~1. note that this functional is programmed into xml_opensim.py but no test case as such yet~~
+   4. *update an osim model file based on in input of markers and the associated joints*
    5. scale a model to a trc file
    6. modify an osim model to create a marker at the distal end of a segment
    7. run inverse kinematics on a trc file given a model

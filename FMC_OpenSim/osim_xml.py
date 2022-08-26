@@ -14,7 +14,7 @@ class OsimModel():
 
 
     def get_joint_locations(self):
-
+        """return a dataframe of joints, parent bodies, and translations"""
         joint_locations = []
 
         for joint in self.osim_root.xpath('Model/JointSet/objects')[0]:
