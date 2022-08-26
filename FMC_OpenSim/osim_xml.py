@@ -9,11 +9,14 @@ import pandas as pd
 
 class OsimModel():
 
-    def __init__(self, osim_template, osim_path):
-        """based on a model template, create a new model. Could be same"""
+    def __init__(self, osim_template, new_osim_path=""):
+        """based on a model template, create a new model"""
         parser = etree.XMLParser(remove_blank_text=True)
         
-        self.path = osim_path
+        if new_osim_path == "":
+            self.path = osim_template
+        else:
+            self.path = new_osim_path
 
         self.tree = etree.parse(osim_template, parser)
         self.root = self.tree.getroot()
@@ -31,9 +34,9 @@ class OsimModel():
                 translation = frame.xpath("translation")[0].text
                 socket_parent = frame.xpath("socket_parent")[0].text
 
-                if translation != "0 0 0":
+                # if translation != "0 0 0":
                     # addition of the ' in translation is to avoid errors if opened in excel
-                    joint_locations.append([joint_name, physical_offset_frame, "'" + translation, socket_parent])
+                joint_locations.append([joint_name, physical_offset_frame, "'" + translation, socket_parent])
         
         
         columns = [["JointName", "PhysicalOffsetFrame", "Translation", "Socket_Parent"]]
@@ -44,7 +47,8 @@ class OsimModel():
     def create_joint_loc_csv(self, csv_path):
         """save a csv of joint centers and parent bodies"""
         joint_loc_df = self.get_joint_locations()
-        joint_loc_df.to_csv(csv_path)
+        joint_loc_df.to_csv(csv_path, index=False)
+
 
     def add_marker(self, marker_name, location_text, parent_frame):
         """add a single marker to an osim file, saving new results"""
@@ -79,48 +83,48 @@ class OsimModel():
 
 
 
-# #####################################
-# # Prototyping OsimModel.add_marker()
-# #####################################
-# # %%
-# repo = Path(__file__).parent.parent
+#####################################
+# Prototyping OsimModel.place_all_markers(config)
+#####################################
+# %%
+repo = Path(__file__).parent.parent
 
-# test_model_path =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
-# test_model = OsimModel(test_model_path)
+test_model_path =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
+test_model = OsimModel(test_model_path)
 
-# # %%
-# # remove markers from element tree
-# for marker in test_model.root.xpath("Model/MarkerSet/objects")[0]:
-#     print(marker.attrib['name'])
-#     marker.getparent().remove(marker)
+# %%
+# remove markers from element tree
+for marker in test_model.root.xpath("Model/MarkerSet/objects")[0]:
+    print(marker.attrib['name'])
+    marker.getparent().remove(marker)
 
-# etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
+etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
 
 
-# # %%
-# # add markers back into osim file
-# marker_parent = test_model.root.xpath("Model/MarkerSet/objects")[0]
+# %%
+# add markers back into osim file
+marker_parent = test_model.root.xpath("Model/MarkerSet/objects")[0]
 
-# marker_parent.text = None
+marker_parent.text = None
 
-# new_marker = etree.SubElement(marker_parent, "Marker")
+new_marker = etree.SubElement(marker_parent, "Marker")
 
-# marker_name = 'left_eye'
-# location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
-# parent_frame = "/bodyset/head"
+marker_name = 'left_eye'
+location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
+parent_frame = "/bodyset/head"
 
-# new_marker.attrib['name'] = marker_name
+new_marker.attrib['name'] = marker_name
 
-# socket_parent_frame = etree.SubElement(new_marker, "socket_parent_frame")
-# location = etree.SubElement(new_marker, "location")
-# fixed = etree.SubElement(new_marker, "fixed")
+socket_parent_frame = etree.SubElement(new_marker, "socket_parent_frame")
+location = etree.SubElement(new_marker, "location")
+fixed = etree.SubElement(new_marker, "fixed")
 
-# new_marker.text = None
-# socket_parent_frame.text = parent_frame
-# location.text = location_text
-# fixed.text = "true"
+new_marker.text = None
+socket_parent_frame.text = parent_frame
+location.text = location_text
+fixed.text = "true"
 
-# new_marker.attrib['name'] = marker_name
-# new_marker.attrib['name'] = marker_name
-# etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
-# # %%
+new_marker.attrib['name'] = marker_name
+new_marker.attrib['name'] = marker_name
+etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
+# %%

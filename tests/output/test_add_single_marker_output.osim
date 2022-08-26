@@ -6822,6 +6822,11 @@
           <location>0.069857071913979135 0.55697305173123246 -0.029007770243867158</location>
           <fixed>true</fixed>
         </Marker>
+        <Marker name="left_eye">
+          <socket_parent_frame>/bodyset/head</socket_parent_frame>
+          <location>0.069857071913979135 0.55697305173123246 -0.029007770243867158</location>
+          <fixed>true</fixed>
+        </Marker>
       </objects>
       <groups/>
     </MarkerSet>

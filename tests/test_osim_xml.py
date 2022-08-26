@@ -17,13 +17,13 @@ repo = Path(__file__).parent.parent
 
 class TestOsimModel(unittest.TestCase):
 
-    def test_get_joint_locations(self):
+    def test_create_joint_loc_csv(self):
         """this also implicity tests the dataframe creation methodi"""
         osim_template = Path(repo, "tests","osim_models", "mediapipe_fullbody_model.osim")
         osim_path = Path(repo, "tests","output", "mediapipe_fullbody_model.osim")
         osim_model = OsimModel(osim_template, osim_path)
-        csv_output_path = Path(repo, "tests", "output", "model_marker_locations.csv")
-        csv_reference_path =  Path(repo, "tests","reference", "model_marker_locations.csv")
+        csv_output_path = Path(repo, "tests", "output", "test_create_joint_loc_output.csv")
+        csv_reference_path =  Path(repo, "tests","reference", "test_create_joint_loc_reference.csv")
         osim_model.create_joint_loc_csv(csv_output_path)
 
         try:
@@ -45,12 +45,12 @@ class TestOsimModel(unittest.TestCase):
         parent_frame = "/bodyset/head"
 
         osim_template = Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
-        osim_path = Path(repo, "tests","output", "test_add_single_marker.osim")
+        osim_path = Path(repo, "tests","output", "test_add_single_marker_output.osim")
         osim_model = OsimModel(osim_template, osim_path)
         
         osim_model.add_marker(marker_name, location_text, parent_frame)
 
-        model_reference = Path(repo, "tests","reference", "test_add_single_marker_ref.osim")
+        model_reference = Path(repo, "tests","reference", "test_add_single_marker_reference.osim")
 
         try:
             #note, shallow is only looking at metadata
@@ -63,6 +63,8 @@ class TestOsimModel(unittest.TestCase):
             print("see reference output: " + str(model_reference))
             print("---")
             
+    
+        
 
 if __name__ == '__main__':
     unittest.main()
