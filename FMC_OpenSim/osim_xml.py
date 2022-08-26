@@ -30,16 +30,14 @@ class OsimModel():
             joint_name = joint.attrib['name']
 
             for frame in joint.xpath("frames/PhysicalOffsetFrame"):
-                physical_offset_frame = frame.attrib['name']
+                # physical_offset_frame = frame.attrib['name']
                 translation = frame.xpath("translation")[0].text
                 socket_parent = frame.xpath("socket_parent")[0].text
-
-                # if translation != "0 0 0":
-                    # addition of the ' in translation is to avoid errors if opened in excel
-                joint_locations.append([joint_name, physical_offset_frame, "'" + translation, socket_parent])
+                # addition of the ' in translation is to avoid errors if opened in excel
+                joint_locations.append([joint_name, socket_parent, "'" + translation])
         
         
-        columns = [["JointName", "PhysicalOffsetFrame", "Translation", "Socket_Parent"]]
+        columns = [["JointName", "Segment", "Location_in_Segment"]]
 
         return pd.DataFrame(joint_locations, columns=columns)
 
@@ -79,18 +77,23 @@ class OsimModel():
         new_marker.attrib['name'] = marker_name
         etree.ElementTree(self.root).write(self.path, pretty_print=True)
 
-    
+    def add_ModelLandmarkMap(self, model_landmark_map_path):
+        pass
 
 
 
 #####################################
-# Prototyping OsimModel.place_all_markers(config)
+# Prototyping OsimModel.add_ModelLandmarkMap(config_xlsx)
 #####################################
+
 # %%
 repo = Path(__file__).parent.parent
 
 test_model_path =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
 test_model = OsimModel(test_model_path)
+model_landmark_map_path = Path(repo, "FMC_OpenSim", "ModelLandmarkMap.xlsx")
+# create a dictionary from the xlsx following https://www.marsja.se/your-guide-to-reading-excel-xlsx-files-in-python/
+
 
 # %%
 # remove markers from element tree

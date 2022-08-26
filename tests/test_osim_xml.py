@@ -63,7 +63,9 @@ class TestOsimModel(unittest.TestCase):
             print("see reference output: " + str(model_reference))
             print("---")
             
-    
+    def test_add_ModelLandmarkMap(self):
+
+        pass    
         
 
 if __name__ == '__main__':
