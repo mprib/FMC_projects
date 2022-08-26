@@ -23,7 +23,7 @@ class OsimModel():
 
             for frame in joint.xpath("frames/PhysicalOffsetFrame"):
                 physical_offset_frame = frame.attrib['name']
-                translation = frame.xpath("translation")[0].text
+                translation = frame.xpath("translation")[0].textrl+-"
                 socket_parent = frame.xpath("socket_parent")[0].text
 
                 if translation != "0 0 0":
@@ -40,7 +40,10 @@ class OsimModel():
         joint_loc_df = self.get_joint_locations()
         joint_loc_df.to_csv(csv_path)
 
+
+#####################################
 # Prototyping OsimModel.add_marker()
+#####################################
 # %%
 repo = Path(__file__).parent.parent
 
