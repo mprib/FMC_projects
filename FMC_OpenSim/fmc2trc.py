@@ -86,8 +86,8 @@ class FMCSession():
         all_trajectories = self.get_trajectory_array()
 
         # not interested in face mesh or hands here, 
-        # so only taking first 33 elements
-        # these represent the gross pose + simple hands
+        # so only taking elements listed in landmarks.json
+        # for the current mediapipe pose, just represents the gross pose + hands
         lm_x = (all_trajectories[:, 0:self.tracked_landmark_count, x_axis] * flip_x * scale_factor)   # skeleton x data
         lm_y = (all_trajectories[:, 0:self.tracked_landmark_count, y_axis] * flip_y * scale_factor)   # skeleton y data
         lm_z = (all_trajectories[:, 0:self.tracked_landmark_count, z_axis] * flip_z * scale_factor)   # skeleton z data
