@@ -124,7 +124,7 @@ class FMCSession():
         self.trajectories.to_csv(csv_filename, index=False)
 
 
-    # Convert a human readable csv to a trc
+    # Convert a trajectory array to a trc
     def create_trajectory_trc(self, trc_filename):
         
         num_markers = len(self.model_landmarks)
@@ -136,8 +136,8 @@ class FMCSession():
 
         trajectories_for_trc = self.trajectories
 
-
         # make a list of the trajectories to keep
+        # only those that are being modelled in osim
         keep_trajectories = []
         for lm in self.model_landmarks:
             keep_trajectories.append(lm+"_x")
@@ -146,11 +146,9 @@ class FMCSession():
 
         # going to recreate these later after potentially dropping frames
         trajectories_for_trc = trajectories_for_trc[keep_trajectories]
-        
-
         trajectories_for_trc = trajectories_for_trc.dropna()
         
-
+        # these are at top of .trc
         orig_num_frames = len(trajectories_for_trc) - 1
         num_frames = orig_num_frames
 
@@ -189,7 +187,7 @@ class FMCSession():
 
             tsv_writer.writerow(header_names)
 
-            # create labels for x,y,z axes (below landmark names)
+            # create labels for x,y,z axes (below landmark names in header)
             header_names = ["",""]
             for i in range(1,len(self.model_landmarks)+1):
                 header_names.append("X"+str(i))
@@ -203,18 +201,12 @@ class FMCSession():
 
             # add in frame and Time stamp to the data frame 
             # this redundent step is due to potentially dropping frames earlier
-            # trajectories_for_trc["Frame"] = [str(i) for i in range(0, len(trajectories_for_trc))]
-            # trajectories_for_trc["Time"] = trajectories_for_trc["Frame"].astype(float) / float(self.camera_rate)
             trajectories_for_trc.insert(0, "Frame", [str(i) for i in range(0, len(trajectories_for_trc))])
             trajectories_for_trc.insert(1, "Time", trajectories_for_trc["Frame"].astype(float) / float(self.camera_rate))
-
-        
-            # trajectories_for_trc = trajectories_for_trc.reindex(columns=column_names)
-
+            
+            # and finally actually write the trajectories
             for row in range(0, len(trajectories_for_trc)):
                 tsv_writer.writerow(trajectories_for_trc.iloc[row].tolist())
-
-            #print(column_names)
 
     def interpolate_trajectory_gaps(self):
         """
@@ -224,10 +216,4 @@ class FMCSession():
         """
         self.trajectories.interpolate(method='polynomial', order=3, inplace=True)
 
-
-
-
-
-
-# print(trajectories)
 
