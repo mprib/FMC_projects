@@ -1,10 +1,8 @@
 # The purpose of this code module is to take the numpy output of freemocap and convert
 # it to a human readable format that will become the hub of translation to other formats
+# additionally, it will generate a .trc file that can be used for opensim scaling
+# and inverse kinematics 
 
-# I am beginning with the code that I developed in a jupyter notebook 
-
-
-# This code copied from https://github.com/freemocap/freemocap/wiki
 import os
 import csv
 from pathlib import Path 
