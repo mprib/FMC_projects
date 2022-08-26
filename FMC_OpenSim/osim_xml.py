@@ -9,10 +9,13 @@ import pandas as pd
 
 class OsimModel():
 
-    def __init__(self, osim_path):
+    def __init__(self, osim_template, osim_path):
+        """based on a model template, create a new model. Could be same"""
         parser = etree.XMLParser(remove_blank_text=True)
+        
         self.path = osim_path
-        self.tree = etree.parse(osim_path, parser)
+
+        self.tree = etree.parse(osim_template, parser)
         self.root = self.tree.getroot()
 
 
@@ -76,48 +79,48 @@ class OsimModel():
 
 
 
-#####################################
-# Prototyping OsimModel.add_marker()
-#####################################
-# %%
-repo = Path(__file__).parent.parent
+# #####################################
+# # Prototyping OsimModel.add_marker()
+# #####################################
+# # %%
+# repo = Path(__file__).parent.parent
 
-test_model_path =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
-test_model = OsimModel(test_model_path)
+# test_model_path =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
+# test_model = OsimModel(test_model_path)
 
-# %%
-# remove markers from element tree
-for marker in test_model.root.xpath("Model/MarkerSet/objects")[0]:
-    print(marker.attrib['name'])
-    marker.getparent().remove(marker)
+# # %%
+# # remove markers from element tree
+# for marker in test_model.root.xpath("Model/MarkerSet/objects")[0]:
+#     print(marker.attrib['name'])
+#     marker.getparent().remove(marker)
 
-etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
+# etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
 
 
-# %%
-# add markers back into osim file
-marker_parent = test_model.root.xpath("Model/MarkerSet/objects")[0]
+# # %%
+# # add markers back into osim file
+# marker_parent = test_model.root.xpath("Model/MarkerSet/objects")[0]
 
-marker_parent.text = None
+# marker_parent.text = None
 
-new_marker = etree.SubElement(marker_parent, "Marker")
+# new_marker = etree.SubElement(marker_parent, "Marker")
 
-marker_name = 'left_eye'
-location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
-parent_frame = "/bodyset/head"
+# marker_name = 'left_eye'
+# location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
+# parent_frame = "/bodyset/head"
 
-new_marker.attrib['name'] = marker_name
+# new_marker.attrib['name'] = marker_name
 
-socket_parent_frame = etree.SubElement(new_marker, "socket_parent_frame")
-location = etree.SubElement(new_marker, "location")
-fixed = etree.SubElement(new_marker, "fixed")
+# socket_parent_frame = etree.SubElement(new_marker, "socket_parent_frame")
+# location = etree.SubElement(new_marker, "location")
+# fixed = etree.SubElement(new_marker, "fixed")
 
-new_marker.text = None
-socket_parent_frame.text = parent_frame
-location.text = location_text
-fixed.text = "true"
+# new_marker.text = None
+# socket_parent_frame.text = parent_frame
+# location.text = location_text
+# fixed.text = "true"
 
-new_marker.attrib['name'] = marker_name
-new_marker.attrib['name'] = marker_name
-etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
-# %%
+# new_marker.attrib['name'] = marker_name
+# new_marker.attrib['name'] = marker_name
+# etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
+# # %%

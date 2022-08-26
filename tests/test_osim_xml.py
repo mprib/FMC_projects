@@ -19,8 +19,9 @@ class TestOsimModel(unittest.TestCase):
 
     def test_get_joint_locations(self):
         """this also implicity tests the dataframe creation methodi"""
-        osim_path = Path(repo, "tests","osim_models", "mediapipe_fullbody_model.osim")
-        osim_model = OsimModel(osim_path)
+        osim_template = Path(repo, "tests","osim_models", "mediapipe_fullbody_model.osim")
+        osim_path = Path(repo, "tests","output", "mediapipe_fullbody_model.osim")
+        osim_model = OsimModel(osim_template, osim_path)
         csv_output_path = Path(repo, "tests", "output", "model_marker_locations.csv")
         csv_reference_path =  Path(repo, "tests","reference", "model_marker_locations.csv")
         osim_model.create_joint_loc_csv(csv_output_path)
@@ -43,12 +44,25 @@ class TestOsimModel(unittest.TestCase):
         location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
         parent_frame = "/bodyset/head"
 
-        osim_path = Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
-        osim_model = OsimModel(osim_path)
+        osim_template = Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
+        osim_path = Path(repo, "tests","output", "test_add_single_marker.osim")
+        osim_model = OsimModel(osim_template, osim_path)
         
         osim_model.add_marker(marker_name, location_text, parent_frame)
-        
-        pass
+
+        model_reference = Path(repo, "tests","reference", "test_add_single_marker_ref.osim")
+
+        try:
+            #note, shallow is only looking at metadata
+            self.assertTrue(filecmp.cmp(osim_path, model_reference, shallow=False), "This is a message")
+        except:
+            print("---")
+            print("<<<<<<<<<<<<<<<<<<<<<FAIL>>>>>>>>>>>>>>>>>>>>>>>>>")
+            print("*******Add Single Marker has Failed*********")
+            print("see test output: " + str(osim_path))
+            print("see reference output: " + str(model_reference))
+            print("---")
+            
 
 if __name__ == '__main__':
     unittest.main()

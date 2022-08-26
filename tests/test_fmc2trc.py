@@ -14,7 +14,6 @@ sys.path.insert(0, str(source))
 
 from fmc2trc import FMCSession
 
-
 class TestFMC2trc(unittest.TestCase):
 
     def setUp(self):

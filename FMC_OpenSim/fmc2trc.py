@@ -11,7 +11,6 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import json
-import subprocess
 import xml.dom.minidom as md
 
 class FMCSession():
@@ -31,11 +30,7 @@ class FMCSession():
             self.trajectories = self.get_trajectory_dataframe()
             
             # modelled trajectories will be used to create the trc and ignore
-            # gap filling of non-modelled landmarks
-            #TODO this should get refactored to pull in the modelled 
-            # trajectories directly from the osim file
-            #pose_modeled = "mediapipe_body"
-            pose_modeled = "mediapipe_body"
+            # tracked landmarks that don't get included in the osim model
             self.model_landmarks = self.get_model_landmarks()
 
     def get_model_landmarks(self):
