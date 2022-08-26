@@ -10,8 +10,10 @@ import pandas as pd
 class OsimModel():
 
     def __init__(self, osim_path):
-        self.tree = etree.parse(osim_path)
-        self.root = self.tree.getroot()        
+        parser = etree.XMLParser(remove_blank_text=True)
+        self.path = osim_path
+        self.tree = etree.parse(osim_path, parser)
+        self.root = self.tree.getroot()
 
 
     def get_joint_locations(self):
@@ -23,7 +25,7 @@ class OsimModel():
 
             for frame in joint.xpath("frames/PhysicalOffsetFrame"):
                 physical_offset_frame = frame.attrib['name']
-                translation = frame.xpath("translation")[0].textrl+-"
+                translation = frame.xpath("translation")[0].text
                 socket_parent = frame.xpath("socket_parent")[0].text
 
                 if translation != "0 0 0":
@@ -37,8 +39,41 @@ class OsimModel():
 
 
     def create_joint_loc_csv(self, csv_path):
+        """save a csv of joint centers and parent bodies"""
         joint_loc_df = self.get_joint_locations()
         joint_loc_df.to_csv(csv_path)
+
+    def add_marker(self, marker_name, location_text, parent_frame):
+        """add a single marker to an osim file, saving new results"""
+
+        # go to parent of markers
+        marker_parent = self.root.xpath("Model/MarkerSet/objects")[0]
+        marker_parent.text = None #necessary for maintaining new lines and tabs, still unsure why
+        
+        # specify new marker info
+        new_marker = etree.SubElement(marker_parent, "Marker")
+        
+        # marker_name = 'left_eye'
+        # location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
+        # parent_frame = "/bodyset/head"
+
+        new_marker.attrib['name'] = marker_name
+
+        socket_parent_frame = etree.SubElement(new_marker, "socket_parent_frame")
+        location = etree.SubElement(new_marker, "location")
+        fixed = etree.SubElement(new_marker, "fixed")
+
+        new_marker.text = None
+        socket_parent_frame.text = parent_frame
+        location.text = location_text
+        fixed.text = "true"
+
+        new_marker.attrib['name'] = marker_name
+        new_marker.attrib['name'] = marker_name
+        etree.ElementTree(self.root).write(self.path, pretty_print=True)
+
+    
+
 
 
 #####################################
@@ -63,12 +98,26 @@ etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
 # add markers back into osim file
 marker_parent = test_model.root.xpath("Model/MarkerSet/objects")[0]
 
+marker_parent.text = None
+
 new_marker = etree.SubElement(marker_parent, "Marker")
 
-marker_name = 'nose'
-location = '(0.0890481 0.532978 0.000609926)'
+marker_name = 'left_eye'
+location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
 parent_frame = "/bodyset/head"
 
+new_marker.attrib['name'] = marker_name
+
+socket_parent_frame = etree.SubElement(new_marker, "socket_parent_frame")
+location = etree.SubElement(new_marker, "location")
+fixed = etree.SubElement(new_marker, "fixed")
+
+new_marker.text = None
+socket_parent_frame.text = parent_frame
+location.text = location_text
+fixed.text = "true"
+
+new_marker.attrib['name'] = marker_name
 new_marker.attrib['name'] = marker_name
 etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
 # %%

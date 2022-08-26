@@ -39,14 +39,14 @@ class TestOsimModel(unittest.TestCase):
 
     def test_add_single_marker_to_model(self):
         """given a spreadsheet of landmarks, add them to an osim file"""
-        marker_name = 'nose'
-        location = '(0.0890481 0.532978 0.000609926)'
+        marker_name = 'left_eye'
+        location_text = '0.069857071913979135 0.55697305173123246 -0.029007770243867158'
         parent_frame = "/bodyset/head"
 
         osim_path = Path(repo, "tests","osim_models", "mediapipe_fullbody_model_no_markers.osim")
         osim_model = OsimModel(osim_path)
         
-        osim_model.add_marker(marker_name, location, parent_frame)
+        osim_model.add_marker(marker_name, location_text, parent_frame)
         
         pass
 
