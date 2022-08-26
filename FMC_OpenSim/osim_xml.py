@@ -63,7 +63,7 @@ etree.ElementTree(test_model.root).write(test_model_path, pretty_print=True)
 # add markers back into osim file
 marker_parent = test_model.root.xpath("Model/MarkerSet/objects")[0]
 
-new_marker = etree.SubElement(marker_parent, "marker")
+new_marker = etree.SubElement(marker_parent, "Marker")
 
 marker_name = 'nose'
 location = '(0.0890481 0.532978 0.000609926)'
