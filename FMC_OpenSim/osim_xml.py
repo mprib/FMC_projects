@@ -4,7 +4,7 @@ from pathlib import Path
 from tkinter.filedialog import test
 import lxml.etree as etree
 import pandas as pd
-
+import subprocess
 
 
 class OsimModel():
@@ -97,18 +97,83 @@ class OsimModel():
 
 class ScaleXML():
 
-    def __init__(self, scale_template, new_scale_path=""):
+    def __init__(self,  scale_template, new_scale_path, trc_file ):
         """based on a model template, create a new model"""
-        parser = etree.XMLParser(remove_blank_text=True)
         
-        if new_scale_path == "":
-            self.path = scale_template
-        else:
-            self.path = new_scale_path
-
+        # if new_scale_path == "":
+        #     self.path = scale_template
+        # else:
+        
+        self.trc_file = trc_file
+        
+        self.path = new_scale_path
+        
+        parser = etree.XMLParser(remove_blank_text=True)
         self.tree = etree.parse(scale_template, parser)
         self.root = self.tree.getroot()
+        etree.ElementTree(self.root).write(self.path, pretty_print=True)
 
-##########################################################
-# Prototyping OsimModel.add_ModelLandmarkMap(config_xlsx)
-##########################################################
+
+
+
+    def scale_model(self):
+        """run the scale.xls file using opensim-cmd"""
+
+        exe_file = str(Path("C", "OpenSim 4.4", "bin", "opensim-cmd.exe"))
+        xml_file = str(self.path)
+        print(exe_file)
+        print(xml_file)
+
+        scale_output = subprocess.run([exe_file, "run-tool", xml_file], 
+                                shell=True,  stdout=subprocess.PIPE, text=True)
+        print("Return Code: " + str(scale_output.returncode))
+        print("Std Err: " + str(scale_output.stderr))
+        print(scale_output)
+        # pass
+
+    # def assign_trc(self, trc_file):
+
+
+    # def assign_model(self, osim_file):
+
+
+
+# %%
+################################################################################
+################################ PROTOTYPING ###################################
+################################################################################
+
+# ------------------------------------------------------------------------------
+# Create some helper functions that will integrate with tests 
+# and make them more succinct
+
+repo = Path(__file__).parent.parent
+print(repo)
+def get_input_path(*args):
+    return Path(repo,"tests",  "input", *args)
+
+def get_reference_and_output_paths(test_name, filetype):
+
+    test_name = test_name.replace(" ", "_")
+
+    if filetype.startswith("."):
+        pass
+    else:
+        filetype = "." + filetype
+
+    ref_path = Path(repo,"tests", "reference", test_name+"_reference" + filetype)
+    out_path = Path(repo,"tests", "output", test_name+"_output" + filetype)
+
+    return ref_path, out_path
+# %%
+# ------------------------------------------------------------------------------
+# Create new scale_xml
+in_trc = get_input_path("trc", "dao_yin.trc")
+in_xml = get_input_path("scale_ik_xml", "scaling_mediapipe_model.xml")
+ref_xml, out_xml = get_reference_and_output_paths("test_assign_model", "xml")
+
+# print(out_xml)
+test_scale_xml = ScaleXML(in_xml, out_xml, in_trc)
+test_scale_xml.scale_model()
+# %%
+# Navigate xml to find model file
