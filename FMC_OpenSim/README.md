@@ -20,8 +20,8 @@ Given changing underlying models and the high number of trajectories to manage f
 4. ~~update an osim model file based on in input of markers and the associated joints~~
 5. ~~modify osim creation to have a template (for creation) and a target (for long term saving)~~
 6. ~~unittest of add_marker method~~
-7. Create method to add markers in bulk from config spreadsheet
-8. scale a model to a trc file
+7. ~~Create method to add markers in bulk from config spreadsheet~~
+8. automate updates of model scaling.xml 
 9. modify an osim model to create a marker at the distal end of a segment
 10. run inverse kinematics on a trc file given a model
 11. modify a scaling file to change the input model

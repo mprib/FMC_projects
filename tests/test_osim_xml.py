@@ -13,7 +13,23 @@ sys.path.insert(0, str(source))
 from osim_xml import OsimModel
 
 repo = Path(__file__).parent.parent
-        
+
+def 
+
+
+def run_test_and_output(reference_file, output_file, ):
+    """automate the checking of output vs reference and printing an alert"""
+
+
+    try:
+        self.assertTrue(filecmp.cmp(reference_file, output_file, shallow=False))
+    except:
+        print("---")
+        print("<<<<<<<<<<<<<<<<<<<<<FAIL>>>>>>>>>>>>>>>>>>>>>>>>>")
+        print("*******Model Joint Positions have changed*********")
+        print("see test output: " + str(output_file))
+        print("see reference output: " + str(reference_file))
+        print("---")
 
 class TestOsimModel(unittest.TestCase):
 
@@ -64,7 +80,7 @@ class TestOsimModel(unittest.TestCase):
             print("---")
             
     def test_add_ModelLandmarkMap(self):
-
+        """given a spreadsheet of landmark positions relative to a segment, add them"""
         repo = Path(__file__).parent.parent
         test_model_template =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model.osim")
         test_model_path =  Path(repo, "tests","output", "test_add_ModelLandmarkMap_output.osim")
@@ -87,7 +103,13 @@ class TestOsimModel(unittest.TestCase):
             print("see reference output: " + str(reference_model_path))
             print("---")
 
+
+
+class TestScaleXML(unittest.TestCase):
+
+    def test_assign_model_path(self):
         
+
 
 if __name__ == '__main__':
     unittest.main()

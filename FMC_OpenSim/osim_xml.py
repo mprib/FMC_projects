@@ -77,6 +77,7 @@ class OsimModel():
         etree.ElementTree(self.root).write(self.path, pretty_print=True)
 
     def add_ModelLandmarkMap(self, model_landmark_map_path, map_sheet_name="Sheet1"):
+        """given a spreadsheet of landmark positions relative to a segment, add them"""
         # remove all markers from element tree
         for marker in self.root.xpath("Model/MarkerSet/objects")[0]:
             # print(marker.attrib['name'])
@@ -94,32 +95,20 @@ class OsimModel():
             self.add_marker(Landmark, Location_in_Segment, Segment)
 
 
+class ScaleXML():
 
+    def __init__(self, scale_template, new_scale_path=""):
+        """based on a model template, create a new model"""
+        parser = etree.XMLParser(remove_blank_text=True)
+        
+        if new_scale_path == "":
+            self.path = scale_template
+        else:
+            self.path = new_scale_path
+
+        self.tree = etree.parse(scale_template, parser)
+        self.root = self.tree.getroot()
 
 ##########################################################
 # Prototyping OsimModel.add_ModelLandmarkMap(config_xlsx)
 ##########################################################
-
-# %%
-# Create a test model to worko with
-
-
-
-
-# %%
-
-
-# %%
-# Get the list of new markers
-
-# xls = pd.ExcelFile(model_landmark_map_path)
-
-
-
-
-# %%
-# iterate over landmark_map
-
-
-# %%
-
