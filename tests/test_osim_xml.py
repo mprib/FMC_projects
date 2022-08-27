@@ -65,7 +65,28 @@ class TestOsimModel(unittest.TestCase):
             
     def test_add_ModelLandmarkMap(self):
 
-        pass    
+        repo = Path(__file__).parent.parent
+        test_model_template =  Path(repo, "tests","osim_models", "mediapipe_fullbody_model.osim")
+        test_model_path =  Path(repo, "tests","output", "test_add_ModelLandmarkMap_output.osim")
+        reference_model_path = Path(repo, "tests","reference", "test_add_ModelLandmarkMap_reference.osim")
+        
+        test_model = OsimModel(test_model_template, test_model_path)
+
+        landmark_map_path = Path(repo, "tests", "osim_models", "ModelLandmarkMap.xlsx")
+
+        test_model.add_ModelLandmarkMap(landmark_map_path)
+
+        try:
+            #note, shallow is only looking at metadata
+            self.assertTrue(filecmp.cmp(test_model_path, reference_model_path, shallow=False))
+        except:
+            print("---")
+            print("<<<<<<<<<<<<<<<<<<<<<FAIL>>>>>>>>>>>>>>>>>>>>>>>>>")
+            print("*******Add Model Landmark Map has Failed*********")
+            print("see test output: " + str(test_model_path))
+            print("see reference output: " + str(reference_model_path))
+            print("---")
+
         
 
 if __name__ == '__main__':
