@@ -1,3 +1,5 @@
+# %%
+
 from pathlib import Path
 import sys
 import unittest
@@ -14,19 +16,37 @@ from osim_xml import OsimModel
 
 repo = Path(__file__).parent.parent
 
-def 
+
+# Create some helper functions that will make tests more succinct
+# %%
+def get_input_path(*args):
+    return Path(repo, "input", *args)
 
 
-def run_test_and_output(reference_file, output_file, ):
+def get_reference_and_output_paths(test_name, filetype):
+
+    test_name = test_name.replace(" ", "_")
+
+    if filetype.startswith("."):
+        pass
+    else:
+        filetype = "." + filetype
+
+    ref_path = Path(repo,"reference", test_name+"_reference" + filetype)
+    out_path = Path(repo,"output", test_name+"_output" + filetype)
+
+    return ref_path, out_path
+
+# %%
+def compare_reference_and_output(reference_file, output_file, message="" ):
     """automate the checking of output vs reference and printing an alert"""
-
 
     try:
         self.assertTrue(filecmp.cmp(reference_file, output_file, shallow=False))
     except:
         print("---")
         print("<<<<<<<<<<<<<<<<<<<<<FAIL>>>>>>>>>>>>>>>>>>>>>>>>>")
-        print("*******Model Joint Positions have changed*********")
+        print("********" + message + "*********")
         print("see test output: " + str(output_file))
         print("see reference output: " + str(reference_file))
         print("---")
@@ -103,12 +123,7 @@ class TestOsimModel(unittest.TestCase):
             print("see reference output: " + str(reference_model_path))
             print("---")
 
-
-
-class TestScaleXML(unittest.TestCase):
-
-    def test_assign_model_path(self):
-        
+    # here I start trying to use the helper functions I just created.
 
 
 if __name__ == '__main__':
