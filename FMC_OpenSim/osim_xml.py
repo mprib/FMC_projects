@@ -94,47 +94,58 @@ class OsimModel():
 
             self.add_marker(Landmark, Location_in_Segment, Segment)
 
+    def scale_model(self, scale_xml, scaled_model_path, trc, time_range_sec):
+        """run the scale.xml file using opensim-cmd"""
+
+        exe_file = str(Path("C:\\", "OpenSim 4.4", "bin", "opensim-cmd.exe"))
+        scale_xml = str(self.path)
+        print(exe_file)
+        print(scale_xml)
+
+
+        # in the process of writing this up.
+        self.update_scaling_config(scale_xml, scaled_model_path, trc, time_range_sec)
+
+        scale_output = subprocess.call([exe_file, "run-tool", scale_xml], 
+                                shell=True,  stdout=subprocess.PIPE, text=True)
+        if scale_output!=0:
+            print(">>>>>>>>>>>>>> SCALED MODEL NOT PRODUCED <<<<<<<<<<<<<<<<<<")
+        else:
+            print("scaled model stored at: ", self.path)
+
+
+    def update_scaling_config(self, scale_xml, scaled_model_path, trc, time_range_sec):
+
+        parser = etree.XMLParser(remove_blank_text=True)
+        tree = etree.parse(scale_xml, parser)
+        root = tree.getroot()
+
+        # Assign variables to the original osim model, the new model name,
+        # the .trc file and the time range being used.
+
+
+
+
+
+
+
+        etree.ElementTree(root).write(scale_xml, pretty_print=True)
+
+
+
+        pass
 
 class ScaleXML():
 
-    def __init__(self,  scale_template, new_scale_path, trc_file ):
+    def __init__(self,  scale_xml, trc_file):
         """based on a model template, create a new model"""
-        
-        # if new_scale_path == "":
-        #     self.path = scale_template
-        # else:
         
         self.trc_file = trc_file
         
-        self.path = new_scale_path
+        self.path = scale_xml
         
-        parser = etree.XMLParser(remove_blank_text=True)
-        self.tree = etree.parse(scale_template, parser)
-        self.root = self.tree.getroot()
-        etree.ElementTree(self.root).write(self.path, pretty_print=True)
 
 
-
-
-    def scale_model(self):
-        """run the scale.xls file using opensim-cmd"""
-
-        exe_file = str(Path("C", "OpenSim 4.4", "bin", "opensim-cmd.exe"))
-        xml_file = str(self.path)
-        print(exe_file)
-        print(xml_file)
-
-        scale_output = subprocess.run([exe_file, "run-tool", xml_file], 
-                                shell=True,  stdout=subprocess.PIPE, text=True)
-        print("Return Code: " + str(scale_output.returncode))
-        print("Std Err: " + str(scale_output.stderr))
-        print(scale_output)
-        # pass
-
-    # def assign_trc(self, trc_file):
-
-
-    # def assign_model(self, osim_file):
 
 
 
@@ -148,7 +159,6 @@ class ScaleXML():
 # and make them more succinct
 
 repo = Path(__file__).parent.parent
-print(repo)
 def get_input_path(*args):
     return Path(repo,"tests",  "input", *args)
 
@@ -170,10 +180,10 @@ def get_reference_and_output_paths(test_name, filetype):
 # Create new scale_xml
 in_trc = get_input_path("trc", "dao_yin.trc")
 in_xml = get_input_path("scale_ik_xml", "scaling_mediapipe_model.xml")
-ref_xml, out_xml = get_reference_and_output_paths("test_assign_model", "xml")
+ref_xml, out_xml = get_reference_and_output_paths("test_scale_model", "xml")
 
-# print(out_xml)
-test_scale_xml = ScaleXML(in_xml, out_xml, in_trc)
-test_scale_xml.scale_model()
-# %%
+# test_scale_xml = ScaleXML(in_xml, out_xml, in_trc)
+# # print(out_xml)
+# # %%
+# test_scale_xml.scale_model()
 # Navigate xml to find model file
