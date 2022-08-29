@@ -114,12 +114,13 @@ class OsimModel():
     """
 
 
-    def __init__(self, osim_template, working_directory):
+    def __init__(self, model_name, osim_template, working_directory):
         """based on an input osim template, create a new model"""
         
+        self.model_name = model_name
         self.osim_template = osim_template
         self.working_directory = working_directory
-        self.osim_path = Path(self.working_directory, "unscaled_model.osim")
+        self.osim_path = Path(self.working_directory, f"unscaled_{self.model_name}_model.osim")
 
         shutil.copy(self.osim_template, self.osim_path)
 
@@ -132,8 +133,8 @@ class OsimModel():
         and trc and time range, create a new temp scale.xml
         """
 
-        self.scale_xml = Path(self.working_directory, "scale.xml")
-        self.scaled_osim_path = Path(self.working_directory, "scaled_model.osim")
+        self.scale_xml = Path(self.working_directory, f"{self.model_name}_scale.xml")
+        self.scaled_osim_path = Path(self.working_directory, f"scaled_{self.model_name}_model.osim")
         shutil.copy(scale_xml_template, self.scale_xml)
 
         self.scaling_tree = etree.parse(self.scale_xml, self.parser)
@@ -156,14 +157,14 @@ class OsimModel():
         scale_output = subprocess.run([exe_file, "run-tool", scale_xml], 
                                 shell=True,  stdout=subprocess.PIPE, text=True)
 
-        print("stdout: " + str(scale_output.stdout))
+        # print("stdout: " + str(scale_output.stdout))
 
 
 
     def configure_ik(self, ik_template, trc, time_range, mot_path):
-        print("trc: " + trc._str)
-
-        self.ik_xml = Path(self.working_directory, "inverse_kinematics.xml")
+        """Create IK config from template and update parameters"""
+      
+        self.ik_xml = Path(self.working_directory, f"{self.model_name}_inverse_kinematics.xml")
 
         shutil.copy(ik_template, self.ik_xml)
 
@@ -180,13 +181,14 @@ class OsimModel():
         pass
 
     def run_ik(self):
+        """run IK on model and trc, creating a .mot file"""
         exe_file = str(Path("C:\\", "OpenSim 4.4", "bin", "opensim-cmd.exe"))
         ik_xml = str(self.ik_xml)
 
         ik_output = subprocess.run([exe_file, "run-tool", ik_xml], 
                                 shell=True,  stdout=subprocess.PIPE, text=True)
 
-        print("stdout: " + str(ik_output.stdout))
+        # print("stdout: " + str(ik_output.stdout))
 
         
 
@@ -219,37 +221,3 @@ def get_reference_and_output_paths(test_name, filetype):
     return ref_path, out_path
 # %%
 # ------------------------------------------------------------------------------
-# Create new scale_xml
-working_dir = Path(repo, "tests", "output")
-scale_xml_template = get_input_path("osim_models", "mediapipe_fullbody_model.osim")
-scale_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
-trc_input = get_input_path("trc", "dao_yin.trc")
-scale_time_range = [0, 15]
-
-# %%
-
-newModel = OsimModel(scale_xml_template, working_dir)
-
-# %%
-
-newModel.configure_scaling(scale_template, trc_input, [0,15])
-
-
-# %%
-
-newModel.scale_model()
-
-# %%
-
-ik_template = get_input_path("scale_ik_xml", "ik_mediapipe_model.xml")
-motion_output = Path(repo, "tests", "output", "dao_yin.mot")
-
-
-newModel.configure_ik(ik_template,trc_input, [0,9], motion_output)
-
-
-# %%
-
-
-newModel.run_ik()
-

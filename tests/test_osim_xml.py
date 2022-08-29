@@ -1,5 +1,6 @@
 # %%
 
+from logging.config import fileConfig
 from pathlib import Path
 from pyexpat.errors import XML_ERROR_INCOMPLETE_PE
 import sys
@@ -75,32 +76,44 @@ class TestOsimModelTemplate(unittest.TestCase):
         self.assertTrue(filecmp.cmp(reference, output, shallow=False))  
 
 
-    # def test_init_ScaleXML(self):
-    #     """create a new scale xml file based on a template"""
-    #     xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
-    #     reference, output = get_reference_and_output_paths("test_init_ScaleXML", ".xml")
+class TestOsimModel(unittest.TestCase):
 
-    #     newScaleXML = ScaleXML(xml_template, output)
+    def setUp(self):
+        self.working_dir = Path(repo, "tests", "output")
+        self.scale_xml_template = get_input_path("osim_models", "mediapipe_fullbody_model.osim")
+        self.scale_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
+        self.trc_input = get_input_path("trc", "dao_yin_short.trc")
+        self.ik_template = get_input_path("scale_ik_xml", "ik_mediapipe_model.xml")
+        self.motion_output = Path(repo, "tests", "output", "dao_yin_short.mot")
+        self.newModel = OsimModel("test", self.scale_xml_template, self.working_dir)
 
-    #     self.assertTrue(filecmp.cmp(reference, output, shallow=False))
 
-    # def test_assign_trc(self):
-    #     """upate a new scale xml to reference a trc file"""
+    def test_model_setup(self):
+        # Create new scale_xml
 
-    #     xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
-    #     reference, output = get_reference_and_output_paths("test_assign_trc", ".xml")
-    #     trc_input = get_input_path("trc", "dao_yin.trc")
+        output = Path(repo, "tests", "output", "unscaled_test_model.osim")
+        reference = Path(repo, "tests", "reference", "unscaled_test_model_reference.osim")
 
-    #     newScaleXML = ScaleXML(xml_template, output)
+        self.assertTrue(filecmp.cmp(output, reference))
+
+    def test_model_scaling_and_IK(self):
+
+        output = Path(repo, "tests", "output", "scaled_test_model.osim")
+        reference = Path(repo, "tests", "reference", "scaled_test_model_reference.osim")
+
+        self.newModel.configure_scaling(self.scale_template, self.trc_input, [0,15])
+        self.newModel.scale_model()
+
+        self.assertTrue(filecmp.cmp(output, reference))
+
+        output = Path(repo, "tests", "output", "dao_yin_short.mot")
+        reference = Path(repo, "tests", "reference", "dao_yin_short_reference.mot")
+
+        self.newModel.configure_ik(self.ik_template,self.trc_input, [0,9], self.motion_output)
+        self.newModel.run_ik()
         
-    #     ScaleXML.assign_trc()
+        self.assertTrue(filecmp.cmp(output, reference))
 
-
-
-    # # def test_add_scaled_model_path
-    # currently demotivated on the TDD front while trying to wrap my head around
-    # testing these functions using Mock. Going to take a detour and just code some 
-    # intermediate functions and will learn from my mistakes later
 
 if __name__ == '__main__':
     unittest.main()

@@ -11,7 +11,7 @@
     <!--Specifies the name of the unscaled model (.osim) and the marker set.-->
     <GenericModelMaker>
       <!--Model file (.osim) for the unscaled model.-->
-      <model_file>c:\Users\Mac Prible\repos\FMC_projects\tests\output\unscaled_model.osim</model_file>
+      <model_file>c:\Users\Mac Prible\repos\FMC_projects\tests\output\unscaled_test_model.osim</model_file>
       <!--Set of model markers used to scale the model. Scaling is done based on distances between model markers compared to the same distances between the corresponding experimental markers.-->
       <marker_set_file>Unassigned</marker_set_file>
     </GenericModelMaker>
@@ -341,13 +341,13 @@
         <groups/>
       </ScaleSet>
       <!--TRC file (.trc) containing the marker positions used for measurement-based scaling. This is usually a static trial, but doesn't need to be.  The marker-pair distances are computed for each time step in the TRC file and averaged across the time range.-->
-      <marker_file>c:\Users\Mac Prible\repos\FMC_projects\tests\input\trc\dao_yin.trc</marker_file>
+      <marker_file>c:\Users\Mac Prible\repos\FMC_projects\tests\input\trc\dao_yin_short.trc</marker_file>
       <!--Time range over which to average marker-pair distances in the marker file (.trc) for measurement-based scaling.-->
       <time_range>0 15</time_range>
       <!--Flag (true or false) indicating whether or not to preserve relative mass between segments.-->
       <preserve_mass_distribution>true</preserve_mass_distribution>
       <!--Name of OpenSim model file (.osim) to write when done scaling.-->
-      <output_model_file>c:\Users\Mac Prible\repos\FMC_projects\tests\output\scaled_model.osim</output_model_file>
+      <output_model_file>c:\Users\Mac Prible\repos\FMC_projects\tests\output\scaled_test_model.osim</output_model_file>
       <!--Name of file to write containing the scale factors that were applied to the unscaled model (optional).-->
       <output_scale_file>Unassigned</output_scale_file>
     </ModelScaler>
