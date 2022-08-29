@@ -14,7 +14,7 @@ repo = Path(__file__).parent.parent
 source = Path(repo, "FMC_OpenSim")
 sys.path.insert(0, str(source))
 
-from osim_xml import OsimModel
+from osim_xml import OsimModel, ScaleXML
 #####################################################################
 
 
@@ -74,19 +74,33 @@ class TestOsimModel(unittest.TestCase):
 
         self.assertTrue(filecmp.cmp(reference, output, shallow=False))  
 
-        # try:
-        #     #note, shallow is only looking at metadata
-            
-        # except:
-        #     print("---")
-        #     print("<<<<<<<<<<<<<<<<<<<<<FAIL>>>>>>>>>>>>>>>>>>>>>>>>>")
-        #     print("*******Add Model Landmark Map has Failed*********")
-        #     print("see test output: " + str(test_model_path))
-        #     print("see reference output: " + str(reference_model_path))
-        #     print("---")
+
+    def test_init_ScaleXML(self):
+        """create a new scale xml file based on a template"""
+        xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
+        reference, output = get_reference_and_output_paths("test_init_ScaleXML", ".xml")
+
+        newScaleXML = ScaleXML(xml_template, output)
+
+        self.assertTrue(filecmp.cmp(reference, output, shallow=False))
+
+    def test_assign_trc(self):
+        """upate a new scale xml to reference a trc file"""
+
+        xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
+        reference, output = get_reference_and_output_paths("test_assign_trc", ".xml")
+        trc_input = get_input_path("trc", "dao_yin.trc")
+
+        newScaleXML = ScaleXML(xml_template, output)
+        
+        ScaleXML.assign_trc()
 
 
 
+    # def test_add_scaled_model_path
+    # currently demotivated on the TDD front while trying to wrap my head around
+    # testing these functions using Mock. Going to take a detour and just code some 
+    # intermediate functions and will learn from my mistakes later
 
 if __name__ == '__main__':
     unittest.main()

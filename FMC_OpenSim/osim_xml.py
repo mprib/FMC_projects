@@ -6,6 +6,8 @@ import lxml.etree as etree
 import pandas as pd
 import subprocess
 
+from pyrsistent import get_in
+
 
 class OsimModel():
 
@@ -94,58 +96,41 @@ class OsimModel():
 
             self.add_marker(Landmark, Location_in_Segment, Segment)
 
-    def scale_model(self, scale_xml, scaled_model_path, trc, time_range_sec):
-        """run the scale.xml file using opensim-cmd"""
 
-        exe_file = str(Path("C:\\", "OpenSim 4.4", "bin", "opensim-cmd.exe"))
-        scale_xml = str(self.path)
-        print(exe_file)
-        print(scale_xml)
+class ScaleXML():
 
-
-        # in the process of writing this up.
-        self.update_scaling_config(scale_xml, scaled_model_path, trc, time_range_sec)
-
-        scale_output = subprocess.call([exe_file, "run-tool", scale_xml], 
-                                shell=True,  stdout=subprocess.PIPE, text=True)
-        if scale_output!=0:
-            print(">>>>>>>>>>>>>> SCALED MODEL NOT PRODUCED <<<<<<<<<<<<<<<<<<")
-        else:
-            print("scaled model stored at: ", self.path)
-
-
-    def update_scaling_config(self, scale_xml, scaled_model_path, trc, time_range_sec):
-
+    def __init__(self, scale_xml_template, new_scale_xml_path):
+        """based on an input scaling xml template, create a new template"""
+        
         parser = etree.XMLParser(remove_blank_text=True)
-        tree = etree.parse(scale_xml, parser)
-        root = tree.getroot()
+    
+        self.tree = etree.parse(scale_xml_template, parser)
+        self.path = new_scale_xml_path
 
-        # Assign variables to the original osim model, the new model name,
-        # the .trc file and the time range being used.
-
-
-
+        self.root = self.tree.getroot()
+        etree.ElementTree(self.root).write(self.path, pretty_print=True)
 
 
+    def update_xml(self):
+        etree.ElementTree(self.root).write(self.path, pretty_print=True)
 
-
-        etree.ElementTree(root).write(scale_xml, pretty_print=True)
-
+    def configure_xml(self, template, trc, scale_time_range, xml_outout):
 
 
         pass
 
-class ScaleXML():
+    def scale_model(self):
+        """run the scale.xml file using opensim-cmd"""
 
-    def __init__(self,  scale_xml, trc_file):
-        """based on a model template, create a new model"""
-        
-        self.trc_file = trc_file
-        
-        self.path = scale_xml
-        
+        exe_file = str(Path("C:\\", "OpenSim 4.4", "bin", "opensim-cmd.exe"))
+        scale_xml = str(self.path)
 
-
+        scale_output = subprocess.call([exe_file, "run-tool", scale_xml], 
+                                shell=True,  stdout=subprocess.PIPE, text=True)
+        if scale_output:
+            print(">>>>>>>>>>>>>> SCALED MODEL NOT PRODUCED <<<<<<<<<<<<<<<<<<")
+        else:
+            print("scaled model stored at: ", self.path)
 
 
 
@@ -178,12 +163,52 @@ def get_reference_and_output_paths(test_name, filetype):
 # %%
 # ------------------------------------------------------------------------------
 # Create new scale_xml
-in_trc = get_input_path("trc", "dao_yin.trc")
-in_xml = get_input_path("scale_ik_xml", "scaling_mediapipe_model.xml")
-ref_xml, out_xml = get_reference_and_output_paths("test_scale_model", "xml")
+
+xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
+reference, xml_output = get_reference_and_output_paths("test_configure_xml", ".xml")
+
+trc_input = get_input_path("trc", "dao_yin.trc")
+input_model_path = get_input_path("osim_models", "mediapipe_fullbody_model.osim")
+
+# I am realizing that the model placer component may be minimally important here
+# as there is not human variability in marker placement
+# the ms and mp models are currently the same
+
+# ms refers to "ModelScaler"
+ms_ref_model, ms_output_model = get_reference_and_output_paths("test_configure_xml", ".osim")
+ms_time_range = [0, 15]
+
+
+# mp refers to "MarkerPlacer"
+mp_ref_model, mp_output_model = get_reference_and_output_paths("test_configure_xml", ".osim")
+mp_time_range = [0, 15]
+
+
+
+newScaleXML = ScaleXML(xml_template, xml_output)
+
+newScaleXML.root.xpath('ScaleTool/GenericModelMaker/model_file')[0].text = str(input_model_path)
+newScaleXML.root.xpath('ScaleTool/ModelScaler/marker_file')[0].text = str(trc_input)
+newScaleXML.root.xpath('ScaleTool/ModelScaler/output_model_file')[0].text = str(ms_output_model)
+newScaleXML.root.xpath('ScaleTool/ModelScaler/time_range')[0].text = f'{ms_time_range[0]} {ms_time_range[1]}'
+
+newScaleXML.root.xpath('ScaleTool/MarkerPlacer/marker_file')[0].text = str(trc_input)
+newScaleXML.root.xpath('ScaleTool/MarkerPlacer/output_model_file')[0].text = str(mp_output_model)
+newScaleXML.root.xpath('ScaleTool/MarkerPlacer/time_range')[0].text = f'{mp_time_range[0]} {mp_time_range[1]}'
+
+# etree.ElementTree(newScaleXML.root).write(newScaleXML.path, pretty_print=True)
+
+newScaleXML.update_xml()
+
+# for element in newScaleXML.root.xpath('ScaleTool/GenericModelMaker/model_file'):
+#     print(element)obs
 
 # test_scale_xml = ScaleXML(in_xml, out_xml, in_trc)
 # # print(out_xml)
 # # %%
 # test_scale_xml.scale_model()
 # Navigate xml to find model file
+# %%
+newScaleXML.path = xml_output
+newScaleXML.scale_model()
+# %%

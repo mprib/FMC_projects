@@ -10,6 +10,9 @@ A proof of concept currently exists for a full body model, but it seemed that th
 
 Given changing underlying models and the high number of trajectories to manage for the hand, the current focus is on automating integration of the FMC trajectories with the OpenSim model, scaling, and inverse kinematic configutation files (all of which are in `.xml` format).
 
+### Useful Reference
+
+Discussion of the scaling xml file structure: https://simtk-confluence.stanford.edu:8443/display/OpenSim/Scale+Setup+File
 ### Punch List
 
 
@@ -22,11 +25,16 @@ Given changing underlying models and the high number of trajectories to manage f
 6. ~~unittest of add_marker method~~
 7. ~~Create method to add markers in bulk from config spreadsheet~~
 8. automate updates of model scaling.xml 
-9. modify an osim model to create a marker at the distal end of a segment
+   1. set template model name
+   2. set trc file
+   3. set output model name
+   4. set time range in trc
+9.  modify an osim model to create a marker at the distal end of a segment
 10. run inverse kinematics on a trc file given a model
 11. modify a scaling file to change the input model
 12. modify a scaling file to change the output model
 13. modify a scaling file to define new scaling factors for a segment
+
 
 
 ## Future Directions
