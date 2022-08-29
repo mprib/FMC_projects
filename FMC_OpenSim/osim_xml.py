@@ -160,57 +160,35 @@ class OsimModel():
 
 
 
-    def configure_ik(self, ik_xml_template, trc, time_range):
+    def configure_ik(self, ik_template, trc, time_range, mot_path):
+        print("trc: " + trc._str)
+
         self.ik_xml = Path(self.working_directory, "inverse_kinematics.xml")
 
-        shutil.copy(scale_xml_template, self.ik_xml)
+        shutil.copy(ik_template, self.ik_xml)
 
-        # self.ik_tree = etree.parse(self.ik_xml, self.parser)
-        # self.ik_root = self.ik_tree.getroot()
+        self.ik_tree = etree.parse(self.ik_xml, self.parser)
+        self.ik_root = self.ik_tree.getroot()
         
-        # self.scaling_root.xpath('ScaleTool/GenericModelMaker/model_file')[0].text = str(self.osim_path)
-        # self.scaling_root.xpath('ScaleTool/ModelScaler/marker_file')[0].text = str(trc)
-        # self.scaling_root.xpath('ScaleTool/ModelScaler/output_model_file')[0].text = str(self.scaled_osim_path)
-        # self.scaling_root.xpath('ScaleTool/ModelScaler/time_range')[0].text = f'{time_range[0]} {time_range[1]}'
+        self.ik_root.xpath('InverseKinematicsTool/model_file')[0].text = str(self.scaled_osim_path)
+        self.ik_root.xpath('InverseKinematicsTool/marker_file')[0].text = str(trc)
+        self.ik_root.xpath('InverseKinematicsTool/time_range')[0].text = f'{time_range[0]} {time_range[1]}'
+        self.ik_root.xpath('InverseKinematicsTool/output_motion_file')[0].text = str(mot_path)
 
+        etree.ElementTree(self.ik_root).write(self.ik_xml, pretty_print=True)
 
         pass
 
     def run_ik(self):
-    
-        self
+        exe_file = str(Path("C:\\", "OpenSim 4.4", "bin", "opensim-cmd.exe"))
+        ik_xml = str(self.ik_xml)
 
+        ik_output = subprocess.run([exe_file, "run-tool", ik_xml], 
+                                shell=True,  stdout=subprocess.PIPE, text=True)
 
+        print("stdout: " + str(ik_output.stdout))
 
-
-    def set_scaling_params(self, scale_xml_template, new_scale_xml_path, trc, time_range, scaled_osim_path):
-        """
-        based on an input scaling xml template, create a new template using the
-        provided trc file
-
-        I suspect that I may be overloading this class and function, but am concerned
-        about over
-        """
-    
-
-        self.scaling_tree = etree.parse(scale_xml_template, self.parser)
-        self.osim_path = new_scale_xml_path
-
-        self.scaling_root = self.scaling_tree.getroot()
-        etree.ElementTree(self.scaling_root).write(self.osim_path, pretty_print=True)
-
-
-
-    def update_xml(self):
-        etree.ElementTree(self.scaling_root).write(self.osim_path, pretty_print=True)
-
-    def configure_xml(self, template, trc, scale_time_range, xml_outout):
-
-
-        pass
-
-
-
+        
 
 
 # %%
@@ -264,52 +242,14 @@ newModel.scale_model()
 # %%
 
 ik_template = get_input_path("scale_ik_xml", "ik_mediapipe_model.xml")
-
-newModel.configure_ik(ik_template,trc_input, [0,15])
-
-
-# # %%
-# # I am realizing that the model placer component may be minimally important here
-# # as there is not human variability in marker placement
-# # the ms and mp models are currently the same
-
-# # ms refers to "ModelScaler"
-# ms_ref_model, ms_output_model = get_reference_and_output_paths("test_configure_xml", ".osim")
-# ms_time_range = [0, 15]
+motion_output = Path(repo, "tests", "output", "dao_yin.mot")
 
 
-# # mp refers to "MarkerPlacer"
-# mp_ref_model, mp_output_model = get_reference_and_output_paths("test_configure_xml", ".osim")
-# mp_time_range = [0, 15]
+newModel.configure_ik(ik_template,trc_input, [0,9], motion_output)
 
-
-
-# newScaleXML = (xml_template, xml_output)
-
-# newScaleXML.root.xpath('ScaleTool/GenericModelMaker/model_file')[0].text = str(input_model_path)
-# newScaleXML.root.xpath('ScaleTool/ModelScaler/marker_file')[0].text = str(trc_input)
-# newScaleXML.root.xpath('ScaleTool/ModelScaler/output_model_file')[0].text = str(input_model_path)
-# newScaleXML.root.xpath('ScaleTool/ModelScaler/time_range')[0].text = f'{ms_time_range[0]} {ms_time_range[1]}'
-
-# newScaleXML.root.xpath('ScaleTool/MarkerPlacer/marker_file')[0].text = str(trc_input)
-# newScaleXML.root.xpath('ScaleTool/MarkerPlacer/output_model_file')[0].text = str(mp_output_model)
-# newScaleXML.root.xpath('ScaleTool/MarkerPlacer/time_range')[0].text = f'{mp_time_range[0]} {mp_time_range[1]}'
-
-# # etree.ElementTree(newScaleXML.root).write(newScaleXML.path, pretty_print=True)
-
-# newScaleXML.update_xml()
-
-# # for element in newScaleXML.root.xpath('ScaleTool/GenericModelMaker/model_file'):
-# #     print(element)obs
-
-# # test_scale_xml = ScaleXML(in_xml, out_xml, in_trc)
-# # # print(out_xml)
-# # # %%
-# # test_scale_xml.scale_model()
-# # Navigate xml to find model file
-# # %%
-# newScaleXML.path = xml_output
-# newScaleXML.scale_model()
-# # %%
 
 # %%
+
+
+newModel.run_ik()
+
