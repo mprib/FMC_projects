@@ -14,7 +14,7 @@ repo = Path(__file__).parent.parent
 source = Path(repo, "FMC_OpenSim")
 sys.path.insert(0, str(source))
 
-from osim_xml import OsimModel, ScaleXML
+from osim_xml import OsimModelTemplate, OsimModel
 #####################################################################
 
 
@@ -36,13 +36,13 @@ def get_reference_and_output_paths(test_name, filetype):
     out_path = Path(repo,"tests", "output", test_name+"_output" + filetype)
 
     return ref_path, out_path
-class TestOsimModel(unittest.TestCase):
+class TestOsimModelTemplate(unittest.TestCase):
 
     def test_create_joint_loc_csv(self):
         """this also implicity tests the dataframe creation method"""
         osim_template = get_input_path("osim_models", "mediapipe_fullbody_model.osim")
         reference, output = get_reference_and_output_paths("test_create_joint_loc_csv", "csv")
-        osim_model = OsimModel(osim_template)
+        osim_model = OsimModelTemplate(osim_template)
         osim_model.create_joint_loc_csv(output)
 
         self.assertTrue(filecmp.cmp(reference, output, shallow=False), "create_joint_loc_csv() working")
@@ -57,7 +57,7 @@ class TestOsimModel(unittest.TestCase):
 
         osim_template = get_input_path("osim_models", "mediapipe_fullbody_model_no_markers.osim")
         reference, output = get_reference_and_output_paths("test_add_single_marker_to_model", ".osim")
-        osim_model = OsimModel(osim_template, output)
+        osim_model = OsimModelTemplate(osim_template, output)
         osim_model.add_marker(marker_name, location_text, parent_frame)
 
         self.assertTrue(filecmp.cmp(reference, output, shallow=False), "add_single_marker() working")
@@ -69,35 +69,35 @@ class TestOsimModel(unittest.TestCase):
 
         reference, output = get_reference_and_output_paths("test_add_ModelLandmarkMap", ".osim")
 
-        test_model = OsimModel(test_model_template, output)
+        test_model = OsimModelTemplate(test_model_template, output)
         test_model.add_ModelLandmarkMap(landmark_map_path)
 
         self.assertTrue(filecmp.cmp(reference, output, shallow=False))  
 
 
-    def test_init_ScaleXML(self):
-        """create a new scale xml file based on a template"""
-        xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
-        reference, output = get_reference_and_output_paths("test_init_ScaleXML", ".xml")
+    # def test_init_ScaleXML(self):
+    #     """create a new scale xml file based on a template"""
+    #     xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
+    #     reference, output = get_reference_and_output_paths("test_init_ScaleXML", ".xml")
 
-        newScaleXML = ScaleXML(xml_template, output)
+    #     newScaleXML = ScaleXML(xml_template, output)
 
-        self.assertTrue(filecmp.cmp(reference, output, shallow=False))
+    #     self.assertTrue(filecmp.cmp(reference, output, shallow=False))
 
-    def test_assign_trc(self):
-        """upate a new scale xml to reference a trc file"""
+    # def test_assign_trc(self):
+    #     """upate a new scale xml to reference a trc file"""
 
-        xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
-        reference, output = get_reference_and_output_paths("test_assign_trc", ".xml")
-        trc_input = get_input_path("trc", "dao_yin.trc")
+    #     xml_template = get_input_path("scale_ik_xml", "scale_mediapipe_model.xml")
+    #     reference, output = get_reference_and_output_paths("test_assign_trc", ".xml")
+    #     trc_input = get_input_path("trc", "dao_yin.trc")
 
-        newScaleXML = ScaleXML(xml_template, output)
+    #     newScaleXML = ScaleXML(xml_template, output)
         
-        ScaleXML.assign_trc()
+    #     ScaleXML.assign_trc()
 
 
 
-    # def test_add_scaled_model_path
+    # # def test_add_scaled_model_path
     # currently demotivated on the TDD front while trying to wrap my head around
     # testing these functions using Mock. Going to take a detour and just code some 
     # intermediate functions and will learn from my mistakes later
