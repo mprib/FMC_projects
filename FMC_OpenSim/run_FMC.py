@@ -1,12 +1,6 @@
 import freemocap
-freemocap.RunMe(sessionID='sesh_2022-08-10_10_33_12',
-                stage=5,
-                use_saved_calibration=True,
-                useBlender=True)
+freemocap.RunMe(use_saved_calibration=True, 
+                # showAnimation=False,
+                place_skeleton_on_origin=True)
 
-
-# import sys
-
-# print("this is the name of a program", sys.argv[0])
-
-# print(sys.argv)
+freemocap.RunMe()

@@ -16,6 +16,8 @@ Discussion of the scaling xml file structure: <https://simtk-confluence.stanford
 
 ### Punch List
 
+#### Stage 1: Processing of Full Body "Dao Yin" steps
+
 1. ~~produce a trc file from a freemocap session and given model~~
 2. ~~produce a list of markers used in a given model~~
 3. ~~produce a file summarizing each joint's placement relative to it's socket~~
@@ -33,9 +35,14 @@ Discussion of the scaling xml file structure: <https://simtk-confluence.stanford
 10. ~~run inverse kinematics on a trc file given a model~~
 11. ~~modify a scaling file to change the input model~~
 12. ~~modify a scaling file to change the output model~~
-13. modify a scaling file to define new scaling factors for a segment
-    1.  Given that these are template modifications that will not be routinely performed, I'm beginning to think that these should best be done in OpenSim/text editor to ensure quality.
+#### Stage 2: Apply Workflow to Hand Tracking
 
+1. ~~Capture hand tracking skeleton.npy data~~
+   1. *note: had to use full sized charuco* 
+2. Convert hand tracking.npy to .trc
+3. update hand model template to include markers at each joint
+4. Create hand model scaling template
+5. Run IK on hand tracked data
 ## Future Directions
 
 Gap filling of trajectories will be an important component of a useful system, particularly for configurations without substantial camera redundancy. Machine learning tools may offer a way to back fill trajectories "good enough" for IK to finish the job.
