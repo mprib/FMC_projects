@@ -1,4 +1,4 @@
-PathFileType	4	(X/Y/Z)	C:\Users\Mac Prible\repos\FMC_projects\tests\output\test_trc_creation_output.trc
+PathFileType	4	(X/Y/Z)	c:\Users\Mac Prible\repos\FMC_projects\tests\output\test_trc_creation_output.trc
 DataRate	CameraRate	NumFrames	NumMarkers	Units	OrigDataRate	OrigDataStartFrame	OrigNumFrames
 25	25	206	19	m	25	0	206
 Frame#	Time	nose			right_eye			left_eye			right_shoulder			left_shoulder			left_elbow			right_elbow			left_wrist			right_wrist			right_hip			left_hip			right_knee			left_knee			right_ankle			right_heel			right_foot_index			left_ankle			left_heel			left_foot_index		

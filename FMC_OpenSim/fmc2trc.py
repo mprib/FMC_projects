@@ -14,9 +14,11 @@ import xml.dom.minidom as md
 class FMCSession():
     """Provide a session object to manage FMC output processing"""
 
-    def __init__(self, sessionID, FMC_folder, camera_rate, osim_file, pose_tracked="mediapipe_body_hands"):
+    def __init__(self, sessionID, FMC_folder, data_array, camera_rate, osim_file, pose_tracked="mediapipe_body_hands"):
+
             self.sessionID = sessionID
             self.camera_rate = camera_rate
+            self.data_array = data_array
             self.FMC_folder =  FMC_folder
             self.osim_file = osim_file
             self.pose_tracked = pose_tracked
@@ -46,7 +48,12 @@ class FMCSession():
     def get_landmark_index(self, pose_key):
         """Read in a dictionary of the landmarks being tracked"""
         
-        with open("FMC_OpenSim\json\landmarks.json") as f_obj:
+        # print(Path(__file__).parent)
+
+        landmark_json = Path(Path(__file__).parent, "json", "landmarks.json")
+        # print(repr(landmark_json))
+
+        with open(landmark_json) as f_obj:
             landmarks = json.load(f_obj)
 
         return landmarks[pose_key]
@@ -56,7 +63,9 @@ class FMCSession():
         """returns the array of 3D trajectories associated with a session"""
 
         dataArrayPath = self.FMC_folder / self.sessionID / 'DataArrays'
-        skeletonPath = dataArrayPath / 'mediaPipeSkel_3d_smoothed.npy'
+        skeletonPath = dataArrayPath / self.data_array
+
+        # 'mediaPipeSkel_3d_smoothed.npy'
         return np.load(skeletonPath) #load 3d open pose data
 
 
@@ -125,7 +134,7 @@ class FMCSession():
 
 
     # Convert a trajectory array to a trc
-    def create_trajectory_trc(self, trc_filename):
+    def create_trajectory_trc(self, trc_filename, drop_na=True):
         
         num_markers = len(self.model_landmarks)
         data_rate= self.camera_rate # not sure how this is different from camera rate
@@ -138,16 +147,22 @@ class FMCSession():
 
         # make a list of the trajectories to keep
         # only those that are being modelled in osim
+        # 
         keep_trajectories = []
         for lm in self.model_landmarks:
             keep_trajectories.append(lm+"_x")
             keep_trajectories.append(lm+"_y")
             keep_trajectories.append(lm+"_z")
 
-        # going to recreate these later after potentially dropping frames
-        trajectories_for_trc = trajectories_for_trc[keep_trajectories]
-        trajectories_for_trc = trajectories_for_trc.dropna()
+        # if an osim has markers, only keep those markers,
+        # otherwise export everything for inspection
+        if keep_trajectories:
+            trajectories_for_trc = trajectories_for_trc[keep_trajectories]
         
+        if drop_na:
+            trajectories_for_trc = trajectories_for_trc.dropna()
+        
+
         # these are at top of .trc
         orig_num_frames = len(trajectories_for_trc) - 1
         num_frames = orig_num_frames
@@ -201,8 +216,10 @@ class FMCSession():
 
             # add in frame and Time stamp to the data frame 
             # this redundent step is due to potentially dropping frames earlier
-            trajectories_for_trc.insert(0, "Frame", [str(i) for i in range(0, len(trajectories_for_trc))])
-            trajectories_for_trc.insert(1, "Time", trajectories_for_trc["Frame"].astype(float) / float(self.camera_rate))
+            # when pairing down the dataframe to only relevant markers
+            if keep_trajectories:
+                trajectories_for_trc.insert(0, "Frame", [str(i) for i in range(0, len(trajectories_for_trc))])
+                trajectories_for_trc.insert(1, "Time", trajectories_for_trc["Frame"].astype(float) / float(self.camera_rate))
             
             # and finally actually write the trajectories
             for row in range(0, len(trajectories_for_trc)):

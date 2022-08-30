@@ -44,9 +44,10 @@ class TestFMC2trc(unittest.TestCase):
         
         self.FMC_folder = get_input_path("FMC_Sessions")
         self.GoodSession = "sesh_2022-08-10_10_33_12"
+        self.data_array = 'mediaPipeSkel_3d_smoothed.npy'
         self.osim_file = get_input_path("osim_models", "mediapipe_fullbody_model.osim")
 
-        self.testSession = FMCSession(self.GoodSession, self.FMC_folder, osim_file=self.osim_file, camera_rate=25)
+        self.testSession = FMCSession(self.GoodSession, self.FMC_folder, self.data_array, osim_file=self.osim_file, camera_rate=25)
         
     def test_trc_creation(self):
         """given a previously set up FMC session, create an OpenSim .trc file"""
