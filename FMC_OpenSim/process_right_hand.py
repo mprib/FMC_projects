@@ -20,7 +20,7 @@ data_array = "mediaPipeSkel_3d_smoothed_unrotated.npy"
 # first order of business is to pull the joint names from the osim file
 # and then assign model markers to them
 
-model_template_path = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "2nd_Hand_Model_Mass.osim")
+model_template_path = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "fmc_hand_model_template.osim")
 hand_model = osim_xml.OsimModelTemplate(model_template_path, Path(FMC_folder, session_ID, "OpenSim", "fmc_hand_model.osim"))
 
 
