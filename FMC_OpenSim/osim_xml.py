@@ -82,6 +82,7 @@ class OsimModelTemplate():
         new_marker.attrib['name'] = marker_name
         etree.ElementTree(self.osim_root).write(self.osim_path, pretty_print=True)
 
+
     def add_ModelLandmarkMap(self, model_landmark_map_path, map_sheet_name="Sheet1"):
         """given a spreadsheet of landmark positions relative to a segment, add them"""
         # remove all markers from element tree

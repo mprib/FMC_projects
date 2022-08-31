@@ -24,8 +24,9 @@ model_template_path = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "fmc_
 hand_model = osim_xml.OsimModelTemplate(model_template_path, Path(FMC_folder, session_ID, "OpenSim", "fmc_hand_model.osim"))
 
 
-hand_joint_xls_path = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "hand_joints.xlsx")
-hand_model.create_joint_loc_xlsx(hand_joint_xls_path)
+################ Only needs to be done once to build the landmark map, which is do
+# hand_joint_xls_path = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "hand_joints.xlsx")
+# hand_model.create_joint_loc_xlsx(hand_joint_xls_path)
 
 # %% Now go update the .osim file to include these markers that have been
 # manually identified in the spreadsheet
@@ -42,4 +43,23 @@ hand_recording = fmc2trc.FMCSession(session_ID, FMC_folder, data_array ,25, mode
 hand_recording.create_trajectory_trc(Path(FMC_folder, session_ID, "OpenSim", "mediapipe_hand.trc"), drop_na=True)
 hand_recording.create_trajectory_csv(Path(FMC_folder, session_ID, "OpenSim", "mediapipe_hand.csv"))
 
+# %%
+
+from pathlib import Path
+import lxml.etree as etree
+
+repo = Path(__file__).parent.parent
+
+osim_model = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "fmc_hand_model_template_no_muscles.osim")
+
+xml_parser = etree.XMLParser(remove_blank_text=True)
+osim_tree = etree.parse(osim_model, xml_parser)
+osim_root = osim_tree.getroot()
+
+for body in osim_root.xpath("//WrapObjectSet"):
+    print(body.attrib['name'])
+    body.getparent().remove(body)
+
+
+etree.ElementTree(osim_root).write(osim_model, pretty_print=True)
 # %%
