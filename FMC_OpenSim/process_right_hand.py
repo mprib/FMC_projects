@@ -20,7 +20,7 @@ data_array = "mediaPipeSkel_3d_smoothed_unrotated.npy"
 # first order of business is to pull the joint names from the osim file
 # and then assign model markers to them
 
-model_template_path = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "fmc_hand_model_template.osim")
+model_template_path = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "fmc_hand_model_template_no_muscles.osim")
 hand_model = osim_xml.OsimModelTemplate(model_template_path, Path(FMC_folder, session_ID, "OpenSim", "fmc_hand_model.osim"))
 
 
@@ -38,28 +38,28 @@ hand_model.add_ModelLandmarkMap(map_path, map_sheet_name="LandmarkMap")
 # %% with markers in the model, actually create the .trc file
 
 
-hand_recording = fmc2trc.FMCSession(session_ID, FMC_folder, data_array ,25, model_template_path)
+hand_recording = fmc2trc.FMCSession(session_ID, FMC_folder, data_array ,25, hand_model.osim_path)
 
 hand_recording.create_trajectory_trc(Path(FMC_folder, session_ID, "OpenSim", "mediapipe_hand.trc"), drop_na=True)
 hand_recording.create_trajectory_csv(Path(FMC_folder, session_ID, "OpenSim", "mediapipe_hand.csv"))
 
 # %%
 
-from pathlib import Path
-import lxml.etree as etree
+# from pathlib import Path
+# import lxml.etree as etree
 
-repo = Path(__file__).parent.parent
+# repo = Path(__file__).parent.parent
 
-osim_model = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "fmc_hand_model_template_no_muscles.osim")
+# osim_model = Path(repo,"FMC_OpenSim", "models", "fmc_hand_model", "fmc_hand_model_template_no_muscles.osim")
 
-xml_parser = etree.XMLParser(remove_blank_text=True)
-osim_tree = etree.parse(osim_model, xml_parser)
-osim_root = osim_tree.getroot()
+# xml_parser = etree.XMLParser(remove_blank_text=True)
+# osim_tree = etree.parse(osim_model, xml_parser)
+# osim_root = osim_tree.getroot()
 
-for body in osim_root.xpath("//WrapObjectSet"):
-    print(body.attrib['name'])
-    body.getparent().remove(body)
+# for body in osim_root.xpath("//WrapObjectSet"):
+#     print(body.attrib['name'])
+#     body.getparent().remove(body)
 
 
-etree.ElementTree(osim_root).write(osim_model, pretty_print=True)
+# etree.ElementTree(osim_root).write(osim_model, pretty_print=True)
 # %%
